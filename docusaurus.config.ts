@@ -40,12 +40,14 @@ const config: Config = {
       "classic",
       {
         docs: {
+          routeBasePath: "/",
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
           //   "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
+        blog: false,
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -73,17 +75,17 @@ const config: Config = {
           label: "Docs",
         },
         {
-          to: "/docs/category/users",
+          to: "/category/users",
           position: "left",
           label: "Users",
         },
         {
-          to: "/docs/category/nodes",
+          to: "/category/nodes",
           position: "left",
           label: "Nodes",
         },
         {
-          to: "/docs/category/builders",
+          to: "/category/builders",
           position: "left",
           label: "Builders",
         },
