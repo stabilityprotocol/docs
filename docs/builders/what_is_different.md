@@ -36,23 +36,23 @@ function sendViaCall(address payable _to) public payable {
 ```
 
 ### Address Balance
-On Stability, the address.balance operation will not function as expected. This operation, which is used to retrieve the balance of Ether (or any native token) held by an address, relies on the existence of a native token. In the absence of such a token, this operation **cannot return** valid information about an address's balance, as shown in the example below:
 
-```bash 
+On Stability, the address.balance operation will not function as expected. This operation, which is used to retrieve the balance of Ether (or any native token) held by an address, relies on the existence of a native token. In the absence of such a token, this operation will return the balance of the selected DNT (Decentralized Native Token) token. For example:
+
+```bash
 function getBalance() public view returns (uint) {
         return address(this).balance;
     }
->> FAIL
+>> Returns the selected DNT balance
 ```
 
-
 ### Payable Declarations
+
 In the context of Stability, declaring functions and addresses as payable is unnecessary since the blockchain does not support native token transactions. Instead, developers should utilize the ERC-20 token standard for transactions involving token transfers. This approach involves first approving the transfer of tokens to a contract, followed by the contract executing the transfer, mirroring the functionality provided by ERC-20 tokens.
 
-
 ### Receive() and Fallback()
-The receive() and fallback() functions in Solidity are designed to handle incoming transactions and unspecified function calls, respectively. However, without the capability to transfer native tokens, these functions lose their primary purpose on Stability. Developers will need to consider alternative methods for contract interactions that do not rely on direct value transfers.
 
+The receive() and fallback() functions in Solidity are designed to handle incoming transactions and unspecified function calls, respectively. However, without the capability to transfer native tokens, these functions lose their primary purpose on Stability. Developers will need to consider alternative methods for contract interactions that do not rely on direct value transfers.
 
 # 3. Conclusion
 
