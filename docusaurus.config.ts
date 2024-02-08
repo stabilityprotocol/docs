@@ -127,23 +127,23 @@ const config: Config = {
           items: [
             {
               label: "How it works",
-              to: "/docs/category/how-it-works",
+              to: "/category/how-it-works",
             },
             {
               label: "Users",
-              to: "/docs/category/users",
+              to: "/category/users",
             },
             {
               label: "Nodes",
-              to: "/docs/category/nodes",
+              to: "/category/nodes",
             },
             {
               label: "Builders",
-              to: "/docs/category/builders",
+              to: "/category/builders",
             },
             {
               label: "Resources",
-              to: "/docs/category/resources",
+              to: "/category/resources",
             },
           ],
         },
