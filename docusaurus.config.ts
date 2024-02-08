@@ -164,7 +164,7 @@ const config: Config = {
             },
             {
               label: "Discord",
-              href: "https://discord.gg/VagSJw6e",
+              href: "https://discord.com/invite/68j2XtTKY9",
             },
           ],
         },

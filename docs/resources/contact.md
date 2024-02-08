@@ -11,7 +11,7 @@ sidebar_position: 4
 We're open to conversation and eager to hear from you! Our primary hub for chats, updates, and live interactions is our Discord server. Jump in to join our vibrant community.
 
 <div style={{ display: 'flex', alignItems: 'center' }}>
-  <a href="https://discord.gg/68j2XtTKY9" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+  <a href="https://discord.com/invite/68j2XtTKY9" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
     <img src="https://cdn3.emoji.gg/emojis/9738-discord-ico.png" width="32" height="32" alt="discord_ico" style={{ marginRight: '8px' }}/> 
     <span>Join us on Discord</span>
     <img src="https://cdn3.emoji.gg/emojis/2988-copy-link.png" style={{ width: '16px', height: '16px', marginLeft: '5px' }} alt="Link Icon"/>
