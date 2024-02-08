@@ -6,7 +6,7 @@ info:
   contact:
     name: API Support
     url: https://stabilityprotocol.com/support
-    email: support@stabilityprotocol.com
+    email: contact@stabilityprotocol.com
 servers:
   - url: https://api.stabilityprotocol.com/v1
     description: Stability Protocol API base URL

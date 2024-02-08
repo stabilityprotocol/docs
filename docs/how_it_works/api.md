@@ -28,7 +28,13 @@ The Stability JSON RPC API supports familiar Ethereum/Geth-compatible endpoints 
 
 > `stability_getValidatorList`
 
-Obtain the current validator set, showcasing the active validators within the network.
+Obtain the current validator set, showcasing the validators within the network.
+
+#
+
+> `stability_getActiveValidatorList`
+
+Obtain the current active validator set, showcasing the active validators within the network.
 
 #
 

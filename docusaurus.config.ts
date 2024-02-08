@@ -61,6 +61,7 @@ const config: Config = {
           {
             spec: "./public-api.yaml",
             route: "/api/",
+            id: "public-api",
             url: "https://github.com/stabilityprotocol/stability-docs/blob/main/public-api.yaml",
           },
         ],
