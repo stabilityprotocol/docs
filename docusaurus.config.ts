@@ -69,10 +69,9 @@ const config: Config = {
       },
       items: [
         {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          to: "/category/how-it-works",
           position: "left",
-          label: "Docs",
+          label: "How it works",
         },
         {
           to: "/category/users",
@@ -88,6 +87,11 @@ const config: Config = {
           to: "/category/builders",
           position: "left",
           label: "Builders",
+        },
+        {
+          to: "/category/resources",
+          position: "left",
+          label: "Resources",
         },
         {
           href: "https://github.com/stabilityprotocol/",
