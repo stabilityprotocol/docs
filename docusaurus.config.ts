@@ -101,8 +101,24 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Docs",
-              to: "/docs/",
+              label: "How it works",
+              to: "/docs/category/how-it-works",
+            },
+            {
+              label: "Users",
+              to: "/docs/category/users",
+            },
+            {
+              label: "Nodes",
+              to: "/docs/category/nodes",
+            },
+            {
+              label: "Builders",
+              to: "/docs/category/builders",
+            },
+            {
+              label: "Resources",
+              to: "/docs/category/resources",
             },
           ],
         },
@@ -118,7 +134,7 @@ const config: Config = {
               href: "https://www.linkedin.com/company/stabilitysolutions/about/",
             },
             {
-              label: "X fka Twitter",
+              label: "X",
               href: "https://medium.com/stabilitynetwork",
             },
             {
@@ -141,7 +157,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Stability, Inc.`,
     },
     prism: {
       theme: darkCodeTheme,
