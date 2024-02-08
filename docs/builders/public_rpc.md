@@ -1,12 +1,12 @@
 ---
-sidebar_position: 9
+sidebar_position: 7
 ---
 
-# API
+# Public RPC
 
-## What is the Stability API?
+## What is the Stability RPC?
 
-The Stability API allows applications to connect to a Stability node that is part of the Stability Blockchain Network. Users can interact with on-chain data and send transactions programmatically by using endpoints provided by this API, or through a UI that uses these endpoints as its backend. The API follows a JSON-RPC standard with a uniform set of methods agnostic of custom applications or nodes, that is lightweight and stateless remote procedure call using JSON as its data format (RFC 4627).
+The Stability RPC allows applications to connect to a Stability node that is part of the Stability Blockchain Network. Users can interact with on-chain data and send transactions programmatically by using endpoints provided by this API, or through a UI that uses these endpoints as its backend. The API follows a JSON-RPC standard with a uniform set of methods agnostic of custom applications or nodes, that is lightweight and stateless remote procedure call using JSON as its data format (RFC 4627).
 
 The Stability JSON RPC API supports familiar Ethereum/Geth-compatible endpoints in addition to Stability-custom endpoints that have functionality specialized to our ecosystem.
 
@@ -50,7 +50,7 @@ Submit a transaction that is sponsored to the network's mempool, facilitating tr
 
 ## Example
 
-```
+```shell
 $ curl 'https://free.testnet.stabilityprotocol.com/' \
   -X POST \
   -H "Content-Type: application/json" \

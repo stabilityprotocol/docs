@@ -1,3 +1,7 @@
+---
+sidebar_position: 5
+---
+
 # API Keys
 
 In this tutorial, you will learn how to create an API key on Stability's Account Manager.

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Setting Up Stability In Viem
@@ -31,7 +31,7 @@ Viem is a TypeScript interface tailored for interacting with web3, designed to p
 
 For this setup, we'll be utilizing npm, ts-node, and Viem. This combination allows us to write and execute TypeScript directly, facilitating rapid development and testing within the Stability ecosystem.
 
-## 4. Install 
+## 4. Install
 
 Begin by installing Viem and ts-node via npm. This step ensures that you have the necessary tools to create and run TypeScript files that interact with the Stability blockchain.
 
@@ -39,8 +39,10 @@ Begin by installing Viem and ts-node via npm. This step ensures that you have th
 npm i viem ts-node
 ```
 
-## 5. Create a Test.tsx File 
+## 5. Create a Test.tsx File
+
 Next, create a TypeScript file named Test.tsx and paste the following code. This script configures Viem to connect to the Stability Testnet, allowing you to interact with the blockchain. In this example, we will retrieve the current block number.
+
 ```bash
 
 import { createPublicClient, http, defineChain } from 'viem'
@@ -77,16 +79,16 @@ const stbleTestnet = defineChain({
       },
     },
   });
- 
-const client = createPublicClient({ 
-  chain: stbleTestnet, 
-  transport: http(), 
-}) 
+
+const client = createPublicClient({
+  chain: stbleTestnet,
+  transport: http(),
+})
 
 async function getBlockNumber() {
   const blockNumber = Number(await client.getBlockNumber());
   return blockNumber
-} 
+}
 
 getBlockNumber().then(blockNumber => {
   console.log('The Current Stability Block Number is', blockNumber);
@@ -94,7 +96,9 @@ getBlockNumber().then(blockNumber => {
 ```
 
 ## 6. Test in Console
+
 To verify your setup, execute the test script using npx ts-node. This command will compile and run your TypeScript file, outputting the current block number of the Stability Testnet to the console.
+
 ```bash
 npx ts-node test.tsx
 ```
