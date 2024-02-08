@@ -34,7 +34,7 @@ After installation, you need to add the Stability Protocol network to MetaMask:
     - New RPC URL: `https://free.testnet.stabilityprotocol.com`
     - Chain ID: 20180427
     - Currency Symbol: FREE
-    - Block Explorer URL: WIP
+    - Block Explorer URL: https://stability-testnet.blockscout.com
 
 Now you're connected to the Stability Protocol network through MetaMask and ready to make transactions or interact with smart contracts.
 
