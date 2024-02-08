@@ -67,4 +67,4 @@ const signer = provider.getSigner();
 
 **Testnet Transactions:** While the testnet is generally more accessible and does not require an API key for basic interactions, certain actions may still necessitate authentication. This approach allows developers to test their applications in a controlled environment, closely simulating mainnet conditions with fewer constraints.
 
-For further details on the API key creation process and other requirements, refer to the [Transactions](./using_stability/transactions.md) section.
+For further details on the API key creation process and other requirements, refer to the [Transactions](./transactions.md) section.
