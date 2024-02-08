@@ -53,6 +53,24 @@ const config: Config = {
         },
       } satisfies Preset.Options,
     ],
+    [
+      "redocusaurus",
+      {
+        // Plugin Options for loading OpenAPI files
+        specs: [
+          {
+            spec: "./public-api.yaml",
+            route: "/api/",
+            url: "https://github.com/stabilityprotocol/stability-docs/blob/main/public-api.yaml",
+          },
+        ],
+        // Theme Options for modifying how redoc renders them
+        theme: {
+          // Change with your site colors
+          primaryColor: "#1890ff",
+        },
+      },
+    ],
   ],
 
   themeConfig: {
