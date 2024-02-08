@@ -1,8 +1,4 @@
----
-sidebar_position: 2
----
-
-# Quick start - Deploy Contract Using Remix
+# Quickstart - Deploy Contract Using Remix
 
 ## 1. Introduction
 

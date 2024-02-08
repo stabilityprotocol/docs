@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Account Overview
@@ -8,11 +8,11 @@ Check your remaining free transactions for the day, history, and node upgrade op
 
 1. Navigate to your Account Overview **[here](https://account.stabilityprotocol.com)**
 
-![Account Overview](../../../static/img/stability-portal.jpg)
+![Account Overview](../../static/img/stability-portal.jpg)
 
 2. Click the **Start Now** button
 
-![Account Overview Authentication](../../../static/img/stability-portal-auth.jpg)
+![Account Overview Authentication](../../static/img/stability-portal-auth.jpg)
 
 3. Choose between **Magic.link** (for SSO or emailed OTP access) or **Metamask**
 

@@ -1,8 +1,4 @@
----
-sidebar_position: 1
----
-
-# Quick start - Deploy Contract Using Hardhat
+# Quickstart - Deploy Contract Using Hardhat
 
 ## 1. Introduction
 

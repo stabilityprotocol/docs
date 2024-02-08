@@ -1,0 +1,8 @@
+{
+  "label": "Rust Environment Setup",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Environment Setup, including installation and configuration of the software required to run the application."
+  }
+}
