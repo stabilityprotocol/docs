@@ -18,6 +18,7 @@ const config: Config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
+  trailingSlash: false,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -191,7 +192,6 @@ const config: Config = {
       appId: "0FUT98QHZD",
       apiKey: "be96fc610db3368e74452af19b45dd3b",
       indexName: "stabilityprotocol",
-      contextualSearch: false,
     },
   } satisfies Preset.ThemeConfig,
 };
