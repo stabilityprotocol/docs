@@ -36,6 +36,7 @@ const config: Config = {
     locales: ["en"],
   },
 
+  plugins: ["docusaurus-plugin-sass"],
   presets: [
     [
       "classic",
@@ -50,7 +51,7 @@ const config: Config = {
         },
         blog: false,
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: "./src/css/custom.scss",
         },
       } satisfies Preset.Options,
     ],
@@ -190,7 +191,7 @@ const config: Config = {
     },
     algolia: {
       appId: "0FUT98QHZD",
-      apiKey: "be96fc610db3368e74452af19b45dd3b",
+      apiKey: "eb72b468aaaf378e3904bc4993b7bd6f",
       indexName: "stabilityprotocol",
       contextualSearch: true,
     },
