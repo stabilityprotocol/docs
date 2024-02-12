@@ -191,8 +191,7 @@ const config: Config = {
       appId: "0FUT98QHZD",
       apiKey: "be96fc610db3368e74452af19b45dd3b",
       indexName: "stabilityprotocol",
-      contextualSearch: true,
-      searchParameters: {},
+      contextualSearch: false,
     },
   } satisfies Preset.ThemeConfig,
 };
