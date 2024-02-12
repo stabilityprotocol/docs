@@ -187,6 +187,13 @@ const config: Config = {
     prism: {
       theme: darkCodeTheme,
     },
+    algolia: {
+      appId: "0FUT98QHZD",
+      apiKey: "be96fc610db3368e74452af19b45dd3b",
+      indexName: "stabilityprotocol",
+      contextualSearch: true,
+      searchParameters: {},
+    },
   } satisfies Preset.ThemeConfig,
 };
 
