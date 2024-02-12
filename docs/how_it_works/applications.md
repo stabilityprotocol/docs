@@ -70,9 +70,9 @@ The structure of a smart contract is very similar to classes in object-oriented-
 ### Practicing Solidity
 
 - _[Crypto Zombies](https://cryptozombies.io/)_
-- _[Ethernaut](https:://ethernaut.openzeppelin.com/)_
-- _[0xMonaco](http://0xmonaco.ctf.paradigm.xyz/)_
-- _[Chainshot](https:://chainshot.com)_
+- _[Ethernaut](https://ethernaut.openzeppelin.com/)_
+- _[0xMonaco](https://0xmonaco.ctf.paradigm.xyz/)_
+- _[Chainshot](https://chainshot.com)_
 
 ### Javascript Libraries
 
