@@ -1,4 +1,4 @@
-# Quickstart - Deploy Contract Using Hardhat
+# Deploy Contract Using Hardhat
 
 ## 1. Introduction
 

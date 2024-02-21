@@ -66,4 +66,4 @@ node index.js
 
 Upon successful execution, you should see a console log displaying the current block number of the Stability blockchain. This step confirms that your Javascript / Ethers setup is correctly configured to interact with the Stability network.
 
-![Console Return of Block Number](../../static/img/blocknumberethers.png)
+![Console Return of Block Number](../../../../static/img/blocknumberethers.png)

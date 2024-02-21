@@ -1,4 +1,4 @@
-# Quickstart - Deploy Contract Using Remix
+# Deploy Contract Using Remix
 
 ## 1. Introduction
 
