@@ -105,9 +105,9 @@ const config: Config = {
           label: "Validators",
         },
         {
-          to: "/category/builders",
+          to: "/category/developers",
           position: "left",
-          label: "Builders",
+          label: "Developers",
         },
         {
           to: "/category/resources",
@@ -140,8 +140,8 @@ const config: Config = {
               to: "/category/validators",
             },
             {
-              label: "Builders",
-              to: "/category/builders",
+              label: "Developers",
+              to: "/category/developers",
             },
             {
               label: "Resources",
