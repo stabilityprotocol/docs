@@ -90,9 +90,9 @@ const config: Config = {
       },
       items: [
         {
-          to: "/category/how-it-works",
+          to: "/category/how-stability-works",
           position: "left",
-          label: "How it works",
+          label: "How Stability Works",
         },
         {
           to: "/category/users",
@@ -128,8 +128,8 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "How it works",
-              to: "/category/how-it-works",
+              label: "How Stability Works",
+              to: "/category/how-stability-works",
             },
             {
               label: "Users",
