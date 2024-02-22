@@ -1,6 +1,6 @@
 {
-  "label": "Nodes",
-  "position": 4,
+  "label": "Validators",
+  "position": 5,
   "link": {
     "type": "generated-index",
     "description": "Learn about the different types of nodes available in the system and how to use them."

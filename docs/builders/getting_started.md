@@ -6,7 +6,7 @@ sidebar_position: 1
 
 This quickstart is tailored for users eager to connect with and explore the capabilities of the Stability Network. This guide is designed for developers aiming to craft decentralized applications (dApps), enthusiasts keen on engaging with blockchain technology beyond conventional tools, and anyone interested in understanding what sets Stability apart from traditional EVMs and smart contracts.
 
-# Prerequisities
+## Prerequisites
 
 This tutorial presumes a foundational understanding of blockchain technology and familiarity with smart contract development tools.
 
@@ -66,7 +66,7 @@ function sendViaCall(address payable _to) public payable {
 
 ### Address Balance
 
-On Stability, the address.balance operation will not function as expected. This operation, which is used to retrieve the balance of Ether (or any native token) held by an address, relies on the existence of a native token. In the absence of such a token, this operation will return the balance of the selected DNT (Decentralized Native Token) token. For example:
+On Stability, the address.balance operation will not function as expected. This operation, which is used to retrieve the balance of Ether (or any native token) held by an address, relies on the existence of a native token. For example:
 
 ```bash
 function getBalance() public view returns (uint) {
