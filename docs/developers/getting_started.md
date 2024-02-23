@@ -4,11 +4,11 @@ sidebar_position: 1
 
 # Getting Started
 
-This quickstart is tailored for users eager to connect with and explore the capabilities of the Stability Network. This guide is designed for developers aiming to craft decentralized applications (dApps), enthusiasts keen on engaging with blockchain technology beyond conventional tools, and anyone interested in understanding what sets Stability apart from traditional EVMs and smart contracts.
+This quickstart is tailored for developers eager to connect with and explore the capabilities of the Stability Network directly. This guide is designed for developers aiming to craft decentralized applications (dApps), enthusiasts keen on engaging with Stability's blockchain beyond frontends, and anyone interested in understanding what sets Stability apart from traditional EVMs and smart contracts.
 
 ## Prerequisites
 
-This tutorial presumes a foundational understanding of blockchain technology and familiarity with smart contract development tools.
+This tutorial presumes a foundational understanding of blockchain technology and familiarity with tools that interact directly with the blockchain. For example, smart contracts and development tools such as Remix and Viem.
 
 ## Register for an API Key
 
@@ -83,5 +83,5 @@ In the context of Stability, declaring functions and addresses as payable is unn
 
 The receive() and fallback() functions in Solidity are designed to handle incoming transactions and unspecified function calls, respectively. However, without the capability to transfer native tokens, these functions lose their primary purpose on Stability. Developers will need to consider alternative methods for contract interactions that do not rely on direct value transfers.
 
-## Conclusion
+## Now Start Swimming
 Armed with this knowledge and your API key, you're well-prepared to embark on your development journey with the Stability Network. Dive in and start innovating! Happy hacking!

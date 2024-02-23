@@ -2,24 +2,75 @@
 sidebar_position: 1
 ---
 
-# Connect
+# Getting Started
 
-Integrating with the Stability Protocol chain involves connecting through MetaMask, a popular Ethereum wallet and gateway to blockchain apps, followed by advanced interactions using Ethers.js. This comprehensive guide walks you through the process of connecting to the Stability Protocol network using these tools, facilitating everything from simple transactions to complex smart contract interactions.
+This quickstart is intended for users who wish to use the Stability Network using browser-based extensions. For this example, we will be using Metamask, the most popular browser extension for interacting with blockchains.
+
 
 ## MetaMask Configuration
 
-MetaMask allows users to interact with the Ethereum blockchain easily. Here's how to set it up for the Stability Protocol chain:
+MetaMask allows users to interact with the Stability blockchain easily. Here's how to set it up for the Stability Protocol chain:
 
 ### 1. Installing MetaMask
 
 If you haven't already, install MetaMask for your browser from the [official MetaMask website](https://metamask.io/).
 
-### 2. Adding Stability Protocol Network
+### 2. Sign Up For An API Key
 
-After installation, you need to add the Stability Protocol network to MetaMask:
+After installation, you need to add the Stability Protocol network to MetaMask. For this, you will need to register for an API Key. 
 
-- Open MetaMask and go to Settings > Networks > Add Network.
-- Enter the following details:
+![Registration Screen](../../static/img/register.png)
+
+To begin, navigate to Stability's [Account Manager](https://account.stabilityprotocol.com/keys) page and select your preferred method of registration. To receive an API key, you must register using either Github, Google, or Email. If you opt to register via email, ensure to verify your email address.
+
+It's important to note that registrations through Metamask or Magiclink do not provide a dedicated API key.
+
+![Generate API Key Screen](../../static/img/createapi.png)
+
+Once logged in to Stability's Account Manager, locate the option for generating an API key. Click on the designated button to create your unique API key.
+
+Click the info button to reveal your private RPC address. We will be using this to connect to Stability.
+
+
+### 3. Add Network to Metamask
+
+1. **Access MetaMask Extension**
+
+    Click on the MetaMask extension icon in your browser.
+
+2. **Open Settings**
+
+    Inside the MetaMask interface, click on the menu icon (three horizontal lines) and then select `Settings`.
+
+3. **Navigate to Networks**
+
+    In the `Settings` menu, find and click on `Networks`.
+
+4. **Add New Network**
+
+    Click on `Add Network` to start the process of adding a new network.
+
+5. **Choose Manual Addition**
+
+    Select the option to `Add A Network Manually`.
+
+6. **Enter Network Details**
+
+    ![MetaMask RPC Screenshot](../../../static/img/stability-metamask-screenshot.png)
+
+    Fill in the network details as follows:
+
+    - **Network Name:** Stability
+    - **New RPC URL:** `https://free.stble.io/`
+    - **Chain ID:** 20180427
+    - **Currency Symbol:** FREE
+    - **Block Explorer URL:** `https://stability-testnet.blockscout.com/`
+
+    Note: You may encounter a warning regarding the currency symbol. This is expected, as the Stability network does not use a currency for gas fees. The network can be used without a currency balance.
+
+7. **Save and Connect**
+
+    After entering all the information, click `Save`. MetaMask will automatically connect to the newly added network.
 
   - **Mainnet Configuration:**
 
@@ -38,28 +89,6 @@ After installation, you need to add the Stability Protocol network to MetaMask:
 
 Now you're connected to the Stability Protocol network through MetaMask and ready to make transactions or interact with smart contracts.
 
-## Ethers.js Integration
-
-Ethers.js is a concise and powerful library for interacting with the Ethereum blockchain and smart contracts.
-
-### Connecting to Stability Protocol
-
-With MetaMask configured, you can use Ethers.js to interact with the Stability Protocol network programmatically.
-
-#### Example Code Snippet:
-
-```javascript
-const { ethers } = require("ethers");
-
-// Using MetaMask as the provider for Ethers.js
-const provider = new ethers.providers.Web3Provider(window.ethereum);
-
-// Prompt user for account connections
-await provider.send("eth_requestAccounts", []);
-const signer = provider.getSigner();
-
-// Now you can use 'signer' for transactions or smart contract interactions
-```
 
 ## Requirements for Transactions
 
