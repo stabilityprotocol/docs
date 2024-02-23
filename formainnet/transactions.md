@@ -1,0 +1,3 @@
+### Mainnet Transactions and API Key Requirement
+
+When operating on the Mainnet, the free transaction policy available on the Testnet does not apply. Users are required to create an API Key through our **[Stability Portal](https://portal.stabilityprotocol.com)** for conducting transactions on the Mainnet. This key is a crucial component for accessing our Mainnet services, enabling users to securely and effectively manage their transactions.
