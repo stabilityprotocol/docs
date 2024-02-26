@@ -6,52 +6,74 @@ sidebar_position: 3
 
 _Frequently asked questions_
 
-## What is the RPC URL and Chain ID?
+## Using Stability
 
-RPC URL: **https://free.testnet.stabilityprotocol.com**  
-Chain ID: **20180427**
+### How can a public blockchain work without cryptocurrency?
 
-## How do you manually add Stability Network to Metamask?
+Stability sets all gas prices to zero, therefore there is no cost to perform a transaction. 
 
-1. Click the Metamask logo in your browser extensions to open Metamask
-1. Click the Network switcher icon the top left of the window\*\*
-1. Click Add network\*\*
-1. Click Add a network manually at the bottom of the network list\*\*
+### Can I use my existing wallet app on Stability?
 
-Enter the following information:  
- Network Name: **Stability Network**  
- New RPC URL: **https://free.testnet.stabilityprotocol.com**  
- Chain ID: **20180427**  
- Currency Symbol: **FREE**
+Yes, all EVM-compatible wallets, such as Metamask, work on Stability.
 
-## What happens if I run out of transactions?
+### Can I use my existing Ethereum address on Stability?
 
-The transaction status will show as 'Failed'
+Yes. Private keys used on Ethereum, or any other EVM-based blockchain, will resolve to the same public address.
 
-## Paid Transactions FAQs
+### How can I connect to Stability Testnet?
 
-- What does mean `missing queryParam: api_key` error?
+Stability uses the same architecture for performing transactions as most blockchain networks. Simply connect to an RPC and you are able to perform transactions on Stability.
 
-  This means that you haven't setup correctly the `api_key` query param on your wallet provider or http request.
+ We currently offer two options for connecting to Stability Testnet.
 
-- What does mean `unknown api_key`?
+Our public RPC allows a limit of 25 transactions per address. Users wishing to go beyond 25 free daily transactions should register for a free API Key on our testnet. This provides a private RPC this allows for up to 2,000 daily transactions per API Key on Stability Testnet, and only requires a sign on using your e-mail, Github, or Google account. It is completely free. For an easy step-by-step guide to doing so, please check out [User Quickstart](../users/getting_started.md).
 
-  This could mean that either have set wrongly your `api_key` or that you haven't signed up correctly your `api_key` in [Stble Portal](https://portal.stble.io)
+Our connection details for our public RPC is as follows -
+    - **Network Name:** Stability Test Net
+    - **New RPC URL:** `https://free.testnet.stabilityprotocol.com/`
+    - **Chain ID:** 20180427
+    - **Currency Symbol:** FREE
+    - **Block Explorer URL:** `https://stability-testnet.blockscout.com/`
 
-- What does mean `apikey limit exceeded`?
+The setup details for a private RPC on Stability Testnet are the same, save for the RPC URL. Simply replace 'YOUR_API_KEY' with your API key.
+    - **Network Name:** Stability Test Net
+    - **New RPC URL:** `https://free.testnet.stabilityprotocol.com/?api_key=YOUR_API_KEY`
+    - **Chain ID:** 20180427
+    - **Currency Symbol:** FREE
+    - **Block Explorer URL:** `https://stability-testnet.blockscout.com/`
 
-  Every `api_key` has a maximum of transactions that this `api_key` can execute. If this error has been reached you won't be able to execute more transactions in the period of time that your `api_key` is setup for.
+### Will using the private RPC result in my transactions occurring on a different network?
 
-## Free Transactions FAQs
+No, all public and private transactions will occur on the same public testnet network.
 
-- What does mean `free transactions disabled` error?
+### What happens if I run out of free transactions?
 
-  This means that free transactions has been temporarily suspended for some reason.
+If the daily free transactions exceed your allocated daily limit, your transactions will not be processed by Stability Testnet. Each transaction will return as 'Failed'.
 
-- What does mean `gasLimit over maxTxGasLimit=number` error?
+### Why are there limits on the amount of transactions?
 
-  There exist a limit for transaction `gasLimit` value for avoding DoS attack or other posible incovenients.
+We set limits to prevent spamming of the network.
 
-- What does mean `daily limit exceeded` error?
+## Developing on Stability
 
-  There exist a limit for the transactions that an address can perform every day, is this error is shown you are above the limit.
+### I am a developer - how do I develop on Stability?
+
+Developing on Stability uses the same tooling as Ethereum, or any other EVM-based blockchain. 
+
+### Can I deploy and interact with smart contracts on Stability Testnet? Is it the same as Ethereum?
+
+Yes. Stability is an EVM-based blockchain and most smart contract functionality remains the same. There are a few notable differences due to our tokenless model. For further detail, view our [What is different on Stability](../developers/what_is_different.md) documentation.
+
+### Can I create and deploy my own tokens on the Stability Testnet network?
+
+Yes. Go nuts! The Stability Testnet is here for experimentation, and exploring the possiblities of zero-gas transactions.
+
+### I would like to have a larger quota for Stability Testnet transactions. How can I do this?
+
+Please contact us using the following [`Google Form`](https://docs.google.com/forms/d/e/1FAIpQLSfiBQOc0z9HtHyHCH1QCIZWQ0mdJ8koGaWysErJHJRylQy2Yw/viewform)
+
+<!-- ### Community
+
+## What future developments are planned for Stability, and how can I stay updated?
+
+## How can I contribute to the development and improvement of the Stability platform? -->
