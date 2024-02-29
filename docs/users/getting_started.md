@@ -27,7 +27,7 @@ It's important to note that registrations through Metamask or Magiclink do not p
 
 ![Generate API Key Screen](../../static/img/createapi.png)
 
-Once logged in to Stability's Account Manager, locate the option for generating an API key. Click on the designated button to create your unique API key.
+Once logged in to Stability's [Account Manager](https://account.stabilityprotocol.com/keys), locate the option for generating an API key. Click on the designated button to create your unique API key.
 
 Click the info button to reveal your private RPC address. We will be using this to connect to Stability.
 

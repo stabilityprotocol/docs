@@ -4,6 +4,7 @@ sidebar_position: 2
 
 # Architecture
 
+
 Stability blockchain is composed by two major elements:
 
 - **Stability's Blockchain Client:** A Substrate-based blockchain client whose details are furtherly detailed below at [**Blockchain Client**](#blockchain-client).
