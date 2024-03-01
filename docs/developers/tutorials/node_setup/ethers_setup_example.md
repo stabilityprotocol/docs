@@ -12,7 +12,7 @@ This guide will demonstrate the steps to install Ethers.js and configure the fra
 
 - Basic knowledge of programming, blockchain, and Javascript.
 - Node.js and NPM installed on your system.
-- A text editor or IDE for development.
+- A code edtior (IDE). such as Visual Studio.
 
 The complete code of this tutorial can be found at this [link](https://github.com/stabilityprotocol/tutorials/tree/main/setup-ethers-environment)
 
