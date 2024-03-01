@@ -4,74 +4,37 @@ sidebar_position: 2
 
 # Architecture
 
+![Depication of Stability Architecture](../../static/img/arch.png)
 
-Stability blockchain is composed by two major elements:
+## Overview : Come Get Bored With Us!
 
-- **Stability's Blockchain Client:** A Substrate-based blockchain client whose details are furtherly detailed below at [**Blockchain Client**](#blockchain-client).
+Stability Protocol represents a pioneering approach in public blockchains by operating without the need for tokens to facilitate transactions. This is achieved through our innovative validator system. Traditional blockchains rely on consensus mechanisms like Proof of Work (PoW) or Proof of Stake (PoS). In contrast, Stability Protocol introduces a novel consensus mechanism known as Proof of Reputation (PoR). This mechanism involves onboarding trusted entities, which have undergone rigorous Know Your Customer (KYC) procedures, to serve as validators.
 
-- **Zero Gas Transactions Pool System:** A custom transaction pool that enables to execute transactions without paying transaction gas instead other billing mechanisms could be implemented. More details are furtherly detailed below at [**Zero Gas Transaction**](#zero-gas-transaction-zgt)
+## Portal: Private RPCs to Submit Transactions
 
-## Blockchain Client
+To submit transactions to Stability, a user must register through our portal. Users begin by obtaining a private RPC through the portal. This RPC is afforded an allotment of credits, effectively determining the number of transactions a user can submit. To submit a transaction, a user consumes credits from their private RPC allotment. 
+Using the portal, users can monitor their credit usage and obtain additional credits as needed, allowing for continuous and uninterrupted interaction with the network.
 
-Stability is written in the Rust programming language using the **[Substrate](https://github.com/paritytech/polkadot-sdk/tree/master/substrate)** v0.9.43 blockchain framework and the **[Frontier](https://github.com/paritytech/frontier)** suite runtime module. Substrate is an open source Software Development Kit (SDK) created by the Polkadot ecosystem that enables modular and flexible chain development using open protocols to streamline interoperability, such as **[jsonRPC](https://www.jsonrpc.org/specification)** and **[libp2p](https://docs.libp2p.io/concepts/introduction/overview/)**. The SDK provides a library of configurable modules and templates using the **[FRAME](https://docs.substrate.io/reference/frame-pallets/)** development environment to create a custom Substrate runtime. FRAME is composed of three core components: modules, macros, and libraries. These modules are also referred to as pallets and provide core functionality for chain runtime, such as enabling smart contract execution. Frontier is an Ethereum compatibility layer built for the Substrate SDK that enables the execution of unmodified EVM code using **[SputnikVM](https://github.com/rust-blockchain/evm)** as its EVM engine, producing nearly identical results to Ethereum Mainnet.
+## Sequencing: How Stability Prepares Submitted Transactions
 
-### Stability Pallets
+In conventional blockchain systems, transactions are broadcast to a public mempool, where validators and miners select transactions to compile into a new block. Typically, these actors prioritize transactions offering higher fees, as these are more profitable to validate and mine.
 
-Substrate, the foundation of Stability, operates using pallets. These are compact modules designed to execute distinct, specialized functions.
+Stability Protocol adopts a different approach to transaction sequencing. Our network only considers the chronological order of transaction submissions. This method ensures a fairer and more predictable processing time, as transactions are mined based on their submission time rather than their associated gas fees. As a result, users experience a more consistent and equitable transaction processing environment, with transactions typically being processed within a remarkably short timeframe of 2 seconds.
 
-The primary pallets of Stability include:
+The network's infrastructure is robust, capable of handling approximately 10,000 transactions per second (TPS). This high throughput is indicative of the network's efficiency and scalability. The underlying architecture and technology enable the Stability Protocol to maintain high performance while offering the potential for further scalability. This scalability is crucial for accommodating an increasing volume of transactions as the network grows, ensuring that the system remains efficient and responsive even under heavy loads.
 
-#### Consensus Pallets
+## Validators: Achieving Consensus
 
-- **Aura**: Slot-based round-robin scheduled block creation by a known set of authorities/validator nodes
-- **GRANDPA**: Deterministic finality algorithm that uses the longest chain rule requiring a known weighted authority/validator node set, and works in combination with a block production mechanism
+Stability has created a novel consensus mechanism to facilitate our tokenless blockchain.
 
-#### Frontier Pallets
+### Aura: Block Creation
+Aura is a slot-based, round-robin mechanism for block creation, performed by a predefined set of validator nodes. In this system, time is divided into distinct slots, and each slot is assigned to a specific validator. This ensures a predictable and fair block creation process, as each validator knows in advance when it will be their turn to create a block. The round-robin nature of Aura ensures that the opportunity to create blocks is evenly distributed among all validators, enhancing the decentralization and fairness of the process.
 
-- **pallet-evm**: Executes Ethereum contract bytecode for smart contracts that are written in Solidity and are then compiled to EVM bytecode, the core responsibility of the EVM
-- **pallet-ethereum**: Stores Ethereum formatted blocks, transaction receipts, and transaction statuses
+### GRANDPA: Block Finality 
+Grandpa stands for GHOST-based Recursive Ancestor Deriving Prefix Agreement. It is a deterministic finality algorithm that employs the longest chain rule, necessitating a known, weighted set of validator nodes. GRANDPA is designed to work in tandem with a block production mechanism like Aura. It provides finality to blocks, meaning that once a block is deemed final by GRANDPA, it cannot be reverted, ensuring the integrity and continuity of the blockchain. In other words, what GRANDPA says is the correct block is the correct block. The combination of GRANDPA with a block production mechanism ensures both efficient block creation and robust finality, contributing to the overall security and stability of the blockchain.
 
-#### Substrate Pallets
+Together, Aura and GRANDPA form the backbone of the Stability Protocol's consensus mechanism, ensuring a highly secure and efficient blockchain.
 
-- **session**: Enables session key, length, and rotation management
-- **timestamp**: Enables getting and setting the on-chain time
-- **collective**: Enables a set of account IDs to make collective feelings known through dispatched calls from specialized origins
 
-#### Moonbeam Pallets
 
-- **precompile-utils**: Allows users to read data directly off of the Ethereum JSON-RPC, eliminating the need to use an additional library
 
-#### Custom Pallets
-
-- **custom-balances**: Enables `pallet_evm` to get access to the Decentralized Native Token (DNT) user balance
-- **dnt-fee-controller**: Manages fee payment to validators and dApps, to enable Business Shared Revenue (BSR)
-- **erc20-manager**: Used to manage memory access as well as control overflow and underflow to modify contract storage to reflect changes in balances, to be able to use ERC-20 for paying fees
-- **fee-rewards-vault**: Enables a space to hold fee rewards, giving support to the `FeeRewardsVaultController`
-- **root-controller**: Enables privileged calls and origins
-- **sponsored-transactions**: Allows for a third-party to pay the fees of a standard transaction, in the event that Zero Gas Transactions (ZGT) is not used
-- **token-fee-controller**: Enables Decentralized Native Token (DNT) with a user fee selector and validator fee selector, from the `SupportedTokensManager`
-- **upgrade-runtime-proposal**: Used to update the runtime
-- **validator-set**: Used to manage validators, such as adding and removing validators
-- **zero-gas-transactions**: Enables non-financial transaction execution
-
-For more information about pallets you can reference the `substrate_node` API documentation **[here](https://paritytech.github.io/polkadot-sdk/master/substrate_node/index.html)**.
-
-## Zero Gas Transaction (ZGT)
-
-Zero Gas Transactions is the unique solution of Stability for enabling the usage of blockchain without the friction of using cryptocurrency, enhancing this way UX and helping non-Web3 companies onboard and leverage the utility of this technology.
-
-### How it works?
-
-In Stability, validators have the ability to reserve a segment of the block for feeless transactions. This approach allows validators to explore alternative business models for transaction validation that are not influenced by the volatility of the fee market.
-
-### Stability ZGT Pool
-
-Using the ZGT framework of Stability blockchain client, we developed a ZGT pool that is supported by all our validators, enabling the execution of feeless transactions. For using this service, go to [**ZGT Portal Root**](https://portal.stabilityprotocol.com).
-
-Stability ZGT mempool consists of three main components:
-
-- **Proxy**: Is the entrypoint of system to which the user will connect, is a wrapped RPC connection to Stability.
-- **API**: Is the endpoint used by the validator's to retrieve pending zero gas transactions.
-- **Worker**: Both proxy and API generate some backgrounds task to perform, the worker is incharged of executing them.
-
-![ZGT System](./zgt_arquitecture.png)
