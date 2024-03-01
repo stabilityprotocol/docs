@@ -10,7 +10,7 @@ Welcome to the Stability Network, an innovative approach to blockchain technolog
 
 ### Tokenless
 
-**No Transaction Fees**: Unlike traditional blockchains that require tokens for transaction fees (often referred to as "gas"), Stability offers a groundbreaking alternative. Transactions on the Stability network are completely free, eliminating the need for users to hold or manage any form of native cryptocurrency. This is made possible through the use of API keys, which allocate transactions to users through secure, unique RPC addresses. This tokenless approach allows for an accessable, better user experience while reducing costs for all parties.
+**Transactions without Gas Fees**: Unlike traditional blockchains that require tokens for transaction fees (often referred to as "gas"), Stability offers a groundbreaking alternative. Transactions on the Stability network do not require a token, eliminating the need for users to hold or manage any form of native cryptocurrency. This is made possible through the use of API keys, which allocate transactions to users through secure, unique RPC addresses. This tokenless approach allows for an accessable, better user experience while reducing costs for all parties.
 
 ### Open-Source
 
