@@ -14,11 +14,6 @@ The Stability JSON RPC API supports familiar Ethereum/Geth-compatible endpoints 
 
 ## EVM RPC Endpoints
 
-### Mainnet
-
-- RPC URL: **https://free.stabilityprotocol.com**
-- Chain ID: **101010**
-
 ### Testnet
 
 - RPC URL: **https://free.testnet.stabilityprotocol.com**
