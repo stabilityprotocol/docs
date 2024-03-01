@@ -8,7 +8,7 @@ sidebar_position: 2
 
 ## Overview : Let's Get Boring!
 
-Stability Protocol represents a pioneering approach in public blockchains by operating without the need for tokens to facilitate transactions. This is achieved through our innovative validator system. Traditional blockchains rely on consensus mechanisms like Proof of Work (PoW) or Proof of Stake (PoS). In contrast, Stability Protocol introduces a novel consensus mechanism known as Proof of Reputation (PoR). This mechanism involves onboarding trusted entities, which have undergone rigorous Know Your Customer (KYC) procedures, to serve as validators.
+Stability Protocol represents a pioneering approach in public blockchains by operating without the need for tokens to facilitate transactions. This is achieved through our innovative validator system. Traditional blockchains rely on consensus mechanisms like Proof of Work (PoW) or Proof of Stake (PoS). In contrast, Stability Protocol introduces a novel consensus mechanism known as Proof of Reputation (PoR). This mechanism involves onboarding trusted entities to serve as validators.
 
 ## Portal: Private RPCs to Submit Transactions
 
