@@ -4,13 +4,13 @@ sidebar_position: 2
 
 # What Is Different In Stability
 
-# 1. Introduction
+## Introduction
 
 Stability is compatible with the EVM web3 development environments you're already familiar with, such as Ethers, Viem, Hardhat, Foundry, etc. This compatibility allows developers to seamlessly transition their existing skills and projects to Stability without having to navigate a steep learning curve associated with entirely new development environments.
 
 One of the key differences with Stability is its lack of a native token. This fundamental change affects the execution of transactions that typically involve the transfer of native tokens, which is a core functionality in many Ethereum-based applications. As a result, developers will find that some standard operations and Solidity functionalities will not work as expected on Stability.
 
-# 2. Examples
+## Examples
 
 ### Native Token Value Transfers
 
@@ -54,6 +54,6 @@ In the context of Stability, declaring functions and addresses as payable is unn
 
 The receive() and fallback() functions in Solidity are designed to handle incoming transactions and unspecified function calls, respectively. However, without the capability to transfer native tokens, these functions lose their primary purpose on Stability. Developers will need to consider alternative methods for contract interactions that do not rely on direct value transfers.
 
-# 3. Conclusion
+## Review
 
 While developing on Stability offers a familiar experience to working with other EVM-compatible blockchains, the absence of a native token introduces specific considerations that developers must account for. This unique characteristic of Stability necessitates a cautious approach to smart contract and backend development, ensuring that applications are designed with these limitations in mind.
