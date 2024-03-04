@@ -2,14 +2,14 @@
 sidebar_position: 1
 ---
 
-# Getting Started / Connect to Stability
+# Getting Started / Connect to Stability Testnet
 
 This quickstart guide is intended for users who wish to use the Stability Network through browser-based extensions. In this example, we will use MetaMask, the most popular browser extension for interacting with blockchains.
 
 
 ## MetaMask Configuration
 
-MetaMask allows users to interact with the Stability blockchain easily. Here's how to set it up for Stability Protocol:
+MetaMask allows users to interact with the Stability Testnet blockchain easily. Here's how to set it up:
 
 ### 1. Installing MetaMask
 

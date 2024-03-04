@@ -36,15 +36,15 @@ After following these instructions, you will arrive at a page like this:
 
 ![Metamask add network](metamask_add_network.png)
 
-In `Network Name`, type `Stability Network`.
+In `Network Name`, type `Stability Testnet`.
 
-In `New RPC URL`, type `https://free.stabilityprotocol.com?api_key={YOUR_API_KEY}`. Remember to replace `YOUR_API_KEY` with the API key you obtained in step 2.
+In `New RPC URL`, type `https://free.testnet.stabilityprotocol.com/?api_key={YOUR_API_KEY}`. Remember to replace `YOUR_API_KEY` with the API key you obtained in step 2.
 
-In `Chain ID`, type `101010`.
+In `Chain ID`, type `20180427`.
 
 In `Currency Symbol`, type `FREE`.
 
-Finally, in 'Block Explorer URL', type `https://stability-mainnet.blockscout.com/`.
+Finally, in 'Block Explorer URL', type `https://stability-testnet.blockscout.com/`.
 
 Now, you have successfully added the Stability Network to your MetaMask, fully configured with your API Key.
 

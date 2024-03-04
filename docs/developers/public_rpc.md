@@ -19,6 +19,12 @@ The Stability JSON RPC API supports familiar Ethereum/Geth-compatible endpoints 
 - RPC URL: **https://free.testnet.stabilityprotocol.com**
 - Chain ID: **20180427**
 
+
+### Global Trust Network Mainnet
+
+- RPC URL: **https://gtn.stabilityprotocol.com**
+- Chain ID: **101010**
+
 ## Stability Custom RPC Endpoints
 
 > `stability_getValidatorList`
