@@ -2,14 +2,14 @@
 sidebar_position: 1
 ---
 
-# Getting Started / Connect to Stability Testnet
+# Getting Started / Connect to Global Trust Network (GTN) or Stability Testnet
 
-This quickstart guide is intended for users who wish to use the Stability Network through browser-based extensions. In this example, we will use MetaMask, the most popular browser extension for interacting with blockchains.
+This quickstart guide is intended for users who wish to use the Global Trust Network (GTN) through browser-based extensions. In this example, we will use MetaMask, the most popular browser extension for interacting with blockchains.
 
 
 ## MetaMask Configuration
 
-MetaMask allows users to interact with the Stability Testnet blockchain easily. Here's how to set it up:
+MetaMask allows users to interact with the Global Trust Network blockchain easily. Here's how to set it up:
 
 ### 1. Installing MetaMask
 
@@ -17,9 +17,9 @@ If you haven't already, install MetaMask for your browser from the [official Met
 
 ### 2. Sign Up For An API Key
 
-After installation, you need to add the Stability Protocol network to MetaMask. This requires registering for an API Key.
+After installation, you need to add the Global Trust Network to MetaMask. This requires registering for an API Key.
 
-![Registration Screen](../../static/img/register.png)
+![Registration Screen](../../static/img/connect.png)
 
 To begin, navigate to Stability's [Account Manager](https://account.stabilityprotocol.com/keys) page and select your preferred method of registration. To receive an API key, you must register using either Github, Google, or Email. If you opt to register via email, ensure you are able to verify your email address.
 
@@ -29,36 +29,43 @@ It's important to note that registrations through Metamask or Magiclink do not p
 
 Once logged in to Stability's [Account Manager](https://account.stabilityprotocol.com/keys), locate the option for generating an API key. Click on the designated button to create your unique API key.
 
-Click the info button to reveal your private RPC address. We will be using this to connect to Stability.
 
-![API Key to RPC](../../static/img/apikeyrpc.png)
+### 3a. Add Network to Metamask + Other Compatible Wallets
 
-### 3. Add Network to Metamask
+![Metamask Logo](../../static/img/metamaskarrow.png)
 
-    Click on the MetaMask extension icon in your browser.
+    To add your custom RPC to your browser extension wallet, click the Metamask Fox Logo next to your API Key. This will work with Metamask as well as many Browser-extension based wallet. 
+    - Note: You may encounter a warning regarding the currency symbol. This is expected, as the Stability network does not use a currency for gas fees. The network can be used without a currency balance.
 
-    Inside the MetaMask interface, click on the menu icon (three horizontal lines) and then select `Settings`.
+    If you are not able to add the network to your wallet, you may have to add the network manually. Follow the instructions below.
 
-    In the `Settings` menu, find and click on `Networks`.
+### 3b. Add Network Manually to a Wallet
 
-    Click on `Add Network` to start the process of adding a new network.
+    In the event your wallet in not compatible with adding chains via Javascript, you can add the following details to your wallet.
+    Replace the 'YOUR_API_KEY' with your own API key.
 
-    Select the option to `Add A Network Manually`.
+| **Global Trust Network (GTN)**                   |                                       |
+|------------------------|-----------------------------------------------------------|
+| Network Name           | Global Trust Network                                      |
+| New RPC URL            | `https://gtn.stabilityprotocol.com/?api_key=YOUR_API_KEY` |
+| Chain ID               | 101010                                                    |
+| Currency Symbol        | FREE                                                      |
+| Block Explorer URL     | `https://stability.blockscout.com/`                       |
 
-    ![MetaMask RPC Screenshot](../../static/img/addnetworktometamask.png)
+| **Stability Test Net (TestNet)** |                                 |
+|------------------------|-----------------------------------------------------------|
+| Network Name           | Stability Test Net                                        |
+| New RPC URL            | `https://free.testnet.stabilityprotocol.com/?api_key=YOUR_API_KEY` |
+| Chain ID               | 20180427                                                      |
+| Currency Symbol        | FREE                                                      |
+| Block Explorer URL     | `https://stability-testnet.blockscout.com/`                       |
 
-    Fill in the network details for Stability Test Net as follows. Replace the 'YOUR_API_KEY' with your own API key.
 
-    - **Network Name:** Stability Test Net
-    - **New RPC URL:** https://free.testnet.stabilityprotocol.com/?api_key=YOUR_API_KEY
-    - **Chain ID:** 20180427
-    - **Currency Symbol:** FREE
-    - **Block Explorer URL:** `https://stability-testnet.blockscout.com/`
+   - Note: You may encounter a warning regarding the currency symbol. This is expected, as the Stability network does not use a currency for gas fees. The network can be used without a currency balance.
 
-    Note: You may encounter a warning regarding the currency symbol. This is expected, as the Stability network does not use a currency for gas fees. The network can be used without a currency balance.
 
-    After entering all the information, click `Save`. MetaMask will automatically connect to the newly added network.
+### 4. Complete!
 
-You're now connected to the Stability Protocol network through MetaMask and ready to make transactions or interact with smart contracts.
+You're now connected to the our blockchain network and ready to make transactions or interact with smart contracts!
 
 

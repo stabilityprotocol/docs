@@ -15,3 +15,8 @@ As part of our dedication to user convenience and platform accessibility, we off
 To expand your transaction limit on the Stability Testnet, simply register for an API Key through the **[Stability Portal](https://portal.stabilityprotocol.com)**. Each registered API key is allocated additional transaction allowances. For a detailed, step-by-step explanation on how to use an API key for transactions, please visit our  **[Getting Started](./getting_started.md)** user documentation. 
 
 
+### Free Transactions on Global Trust Network (GTN)
+
+Global Trust Network (GTN) offers free transactions with a registered API Key. The same process applies. Simply register for an API Key through the **[Stability Portal](https://portal.stabilityprotocol.com)**. Each registered API key is allocated additional transaction allowances. For a detailed, step-by-step explanation on how to use an API key for transactions, please visit our  **[Getting Started](./getting_started.md)** user documentation. 
+
+

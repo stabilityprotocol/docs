@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Getting Started
 
-This quickstart is tailored for developers eager to connect with and explore the capabilities of the Stability Network directly. This guide is designed for developers aiming to craft decentralized applications (dApps), enthusiasts keen on engaging with Stability's blockchain beyond frontends, and anyone interested in understanding what sets Stability apart from traditional EVMs and smart contracts.
+This quickstart is tailored for developers eager to connect with and explore the capabilities of the Stability Testnet and Global Trust Network (GTN) directly. This guide is designed for developers aiming to craft decentralized applications (dApps), enthusiasts keen on engaging with Stability's blockchain, and anyone interested in understanding what sets Stability apart from traditional EVMs and smart contracts.
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ If you opt to register via email, ensure to verify your email address. Verificat
 
 Once logged in to Stability's Account Manager, locate the option for generating an API key. Click on the designated button to create your unique API key.
 
-With your API key, you're now equipped to utilize your private RPC on Stability. Click the info button to reveal your private RPC address. Plus, you'll receive 1,000 free credits monthly with your API key, which can be used for any transactions you choose.
+With your API key, you're now equipped to utilize your private RPC on Stability. Click the info button to reveal your private RPC address. Plus, you'll receive 2,000 free credits monthly with your API key, which can be used for any transactions you choose.
 
 ### Step 3: Ready to Go!
 
