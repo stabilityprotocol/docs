@@ -20,6 +20,19 @@ Yes, all EVM-compatible wallets, such as Metamask, work on Stability.
 
 Yes. Private keys used on Ethereum, or any other EVM-based blockchain, will resolve to the same public address.
 
+### How can I connect to Global Trust Network (GTN)?
+
+Global Trust Network (GTN) uses the same architecture for performing transactions as most blockchain networks. Simply connect to an RPC and you are able to perform transactions on GTN.
+
+To perform trnasactions on GTN, you must sign up for an API key. This allows for up to 2,000 daily transactions per API Key on Global Trust Network, and only requires a sign on using your e-mail, Github, or Google account. It is completely free. For an easy step-by-step guide to doing so, please check out [User Quickstart](../users/getting_started.md).
+
+The connection details for GTN are as follows. Simply replace 'YOUR_API_KEY' with your API key.
+    - **Network Name:** Global Trust Network
+    - **New RPC URL:** `https://free.testnet.stabilityprotocol.com/?api_key=YOUR_API_KEY`
+    - **Chain ID:** 101010
+    - **Currency Symbol:** FREE
+    - **Block Explorer URL:** `https://stability.blockscout.com/`
+
 ### How can I connect to Stability Testnet?
 
 Stability uses the same architecture for performing transactions as most blockchain networks. Simply connect to an RPC and you are able to perform transactions on Stability.

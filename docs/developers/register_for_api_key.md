@@ -20,6 +20,8 @@ If you opt to register via email, ensure to verify your email address. Verificat
 
 ![Generate API Key Screen](../../static/img/createapi.png)
 
+Using the dropdown menu at the top right, select if you would like an API Key generated for Global Trust Network or Stability Testnet. Whichever option is selected is the network the API key will be generated for.
+
 Once logged in to Stability's Account Manager, locate the option for generating an API key. Click on the designated button to create your unique API key.
 
 With your API key, you're now equipped to utilize your private RPC on Stability. Click the info button to reveal your private RPC address. Plus, you'll receive 1,000 free credits monthly with your API key, which can be used for any transactions you choose.

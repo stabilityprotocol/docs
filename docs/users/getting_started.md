@@ -44,7 +44,9 @@ Once logged in to Stability's [Account Manager](https://account.stabilityprotoco
     In the event your wallet in not compatible with adding chains via Javascript, you can add the following details to your wallet.
     Replace the 'YOUR_API_KEY' with your own API key.
 
-| **Global Trust Network (GTN)**                   |                                       |
+**For Global Trust Network**
+
+| **Property**           | **Value**                                                 |
 |------------------------|-----------------------------------------------------------|
 | Network Name           | Global Trust Network                                      |
 | New RPC URL            | `https://gtn.stabilityprotocol.com/?api_key=YOUR_API_KEY` |
@@ -52,13 +54,16 @@ Once logged in to Stability's [Account Manager](https://account.stabilityprotoco
 | Currency Symbol        | FREE                                                      |
 | Block Explorer URL     | `https://stability.blockscout.com/`                       |
 
-| **Stability Test Net (TestNet)** |                                 |
-|------------------------|-----------------------------------------------------------|
-| Network Name           | Stability Test Net                                        |
+
+**For Stability Testnet**
+
+| **Property**           | **Value**                                                            |
+|------------------------|----------------------------------------------------------------------|
+| Network Name           | Stability Test Net                                                   |
 | New RPC URL            | `https://free.testnet.stabilityprotocol.com/?api_key=YOUR_API_KEY` |
-| Chain ID               | 20180427                                                      |
-| Currency Symbol        | FREE                                                      |
-| Block Explorer URL     | `https://stability-testnet.blockscout.com/`                       |
+| Chain ID               | 20180427                                                             |
+| Currency Symbol        | FREE                                                                 |
+| Block Explorer URL     | `https://stability-testnet.blockscout.com/`   
 
 
    - Note: You may encounter a warning regarding the currency symbol. This is expected, as the Stability network does not use a currency for gas fees. The network can be used without a currency balance.

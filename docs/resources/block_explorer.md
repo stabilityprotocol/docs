@@ -4,6 +4,10 @@ sidebar_position: 1
 
 # Block Explorer
 
+The Global Trust Network (GTN) Block Explorer can be accessed by the following URL:
+
+[https://stability.blockscout.com/](https://stability.blockscout.com/)
+
 The Stability Testnet Block Explorer allows you to inspect, analyze, and interact with real-time data on Stability Chain Testnet. The block explorer can be accessed by the following URL:  
   
 [https://stability-testnet.blockscout.com/](https://stability-testnet.blockscout.com/)
@@ -28,15 +32,5 @@ _Forked blocks are not included in the primary chain due to chain reorganization
   
 The Stability Block Explorer provides high-level data for all minted [ERC-20](https://eips.ethereum.org/EIPS/eip-20), [ERC-721](https://eips.ethereum.org/EIPS/eip-721), and [ERC-1155](https://eips.ethereum.org/EIPS/eip-1155) tokens.
 
-## Applications
 
-The Stability Block Explorer allows you to view details about transactions for the network as a whole as well as for individual Stability dApps.
 
-## API
-  
-The Stability Block Explorer supports several methods for calls:
-  
-Rest API  
-GraphQL  
-RPC API  
-ETH RPC API  
