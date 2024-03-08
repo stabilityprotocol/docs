@@ -4,7 +4,7 @@
 
 ### Tutorial Objective
 
-This tutorial teaches how to deploy an ERC20 Smart Contract on the Stabilityprotocol blockchain using Hardhat and TypeScript.
+This tutorial teaches how to deploy an ERC20 Smart Contract on Stability Testnet using Hardhat and TypeScript.
 
 ### Prerequisites
 
@@ -18,16 +18,24 @@ The complete code of this tutorial can be found at this [link](https://github.co
 
 ## 2. Get an Api Key
 
-In stability, we have created a system where transactions don’t require gas. Instead, our users need to have an API key that identifies them. To get your first API key, you need to visit this website: [link](https://account.stabilityprotocol.com/zgt)
+On Stability, we have created a system where transactions don’t require gas. Instead, our users need to have an API key that identifies them. To get your first API key, you need to visit this website: [link](https://account.stabilityprotocol.com/zgt)
 
 When you visit this website, you will see something similar to this:
-![Api Key Portal](api_keys_1.png)
+![Registration Screen](../../../../static/img/connect.png)
 
 You need to choose a login method. You can use a conventional login like email or GitHub, or if you prefer, a more blockchain-oriented login like MetaMask. The choice is yours.
 
 Once you are logged in, click on the 'Create New' button. After this, an API key will appear in the table.
 
-Now, you have an API Key completely ready for use.
+![Generate API Key Screen](../../../../static/img/createapi.png)
+
+Now, you have an API Key completely ready for use. Click the Info button to reveal your API Key.
+
+![API Info Button](../../../../static/img/infobuttonwitharrow.png)
+
+And there it is! Copy this API key for later. You can always come back to this page to access again in the future.
+
+![API Info Screen](../../../../static/img/apikeyinfo.png)
 
 ## 3. Setting Up the Development Environment
 
@@ -74,11 +82,11 @@ contract MyERC20 is ERC20 {
 }
 ```
 
-## 5. Deployment of the Smart Contract on Stabilityprotocol
+## 5. Deployment of the Smart Contract on Stability Testnet
 
 ### Configuration of the hardhat.config.ts File
 
-Edit `hardhat.config.ts` to include the Stabilityprotocol network. Replace `YOUR_API_KEY` with the api key obtained in step 2
+Edit `hardhat.config.ts` to include Stability Testnet. Replace `YOUR_API_KEY` with the api key obtained in step 2
 
 ```ts
 import { HardhatUserConfig } from "hardhat/config";
@@ -146,6 +154,6 @@ If you now take that address and search for it in the Stability block explorer, 
 
 ![Contract deployed image](contract_deployed_image.png)
 
-### Conclusion
+### Congrats!
 
-Deploying a contract on the Stability network using Hardhat is very simple, as despite having zero gas transactions, the network maintains EVM compatibility, which allows using all existing tools in the EVM ecosystem to expedite the development of applications.
+Deploying a contract on the Stability Testnet using Hardhat is very simple, as despite having zero gas transactions, the network maintains EVM compatibility, which allows using all existing tools in the EVM ecosystem to expedite the development of applications.

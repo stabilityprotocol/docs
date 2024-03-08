@@ -6,7 +6,7 @@ sidebar_position: 7
 
 ## What is the Stability RPC?
 
-The Stability RPC allows applications to connect to a Stability node that is part of the Stability Blockchain Network. Users can interact with on-chain data and send transactions programmatically by using endpoints provided by this API, or through a UI that uses these endpoints as its backend. The API follows a JSON-RPC standard with a uniform set of methods agnostic of custom applications or nodes, that is lightweight and stateless remote procedure call using JSON as its data format (RFC 4627).
+The Stability RPC allows applications to connect to a Stability node that is part of the Stability Blockchain Network. Users can interact with on-chain data by using endpoints provided by this API, or through a UI that uses these endpoints as its backend. The API follows a JSON-RPC standard with a uniform set of methods agnostic of custom applications or nodes, that is lightweight and stateless remote procedure call using JSON as its data format (RFC 4627).
 
 The Stability JSON RPC API supports familiar Ethereum/Geth-compatible endpoints in addition to Stability-custom endpoints that have functionality specialized to our ecosystem.
 
@@ -14,7 +14,10 @@ The Stability JSON RPC API supports familiar Ethereum/Geth-compatible endpoints 
 
 ## EVM RPC Endpoints
 
-### Testnet
+### Stability Testnet
+
+The Testnet RPC allows for reading the blockchain, and for 20 daily transactions per an address to be executed. 
+Users wishing to execute more daily transactions are welcome to sign up for a free API key. To sign up for a free API Key, go to our [Getting Started page](./getting_started)
 
 - RPC URL: **https://free.testnet.stabilityprotocol.com**
 - Chain ID: **20180427**

@@ -12,11 +12,11 @@ This tutorial presumes a foundational understanding of blockchain technology and
 
 ## Register for an API Key
 
-The Stability Network employs API keys to manage transactions. Currently, each address is given a limited number of free transactions without an API key using our public RPC. However, to increase the number of transactions that a certain user can execute, users are required to sign up with our [Account Manager](https://account.stabilityprotocol.com/keys) for their very own private RPC address.
+Global Trust Network (GTN) and Stability Testnet employ API keys to manage transactions. On Global Trust Network, an API key is required to perform write transactions. On Stability Testnet, each address is given a limited number of free transactions without an API key using our public RPC. To increase the number of transactions that a certain user can execute on either chain, users are required to sign up with our [Account Manager](https://account.stabilityprotocol.com/keys) for their very own private RPC address.
 
-### Step 1: Register on Stability's Account Manager
+### Step 1: Register on Stability's Account Manager for an API Key.
 
-![Registration Screen](../../static/img/register.png)
+![Registration Screen](../../static/img/connect.png)
 
 To begin, navigate to Stability's [Account Manager](https://account.stabilityprotocol.com/keys) page and select your preferred method of registration. To receive a dedicated API key, you must register using either Github, Google, or Email. It's important to note that registrations through Metamask or Magiclink do not provide a dedicated API key.
 
@@ -26,9 +26,9 @@ If you opt to register via email, ensure to verify your email address. Verificat
 
 ![Generate API Key Screen](../../static/img/createapi.png)
 
-Once logged in to Stability's Account Manager, locate the option for generating an API key. Click on the designated button to create your unique API key.
+Once logged in to Stability's Account Manager, locate the option for generating an API key. Click on the designated button to create your unique API key on the current network. The network is selected via the dropdown menu on the top right.
 
-With your API key, you're now equipped to utilize your private RPC on Stability. Click the info button to reveal your private RPC address. Plus, you'll receive 2,000 free credits monthly with your API key, which can be used for any transactions you choose.
+With your API key, you're now equipped to utilize your private RPC on Stability or Global Trust Network (GTN). Click the info button to reveal your private RPC address. Plus, you'll receive 2,000 free credits monthly with your API key, which can be used for any transactions you choose.
 
 ### Step 3: Ready to Go!
 

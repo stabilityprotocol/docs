@@ -4,7 +4,7 @@
 
 ### Tutorial Objective
 
-This tutorial teaches how to deploy an ERC20 Smart Contract on the Stabilityprotocol blockchain using Remix IDE
+This tutorial teaches how to deploy an ERC20 Smart Contract on the Stability Testnet using Remix IDE.
 
 Remix is an online smart contract IDE that does not require installation.
 
@@ -13,40 +13,48 @@ Remix is an online smart contract IDE that does not require installation.
 - Basic knowledge of programming and blockchain
 - Metamask installed
 
-## 2. Get an Api Key
+### 2. Sign Up For An API Key
 
-In stability, we have created a system where transactions don’t require gas. Instead, our users need to have an API key that identifies them. To get your first API key, you need to visit this website: [link](https://account.stabilityprotocol.com/zgt)
+After installation, you need to add Stability Testnet to MetaMask. This requires registering for an API Key.
 
-When you visit this website, you will see something similar to this:
-![Api Key Portal](api_keys_1.png)
+![Registration Screen](../../../../static/img/connect.png)
 
-You need to choose a login method. You can use a conventional login like email or GitHub, or if you prefer, a more blockchain-oriented login like MetaMask. The choice is yours.
+To begin, navigate to Stability's [Account Manager](https://account.stabilityprotocol.com/keys) page and select your preferred method of registration. To receive an API key, you must register using either Github, Google, or Email. If you opt to register via email, ensure you are able to verify your email address.
 
-Once you are logged in, click on the 'Create New' button. After this, an API key will appear in the table.
+It's important to note that registrations through Metamask or Magiclink do not provide a dedicated API key.
 
-Now, you have an API Key completely ready for use.
+![Generate API Key Screen](../../../../static/img/createapi.png)
 
-## 3. Add stability network to metamask
+Once logged in to Stability's [Account Manager](https://account.stabilityprotocol.com/keys), locate the option for generating an API key. Click on the designated button to create your unique API key.
 
-Once you have your API key, you need to add the Stability Network to your MetaMask using your API key.
+### 3a. Add Network to Metamask + Other Compatible Wallets
 
-To add the Stability Network to MetaMask, visit the network section in your MetaMask -> click on 'Add a Network' -> click on 'Add a network manually'.
+![Metamask Logo](../../../../static/img/metamaskarrow.png)
 
-After following these instructions, you will arrive at a page like this:
+    To add your custom RPC to your browser extension wallet, click the Metamask Fox Logo next to your API Key. This will work with Metamask as well as many Browser-extension based wallet. 
+    - Note: You may encounter a warning regarding the currency symbol. This is expected, as the Stability Testnet does not use a currency for gas fees. The network can be used without a currency balance.
 
-![Metamask add network](metamask_add_network.png)
+    If you are not able to add the network to your wallet, you may have to add the network manually. Follow the instructions below.
 
-In `Network Name`, type `Stability Testnet`.
+### 3b. Add Network Manually to a Wallet
 
-In `New RPC URL`, type `https://free.testnet.stabilityprotocol.com/?api_key={YOUR_API_KEY}`. Remember to replace `YOUR_API_KEY` with the API key you obtained in step 2.
+    In the event your wallet in not compatible with adding chains via Javascript, you can add the following details to your wallet.
+    Replace the 'YOUR_API_KEY' with your own API key.
 
-In `Chain ID`, type `20180427`.
+**For Stability Testnet**
 
-In `Currency Symbol`, type `FREE`.
+| **Property**           | **Value**                                                            |
+|------------------------|----------------------------------------------------------------------|
+| Network Name           | Stability Test Net                                                   |
+| New RPC URL            | `https://free.testnet.stabilityprotocol.com/?api_key=YOUR_API_KEY` |
+| Chain ID               | 20180427                                                             |
+| Currency Symbol        | FREE                                                                 |
+| Block Explorer URL     | `https://stability-testnet.blockscout.com/`   
 
-Finally, in 'Block Explorer URL', type `https://stability-testnet.blockscout.com/`.
 
-Now, you have successfully added the Stability Network to your MetaMask, fully configured with your API Key.
+   - Note: You may encounter a warning regarding the currency symbol. This is expected, as the Stability network does not use a currency for gas fees. The network can be used without a currency balance.
+
+
 
 ## 4. Setting Up Remix
 

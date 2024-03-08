@@ -6,7 +6,7 @@ sidebar_position: 4
 
 ## 1. Introduction
 
-This guide will demonstrate the steps to install Viem and configure the framework for interacting with the Stability blockchain. Viem offers a streamlined approach for Ethereum developers looking to engage with Stability, ensuring a smooth development experience.
+This guide will demonstrate the steps to install Viem and configure the framework for interacting with the Stability Testnet. Viem offers a streamlined approach for Ethereum developers looking to engage with Stability, ensuring a smooth development experience.
 
 ### Prerequisites
 
@@ -31,7 +31,7 @@ For this setup, we'll be utilizing npm, ts-node, and Viem. This combination allo
 
 ## 4. Install
 
-Begin by installing Viem and ts-node via npm. This step ensures that you have the necessary tools to create and run TypeScript files that interact with the Stability blockchain.
+Begin by installing Viem and ts-node via npm. This step ensures that you have the necessary tools to create and run TypeScript files that interact with Stability Testnet.
 
 ```bash
 npm i viem ts-node

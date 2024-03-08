@@ -6,7 +6,7 @@ sidebar_position: 3
 
 ## 1. Introduction
 
-This guide will demonstrate the steps to install Ethers.js and configure the framework for interacting with the Stability blockchain. Ethers.js is a widely used library that enables developers to interact with the Ethereum blockchain and its ecosystem, including custom networks like Stability, in a simple and intuitive way using JavaScript.
+This guide will demonstrate the steps to install Ethers.js and configure the framework for interacting with the Stability Testnet. Ethers.js is a widely used library that enables developers to interact with the Ethereum blockchain and its ecosystem, including custom networks like Stability, in a simple and intuitive way using JavaScript.
 
 ### Prerequisites
 
@@ -35,6 +35,8 @@ npm install ethers
 ## 5. Create an Index.js File
 
 Next, create a Javascript file named Index.js and paste the following code. This script configures Ethers to connect to the Stability Testnet, allowing you to interact with the blockchain. In this example, we will retrieve the current block number.
+
+If you wish to deploy on Global Trust Network (GTN), simply swap out `"https://free.testnet.stabilityprotocol.com"` with your private Global Trust Network RPC URL. 
 
 ```bash
 
@@ -65,3 +67,4 @@ node index.js
 Upon successful execution, you should see a console log displaying the current block number of the Stability blockchain. This step confirms that your Javascript / Ethers setup is correctly configured to interact with the Stability network.
 
 ![Console Return of Block Number](../../../../static/img/blocknumberethers.png)
+
