@@ -16,12 +16,14 @@ The Stability JSON RPC API supports familiar Ethereum/Geth-compatible endpoints 
 
 ### Stability Testnet
 
-The Testnet RPC allows for reading the blockchain, and for 20 daily transactions per an address to be executed. 
+The Stability Public Testnet RPC allows for reading the blockchain, and for 20 daily transactions per an address to be executed. 
 Users wishing to execute more daily transactions are welcome to sign up for a free API key. To sign up for a free API Key, go to our [Getting Started page](./getting_started)
 
 - RPC URL: **https://free.testnet.stabilityprotocol.com**
 - Chain ID: **20180427**
 
+The Global Trust Network (GTN) Public RPC allows for reading the blockchain. Users cannot execute transactions using the GTN Public RPC.
+Users wishing to execute transactions are welcome to sign up for a free API key. To sign up for a free API Key, go to our [Getting Started page](./getting_started)
 
 ### Global Trust Network Mainnet
 
@@ -30,27 +32,29 @@ Users wishing to execute more daily transactions are welcome to sign up for a fr
 
 ## Stability Custom RPC Endpoints
 
+Both networks contain a set of custom RPC points created by the Stability Team.
+
 > `stability_getValidatorList`
 
-Obtain the current validator set, showcasing the validators within the network.
+Obtain the current validator set, returning the current validator addresses approved to maintain the network.
 
 #
 
 > `stability_getActiveValidatorList`
 
-Obtain the current active validator set, showcasing the active validators within the network.
+Obtain the current active validator set, returning the current validator addresses actively maintaining the network.
 
 #
 
 > `stability_getSupportedTokens`
 
-Fetch a list of network-supported tokens eligible for transaction fee payments and potential mining rewards under certain conditions.
+Fetch a list of network-supported tokens. This feature is experimental. This allows for a future use case where network-supported tokens can potentially be used for transaction payments.
 
 #
 
 > `stability_sendSponsoredTransaction`
 
-Submit a transaction that is sponsored to the network's mempool, facilitating transactions without direct fee payment by the sender.
+Submit a transaction that is sponsored to the network's mempool, facilitating transactions without direct fee payment by the sender. This feature is experimental. This allows for a future use case where a user submits a transaction, and a sponsor wallet can execute the transaction.
 
 ## Example
 
@@ -64,4 +68,4 @@ $ curl 'https://free.testnet.stabilityprotocol.com/' \
 {"jsonrpc":"2.0","result":{"code":200,"value":["0xdc2b93f3291030f3f7a6d9363ac37757f7ad5c43"]},"id":1}
 ```
 
-This snippet demonstrates how to query the supported tokens using the stability_getSupportedTokens endpoint, showcasing the API's straightforward and efficient interaction model.
+This snippet demonstrates how to query the supported tokens using the stability_getSupportedTokens endpoint.

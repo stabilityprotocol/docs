@@ -1,23 +1,27 @@
 ---
-title: "Node Upgrades"
+sidebar_position: 5
 ---
 
-Stability blockchain client will be updated within time for enhancing the utility and effiency of the ecosystem. For this reason, there will be upgrades of the client that validators will have to update to.
+# Node Upgrades Guide
 
-We can distinguish two different kind of upgradem, though a certain upgrade could include both of them:
+Keeping the Stability Blockchain Client up-to-date is essential for maintaining the efficiency and utility of the ecosystem. As such, validators must periodically upgrade their nodes to continue participating in the network effectively.
 
-- Runtime Upgrade: Updates the consensus rules of the blockchain and affects to how a valid block is defined. For example, adding some new EVM opcode.
+## Types of Upgrades
 
-- Node Upgrade: Affects to how users (either validators or blockchain users) interact with the blockchain consensus rules. For example, adding a parameter to the blockchain client so every validator could custom their prometheus configuration.
+There are two primary types of upgrades in the blockchain ecosystem:
 
-## How keep sync for a Runtime Upgrade?
+- **Runtime Upgrade**: This type of upgrade modifies the consensus rules of the blockchain, impacting the definition of a valid block. An example would be the introduction of a new EVM opcode.
 
-Runtime upgrades are a built-in mechanism in Substrate framework so no operation is needed from the validators side. Runtime upgrades ocurr through the `pallet_upgrade_runtime` that is controlled by the `pallet_tech_comitee` that acts as multi-signature system that only grants permission for a runtime upgrade if more than half of tech comittee members allow it. Alternatively, there is also an EVM interface for this purpose though the same requirement is required for approving any runtime upgrade.
+- **Node Upgrade**: This affects how users—whether they are validators or general blockchain users—interact with the blockchain's consensus rules. For instance, adding a new parameter to the blockchain client to allow validators to customize their Prometheus configuration.
 
-For further information about Runtime Upgrades visit [**Substrate docs**](https://docs.substrate.io/maintain/runtime-upgrades/).
+## Managing Runtime Upgrades
 
-## How keep sync for a Node Upgrade?
+Stability utilizes the Substrate framework. This allows runtime upgrades on Stability to be seamless, requiring no manual intervention from validators. These upgrades are facilitated through the `pallet_upgrade_runtime`, which is governed by the `pallet_tech_committee`. This committee functions as a multi-signature system, approving runtime upgrades only when a majority of its members consent. Additionally, an EVM interface exists for this purpose, though it adheres to the same consensus requirements.
 
-Node upgrades need the validators nodes (and RPCs) to do some operations to keep in sync. Every upgrade would generate a docker image [here](https://github.com/stabilityprotocol/stability/pkgs/container/stability) and could be executed following [this tutorial](./run_node_using_docker).
+For more information on Runtime Upgrades, please consult the [Substrate Documentation](https://docs.substrate.io/maintain/runtime-upgrades/).
 
-For keep in sync to every node upgrade, every node in the network would have to download the latest docker image and restarting the execution of it, assuring that the latest version of the node is indeed executing.
+## Managing Node Upgrades
+
+Node upgrades require active participation from validators to ensure their nodes remain in sync with the network. Each upgrade produces a new Docker image, available [here](https://github.com/stabilityprotocol/stability/pkgs/container/stability), and can be deployed by following [this tutorial](./run_node_using_docker).
+
+To stay updated with each node upgrade, validators must download the latest Docker image and restart their nodes, thus ensuring they are running the most current version of the software.
