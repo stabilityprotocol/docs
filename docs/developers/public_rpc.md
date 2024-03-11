@@ -2,70 +2,54 @@
 sidebar_position: 7
 ---
 
-# Public RPC
+# Public RPC Guide
 
-## What is the Stability RPC?
+## Introduction to Stability RPC
 
-The Stability RPC allows applications to connect to a Stability node that is part of the Stability Blockchain Network. Users can interact with on-chain data by using endpoints provided by this API, or through a UI that uses these endpoints as its backend. The API follows a JSON-RPC standard with a uniform set of methods agnostic of custom applications or nodes, that is lightweight and stateless remote procedure call using JSON as its data format (RFC 4627).
+The Stability RPC is a critical component that allows applications to connect with a Stability node within the Stability Blockchain Network. It enables users to access on-chain data through specific endpoints or via a user interface that employs these endpoints as its backend. Adhering to the JSON-RPC standard, it offers a consistent method set that is independent of specific applications or nodes, ensuring a lightweight and stateless interaction using JSON (RFC 4627).
 
-The Stability JSON RPC API supports familiar Ethereum/Geth-compatible endpoints in addition to Stability-custom endpoints that have functionality specialized to our ecosystem.
+In addition to supporting standard Ethereum/Geth-compatible endpoints, the Stability JSON RPC API also includes custom endpoints tailored to the unique needs of our ecosystem.
 
-[Ethereum API Documentation](https://ethereum.github.io/execution-apis/api-documentation/)
+For Ethereum API specifics, refer to the [Ethereum API Documentation](https://ethereum.github.io/execution-apis/api-documentation/).
 
 ## EVM RPC Endpoints
 
-### Stability Testnet
+### Stability Testnet Access
 
-The Stability Public Testnet RPC allows for reading the blockchain, and for 20 daily transactions per an address to be executed. 
-Users wishing to execute more daily transactions are welcome to sign up for a free API key. To sign up for a free API Key, go to our [Getting Started page](./getting_started)
+The Stability Public Testnet RPC facilitates blockchain reading and permits up to 20 transactions per address daily. Users requiring more transactions can obtain a free API key by visiting our [Getting Started page](./getting_started).
 
-- RPC URL: **https://free.testnet.stabilityprotocol.com**
-- Chain ID: **20180427**
+- **RPC URL**: `https://free.testnet.stabilityprotocol.com`
+- **Chain ID**: `20180427`
 
-The Global Trust Network (GTN) Public RPC allows for reading the blockchain. Users cannot execute transactions using the GTN Public RPC.
-Users wishing to execute transactions are welcome to sign up for a free API key. To sign up for a free API Key, go to our [Getting Started page](./getting_started)
+### Global Trust Network Mainnet Access
 
-### Global Trust Network Mainnet
+The Global Trust Network (GTN) Public RPC is read-only for the blockchain. Transaction execution is not available through the GTN Public RPC. Users looking to perform transactions should acquire a free API key as detailed on our [Getting Started page](./getting_started).
 
-- RPC URL: **https://gtn.stabilityprotocol.com**
-- Chain ID: **101010**
+- **RPC URL**: `https://gtn.stabilityprotocol.com`
+- **Chain ID**: `101010`
 
 ## Stability Custom RPC Endpoints
 
-Both networks contain a set of custom RPC points created by the Stability Team.
+Our networks feature a suite of custom RPC endpoints developed by the Stability Team to enhance our ecosystem's functionality:
 
-> `stability_getValidatorList`
+- **`stability_getValidatorList`**: Retrieves the current validator set, listing the addresses authorized to maintain the network.
 
-Obtain the current validator set, returning the current validator addresses approved to maintain the network.
+- **`stability_getActiveValidatorList`**: Fetches the current active validator set, listing the addresses actively involved in network maintenance.
 
-#
+- **`stability_getSupportedTokens`**: Provides a list of tokens supported by the network. This experimental feature paves the way for future transaction payment options with network-supported tokens.
 
-> `stability_getActiveValidatorList`
+- **`stability_sendSponsoredTransaction`**: Enables the submission of sponsored transactions to the network's mempool, allowing transactions without the sender directly paying the fee. This experimental feature introduces a scenario where transactions are submitted by users and executed by sponsor wallets.
 
-Obtain the current active validator set, returning the current validator addresses actively maintaining the network.
+## Usage Example
 
-#
-
-> `stability_getSupportedTokens`
-
-Fetch a list of network-supported tokens. This feature is experimental. This allows for a future use case where network-supported tokens can potentially be used for transaction payments.
-
-#
-
-> `stability_sendSponsoredTransaction`
-
-Submit a transaction that is sponsored to the network's mempool, facilitating transactions without direct fee payment by the sender. This feature is experimental. This allows for a future use case where a user submits a transaction, and a sponsor wallet can execute the transaction.
-
-## Example
+The following command illustrates how to query the supported tokens using the `stability_getSupportedTokens` endpoint:
 
 ```shell
-$ curl 'https://free.testnet.stabilityprotocol.com/' \
+curl 'https://free.testnet.stabilityprotocol.com/' \
   -X POST \
   -H "Content-Type: application/json" \
   --data '{"method":"stability_getSupportedTokens","params":[], "id":1,"jsonrpc":"2.0"}'
 
-
 {"jsonrpc":"2.0","result":{"code":200,"value":["0xdc2b93f3291030f3f7a6d9363ac37757f7ad5c43"]},"id":1}
 ```
 
-This snippet demonstrates how to query the supported tokens using the stability_getSupportedTokens endpoint.

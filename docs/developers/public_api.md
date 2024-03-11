@@ -1,5 +1,5 @@
 ---
-title: "Public API"
+title: "Public API Documentation"
 sidebar_position: 8
 ---
 
