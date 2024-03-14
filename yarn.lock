@@ -3738,6 +3738,11 @@ docusaurus-plugin-sass@^0.2.5:
   dependencies:
     sass-loader "^10.1.1"
 
+docusaurus-pushfeedback@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/docusaurus-pushfeedback/-/docusaurus-pushfeedback-1.0.0.tgz#9d8d26f6551f7da216b1761b072fbafc10d87c15"
+  integrity sha512-caf9C8bRpGhzd7foJ0WqSLTSZonPgAFLPEN0U+lKYpiFLVJOHnEK3gOn26kibhhqrVx7FrF2fRBHLO5kJbnkhg==
+
 docusaurus-theme-redoc@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/docusaurus-theme-redoc/-/docusaurus-theme-redoc-2.0.0.tgz#2cbae0f51f1c1f9527069e54173cfdb184d4a995"
