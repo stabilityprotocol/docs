@@ -22,15 +22,15 @@ These tests occurred on March 11th, 2024 for Testnet, and March 12th, 2024 for G
 
 | TRANSACTIONS PER SECOND | GAS PER TRANSACTION | TOTAL BLOCK GAS | MAX TRANSACTIONS PER BLOCK | LINK |
 |-------------------------|---------------------|-----------------|----------------------------|------|
-| 100.00                  | 1,000,000.00        | 213,270,338.00  | 220.00                     | [Link](https://stability-testnet.blockscout.com/block/315241) |
-| 100.00                  | 50,000.00           | 16,256,356.00   | 397.00                     | [Link](https://stability-testnet.blockscout.com/block/344142) |
-| 150.00                  | 100,000.00          | 107,621,286.00  | 1,200.00                   | [Link](https://stability-testnet.blockscout.com/block/344229) |
-| 75.00                   | 200,000.00          | 144,461,401.00  | 765.00                     | [Link](https://stability-testnet.blockscout.com/block/344239) |
-| 75.00                   | 300,000.00          | 104,325,877.00  | 361.00                     | [Link](https://stability-testnet.blockscout.com/block/345093) |
-| 75.00                   | 500,000.00          | 192,152,494.00  | 393.00                     | [Link](https://stability-testnet.blockscout.com/block/345214) |
-| 150.00                  | 500,000.00          | 164,829,733.00  | 342.00                     | [Link](https://stability-testnet.blockscout.com/block/345289) |
-| 150.00                  | 1,000,000.00        | 160,541,685.00  | 189.00                     | [Link](https://stability-testnet.blockscout.com/block/345303) |
-| 225.00                  | 1,000,000.00        | 296,552,763.00  | 305.00                     | [Link](https://stability-testnet.blockscout.com/block/345376) |
+| 100.00                  | 1,000,000.00        | 213,270,338.00  | 220                    | [Link](https://stability-testnet.blockscout.com/block/315241) |
+| 100.00                  | 50,000.00           | 16,256,356.00   | 397                    | [Link](https://stability-testnet.blockscout.com/block/344142) |
+| 150.00                  | 100,000.00          | 107,621,286.00  | 1,200                  | [Link](https://stability-testnet.blockscout.com/block/344229) |
+| 75.00                   | 200,000.00          | 144,461,401.00  | 765                    | [Link](https://stability-testnet.blockscout.com/block/344239) |
+| 75.00                   | 300,000.00          | 104,325,877.00  | 361                    | [Link](https://stability-testnet.blockscout.com/block/345093) |
+| 75.00                   | 500,000.00          | 192,152,494.00  | 393                    | [Link](https://stability-testnet.blockscout.com/block/345214) |
+| 150.00                  | 500,000.00          | 164,829,733.00  | 342                    | [Link](https://stability-testnet.blockscout.com/block/345289) |
+| 150.00                  | 1,000,000.00        | 160,541,685.00  | 189                    | [Link](https://stability-testnet.blockscout.com/block/345303) |
+| 225.00                  | 1,000,000.00        | 296,552,763.00  | 305                    | [Link](https://stability-testnet.blockscout.com/block/345376) |
 
 ## Global Trust Network (GTN) Results
 
