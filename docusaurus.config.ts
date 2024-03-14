@@ -59,7 +59,7 @@ const config: Config = {
         },
         blog: false,
         theme: {
-          customCss: "./src/css/custom.scss",
+          customCss: require.resolve("./src/css/custom.scss"),
         },
       } satisfies Preset.Options,
     ],
