@@ -30,7 +30,7 @@ If you opt to register via email, ensure you can verify your email address.
 Once logged in to Stability's [Account Manager](https://account.stabilityprotocol.com/keys), locate the option for generating an API key. Click on the designated button to create your unique API key.
 
 
-### 3a. Add Network to Metamask + Other Compatible Wallets
+### 3a. Add Network Automatically to Metamask + Other Compatible Wallets
 
 ![Metamask Logo](../../static/img/metamaskarrow.png)
 
