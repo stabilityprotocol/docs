@@ -59,7 +59,11 @@ Once logged in to Stability's [Account Manager](https://account.stabilityprotoco
 
 ![Metamask Add Network Screen with 'Add a network manually' Highlighted](../../static/img/metamaskaddanetworkmanually.png)
 
-####     5. Fill out the network settings using the details below. Be sure to replace the `YOUR_API_KEY` with your own API Key. Afterwards, click Save.
+####     5. Go to the [Stability Account Manager](https://account.stabilityprotocol.com/keys) and copy your API Key.
+
+![Stability Account Manager Screen with an Example API Key Highlighted](../../static/img/apikeyhighlight.png)
+
+####     6. Fill out the network settings using the details below. Be sure to replace the `YOUR_API_KEY` with your own API Key. Afterwards, click Save.
     
 ![Metamask Manual Network Screen with Details Filled and Save Button Highlighted](../../static/img/metamaskmanualnetworksave.png)
 
