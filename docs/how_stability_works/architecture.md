@@ -8,11 +8,11 @@ sidebar_position: 2
 
 ## Overview : Let's Get Boring!
 
-Stability Protocol represents a pioneering approach in public blockchains by operating without the need for tokens to facilitate transactions. This is achieved through our innovative validator system. Traditional blockchains rely on consensus mechanisms like Proof of Work (PoW) or Proof of Stake (PoS). In contrast, Stability Protocol introduces a novel consensus mechanism known as Proof of Reputation (PoR). This mechanism involves onboarding trusted entities to serve as validators.
+Stability represents a pioneering approach in public blockchains by operating without the need for tokens to facilitate transactions. This is achieved through our innovative validator system. Traditional blockchains rely on consensus mechanisms like Proof of Work (PoW) or Proof of Stake (PoS). In contrast, Stability introduces a novel consensus mechanism known as Proof of Reputation (PoR). This mechanism involves onboarding trusted entities to serve as validators.
 
 ## Portal: Private RPCs to Submit Transactions
 
-To submit transactions to Stability, a user must register through our Stability's [Account Manager](https://account.stabilityprotocol.com/keys) portal. Users begin by obtaining an API Key to unlock a private RPC. This RPC is allocated a certain number of credits, effectively determining the number of transactions a user can submit. To submit a transaction, a user consumes credits from their private RPC allotment.  Using Stability's [Account Manager](https://account.stabilityprotocol.com/keys) portal, users can monitor their credit usage and obtain additional credits as needed, allowing for continuous and uninterrupted interaction with the network.
+To submit transactions to Stability, a user must register through our Stability's [Account Manager](https://account.stabilityprotocol.com/keys) portal. Users begin by obtaining an API Key to unlock a private RPC. This RPC is allocated a certain number of credits, effectively determining the number of transactions a user can submit. To submit a transaction, a user consumes credits from their private RPC allotment.  Using Stability's [Account Manager](https://account.stabilityprotocol.com/keys) portal, users can monitor their credit usage and obtain additional credits as needed, allowing for continuous and uninterrupted interaction with the network. Instructions for setting up an account and obtaining your own free RPC are available in the [User Section](../users/getting_started.md).
 
 ## Sequencing: How Stability Prepares Submitted Transactions
 
