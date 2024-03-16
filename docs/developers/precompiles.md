@@ -40,7 +40,7 @@ To Learn More About Ethereum Precompile Contracts, we highly recommend visiting 
 | 0x08    | BN128Pairing | x1, y1, x2, y2, ..., xk, yk  | success      | Implements elliptic curve pairing operation to perform zkSNARK verification.alt_bn128                                         |
 | 0x09    | Blake2  | rounds, h, m, t, f           | h            | Implements the BLAKE2b hash function and other higher-round 64-bit BLAKE2 variants to run cheaply on the EVM.                       |  
 | 0x400    | SHA3FIPS256  | data     | hash          | Implements the SHA-3 (Secure Hash Algorithm 3) cryptographic hashing function as specified in FIPS 202 (Federal Information Processing Standards Publication). This precompile takes an arbitrary length input and processes it to produce a fixed-length 256-bit (32 bytes) output hash.                   |
-| 0x402    | ECRecoverPublicKey  | hash, v, r, s     | hash          | Similar to ECRecover, but returns the pubkey (not the corresponding Ethereum address)                 |      
+| 0x402    | ECRecoverPublicKey  | hash, v, r, s     | hash          | Similar to ecRecover, but returns the pubkey (not the corresponding Ethereum address)                 |      
 
 
 

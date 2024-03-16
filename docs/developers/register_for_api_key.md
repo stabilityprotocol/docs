@@ -6,29 +6,41 @@ sidebar_position: 5
 
 In this tutorial, you will learn how to create an API key on Stability's Account Manager.
 
-Why do you neede to have an API key for using Stability? Our open version of the API is limited so a certain amount of transactions (sometimes this amount could be zero) for each address. To increase the number of transactions that a certain user can execute we would have to require users to sign up to our **Account Manager** so we prevent malicious users to execute an unlimitted number of transactions.
+Why do you need to have an API key for using Stability? Our open version of the API is limited so a certain amount of transactions (sometimes this amount could be zero) for each address. To increase the number of transactions that a certain user can execute we would have to require users to sign up to our **Account Manager** so we prevent malicious users to execute an unlimitted number of transactions.
 
-## Step 1: Register on Stability's Account Manager
+### 2. Sign Up For An API Key
 
-![Registration Screen](../../static/img/connect.png)
+#### Step 1 - Navigate to [Stability Portal](https://portal.stabilityprotocol.com/) and click the `Login | New User' button.
 
-To begin, navigate to Stability's Account Manager page and select your preferred method of registration. To receive a dedicated API key, you must register using either Github, Google, or Email. It's important to note that registrations through Metamask or Magiclink do not provide a dedicated API key.
+![Stability Portal Page](../../static/img/portallogin.png)
 
-If you opt to register via email, ensure to verify your email address. Verification is required each time you log in for added security.
+#### Step 2 - Select Your Preferred Registration
 
-## Step 2: Generate Your API Key
+On this screen, select your preferred method of registration. For this tutorial, we will be following the Google sign-in path. You may also similarly log in via Email, GitHub, Magiclink, or directly through Metamask.  
 
-![Generate API Key Screen](../../static/img/createapi.png)
+It is important to note that registrations through Metamask or Magiclink do not provide a dedicated API Key. Without an API Key, you will not be able to perform transactions on Global Trust Network (GTN), and will have limited functionality on Stability Testnet. To receive an API Key, you must register using either GitHub, Google, or Email. 
 
-Using the dropdown menu at the top right, select if you would like an API Key generated for Global Trust Network or Stability Testnet. Whichever option is selected is the network the API key will be generated for.
+If you opt to register via email, ensure you can verify your email address.
 
-Once logged in to Stability's Account Manager, locate the option for generating an API key. Click on the designated button to create your unique API key.
+![Stability Login Screen](../../static/img/portalloginoptions.png)
 
-![API Info Button](../../static/img/infobuttonwitharrow.png)
+#### Step 3 - Select Your Preferred Network
 
-To reveal your API Key URL, simply click the info icon.
+Using the dropdown menu on the top right, select the network you wish to generate an API Key on.
 
-With your API key, you're now equipped to utilize your private RPC on Stability. Click the info button to reveal your private RPC address. Plus, you'll receive 1,000 free credits monthly with your API key, which can be used for any transactions you choose.
+![Stability Portal Screen with Networks Highlighted](../../static/img/portalselectnetwork.png)
+
+#### Step 4 - Click the `Create New API Key` Button
+![Stability Portal Screen with Create New API Key Button Highlighted](../../static/img/portalcreatenewapikey.png)
+
+#### Step 5 - Congrats! You've created an API Key.
+
+To view your personal RPC URL, click the `Info` button.
+![Stability Portal Screen with Info Button Highlighted](../../static/img/portalinfo.png)
+
+Here, you will find your personal RPC URL.
+![Stability Portal Screen with API URL Highlighted](../../static/img/portalapikeyurlhighlight.png)
+
 
 ## Step 3: Ready to Go!
 
