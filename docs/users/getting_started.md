@@ -52,13 +52,13 @@ Here, you will find your personal RPC URL.
 
 ![Metamask Logo](../../static/img/portalmetamasklogo.png)
 
-To add your custom RPC to your browser extension wallet, click the Metamask Fox Logo next to your API Key. This will work with Metamask as well as many other browser extension based wallets. 
+To add your custom RPC to your browser extension wallet, which will allow you to use Global Trust Network or Stability Testnet, click the Metamask Fox Logo next to your API Key. This will work with Metamask as well as many other browser extension based wallets. 
 
 If you are not able to add the network to your wallet, you may have to add the network manually. Follow the instructions below.
 
 ### 3b. Add Network Manually to Metamask
 
-In the event you are unable to add your wallet automatically, or you wish to add the network manually, simply follow the steps below.
+In the event you are unable to add your wallet automatically via clicking the Metamask Fox Logo above, or you wish to add the network manually, simply follow the steps below.
 
 #### Step 1 - Navigate to `Settings` in Metamask.
 
