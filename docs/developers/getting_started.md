@@ -14,74 +14,43 @@ This tutorial presumes a foundational understanding of blockchain technology and
 
 Global Trust Network (GTN) and Stability Testnet employ API keys to manage transactions. On Global Trust Network, an API key is required to perform write transactions. On Stability Testnet, each address is given a limited number of free transactions without an API key using our public RPC. To increase the number of transactions that a certain user can execute on either chain, users are required to sign up with our [Account Manager](https://account.stabilityprotocol.com/keys) for their very own private RPC address.
 
-### Step 1: Register on Stability's Account Manager for an API Key.
+### 2. Sign Up For An API Key
 
-![Registration Screen](../../static/img/connect.png)
+#### Step 1 - Navigate to [Stability Portal](https://portal.stabilityprotocol.com/) and click the `Login | New User' button.
 
-To begin, navigate to Stability's [Account Manager](https://account.stabilityprotocol.com/keys) page and select your preferred method of registration. To receive a dedicated API key, you must register using either Github, Google, or Email. It's important to note that registrations through Metamask or Magiclink do not provide a dedicated API key.
+![Stability Portal Page](../../static/img/portallogin.png)
 
-If you opt to register via email, ensure to verify your email address. Verification is required each time you log in for added security.
+#### Step 2 - Select Your Preferred Registration
 
-### Step 2: Generate Your API Key
+On this screen, select your preferred method of registration. For this tutorial, we will be following the Google sign-in path. You may also similarly log in via Email, GitHub, Magiclink, or directly through Metamask.  
 
-![Generate API Key Screen](../../static/img/createapi.png)
+It is important to note that registrations through Metamask or Magiclink do not provide a dedicated API Key. Without an API Key, you will not be able to perform transactions on Global Trust Network (GTN), and will have limited functionality on Stability Testnet. To receive an API Key, you must register using either GitHub, Google, or Email. 
 
-Once logged in to Stability's Account Manager, locate the option for generating an API key. Click on the designated button to create your unique API key on the current network. The network is selected via the dropdown menu on the top right.
+If you opt to register via email, ensure you can verify your email address.
 
-With your API key, you're now equipped to utilize your private RPC on Stability or Global Trust Network (GTN). Click the info button to reveal your private RPC address. Plus, you'll receive 2,000 free credits monthly with your API key, which can be used for any transactions you choose.
+![Stability Login Screen](../../static/img/portalloginoptions.png)
 
-### Step 3: Ready to Go!
+#### Step 3 - Select Your Preferred Network
 
-Congratulations! You've successfully created an API key on Stability's Account Manager. Now, you're all set to use Stability at no cost. Utilize your private RPC to interact with the Stability network using wallets such as Metamask or frameworks like Viem or Ethers.js.
+Using the dropdown menu on the top right, select the network you wish to generate an API Key on.
+
+![Stability Portal Screen with Networks Highlighted](../../static/img/portalselectnetwork.png)
+
+#### Step 4 - Click the `Create New API Key` Button
+![Stability Portal Screen with Create New API Key Button Highlighted](../../static/img/portalcreatenewapikey.png)
+
+#### Step 5 - Congrats! You've created an API Key.
+
+To view your personal RPC URL, click the `Info` button.
+![Stability Portal Screen with Info Button Highlighted](../../static/img/portalinfo.png)
+
+Here, you will find your personal RPC URL.
+![Stability Portal Screen with API URL Highlighted](../../static/img/portalapikeyurlhighlight.png)
 
 
-# What Is Different In Stability
+### 3. Review What Is Different With Stability
 
-One of the key differences with Stability is its lack of a native token. This fundamental change affects the execution of transactions that typically involve the transfer of native tokens, which is a core functionality in many Ethereum-based applications. As a result, developers will find that some standard operations and Solidity functionalities will not work as expected on Stability.
-
-## Known Differences
-
-### Native Token Value Transfers
-
-On Stability, functions intended for transferring native gas tokens, such as `.transfer`, `.send`, and any operations involving `msg.value`, are not supported. Attempts to execute such transactions will automatically revert. This is a significant departure from traditional Ethereum-based smart contract interactions, where these methods are commonly used to manage and transfer Ether between accounts. For instance, the following Solidity code snippets illustrate transactions that would **fail** on Stability:
-
-```bash
-function sendViaTransfer(address payable _to) public payable {
-    _to.transfer(msg.value);
-}
->> FAIL
-
-function sendViaSend(address payable _to) public payable {
-    bool sent = _to.send(msg.value);
-    require(sent, "Failed to send Ether");
-}
->> FAIL
-
-function sendViaCall(address payable _to) public payable {
-    (bool sent, bytes memory data) = _to.call{value: msg.value}("");
-    require(sent, "Failed to send Ether");
-}
->> FAIL
-```
-
-### Address Balance
-
-On Stability, the address.balance operation will not function as expected. This operation, which is used to retrieve the balance of Ether (or any native token) held by an address, relies on the existence of a native token. For example:
-
-```bash
-function getBalance() public view returns (uint) {
-        return address(this).balance;
-    }
->> Returns the selected DNT balance
-```
-
-### Payable Declarations
-
-In the context of Stability, declaring functions and addresses as payable is unnecessary since the blockchain does not support native token transactions. Instead, developers should utilize the ERC-20 token standard for transactions involving token transfers. This approach involves first approving the transfer of tokens to a contract, followed by the contract executing the transfer, mirroring the functionality provided by ERC-20 tokens.
-
-### Receive() and Fallback()
-
-The receive() and fallback() functions in Solidity are designed to handle incoming transactions and unspecified function calls, respectively. However, without the capability to transfer native tokens, these functions lose their primary purpose on Stability. Developers will need to consider alternative methods for contract interactions that do not rely on direct value transfers.
+We highly recommend reviewing the section on [What Is Different](./what_is_different.md) regarding Stability as opposed to traditional Ethereum Virtual Machine (EVM) blockchains. Understanding these distinctions is crucial for developers looking to create decentralized applications (dApps) on the Stability platform, especially since certain functionalities, like native token transfers, will not operate in the same way on Stability.
 
 ## Now Start Swimming
 Armed with this knowledge and your API key, you're well-prepared to embark on your development journey with the Stability Network. Dive in and start innovating! Happy hacking!

@@ -18,24 +18,7 @@ The complete code of this tutorial can be found at this [link](https://github.co
 
 ## 2. Get an Api Key
 
-On Stability, we have created a system where transactions don’t require gas. Instead, our users need to have an API key that identifies them. To get your first API key, you need to visit this website: [link](https://account.stabilityprotocol.com/zgt)
-
-When you visit this website, you will see something similar to this:
-![Registration Screen](../../../../static/img/connect.png)
-
-You need to choose a login method. You can use a conventional login like email or GitHub, or if you prefer, a more blockchain-oriented login like MetaMask. The choice is yours.
-
-Once you are logged in, click on the 'Create New' button. After this, an API key will appear in the table.
-
-![Generate API Key Screen](../../../../static/img/createapi.png)
-
-Now, you have an API Key completely ready for use. Click the Info button to reveal your API Key.
-
-![API Info Button](../../../../static/img/infobuttonwitharrow.png)
-
-And there it is! Copy this API key for later. You can always come back to this page to access again in the future.
-
-![API Info Screen](../../../../static/img/apikeyinfo.png)
+If you have not done so, review the developer [getting started](../../getting_started.md) documentation to create your own API Key. 
 
 ## 3. Setting Up the Development Environment
 

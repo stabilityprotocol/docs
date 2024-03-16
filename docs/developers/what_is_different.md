@@ -10,6 +10,10 @@ Stability is compatible with the EVM web3 development environments you're alread
 
 One of the key differences with Stability is its lack of a native token. This fundamental change affects the execution of transactions that typically involve the transfer of native tokens, which is a core functionality in many Ethereum-based applications. As a result, developers will find that some standard operations and Solidity functionalities will not work as expected on Stability.
 
+# What Is Different In Stability
+
+One of the key differences with Stability is its lack of a native token. This fundamental change affects the execution of transactions that typically involve the transfer of native tokens, which is a core functionality in many Ethereum-based applications. As a result, developers will find that some standard operations and Solidity functionalities will not work as expected on Stability.
+
 ## Examples
 
 ### Native Token Value Transfers
@@ -37,7 +41,7 @@ function sendViaCall(address payable _to) public payable {
 
 ### Address Balance
 
-On Stability, the address.balance operation will not function as expected. This operation, which is used to retrieve the balance of Ether (or any native token) held by an address, relies on the existence of a native token. In the absence of such a token, this operation will return the balance of the selected DNT (Decentralized Native Token) token. For example:
+On Stability, the address.balance operation will not function as expected. This operation, which is used to retrieve the balance of Ether (or any native token) held by an address, relies on the existence of a native token. For example:
 
 ```bash
 function getBalance() public view returns (uint) {

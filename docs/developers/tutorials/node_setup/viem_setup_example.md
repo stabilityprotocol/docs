@@ -16,6 +16,8 @@ This guide will demonstrate the steps to install Viem and configure the framewor
 
 The complete code of this tutorial can be found at this [link](https://github.com/stabilityprotocol/tutorials/tree/main/setup-viem-environment)
 
+If you have not done so, review the developer [getting started](../../getting_started.md) documentation to create your own API Key. 
+
 ## 2. About Viem
 
 Viem is a TypeScript interface tailored for interacting with web3, designed to provide developers with low-level, stateless primitives for seamless interaction with blockchains. Key focuses of Viem include:

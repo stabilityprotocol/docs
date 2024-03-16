@@ -16,6 +16,8 @@ This guide will demonstrate the steps to install Ethers.js and configure the fra
 
 The complete code of this tutorial can be found at this [link](https://github.com/stabilityprotocol/tutorials/tree/main/setup-ethers-environment)
 
+If you have not done so, review the developer [getting started](../../getting_started.md) documentation to create your own API Key. 
+
 ## 2. About Ethers
 
 Ethers.js is a compact, complete library for interacting with the Ethereum Blockchain and its ecosystem. It provides a set of tools and functions to connect to standard Ethereum networks, as well as custom ones like the Stability Testnet, making it an ideal choice for blockchain development. Ethers.js simplifies the process of sending transactions, interacting with smart contracts, and handling blockchain data, ensuring developers have a powerful yet straightforward interface for blockchain-based projects.
