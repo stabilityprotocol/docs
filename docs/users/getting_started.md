@@ -6,10 +6,9 @@ sidebar_position: 1
 
 This quickstart guide is intended for users who wish to use the Global Trust Network (GTN) or Stability Testnet through browser extensions. In this example, we will use MetaMask, the most popular browser extension for interacting with blockchains.
 
-
 ## MetaMask Configuration
 
-MetaMask allows users to interact with the Global Trust Network blockchain easily. Here's how to set it up:
+MetaMask allows users to interact with the Global Trust Network or Stability Testnet easily. Here's how to set it up:
 
 ### 1. Installing MetaMask
 
@@ -17,22 +16,41 @@ If you haven't already, install MetaMask for your browser from the [official Met
 
 ### 2. Sign Up For An API Key
 
-After installation, you need to add the Global Trust Network or Stability Testnet to MetaMask. This requires registering for an API Key.
+#### Step 1 - Navigate to [Stability Portal](https://portal.stabilityprotocol.com/) and click the `Login | New User' button.
 
-![Registration Screen](../../static/img/connect2.png)
+![Stability Portal Page](../../static/img/portallogin.png)
 
-To begin, navigate to Stability's [Account Manager](https://account.stabilityprotocol.com/keys) page and select your preferred method of registration. For this tutorial, we will be following the Google sign-in path. You may also similarly log in via Email, GitHub, Magiclink or directly through Metamask.  
-It is important to note that registrations through Metamask or Magiclink do not provide a dedicated API key. To receive an API key, you must register using either GitHub, Google, or Email. 
+#### Step 2 - Select Your Preferred Registration
+
+On this screen, select your preferred method of registration. For this tutorial, we will be following the Google sign-in path. You may also similarly log in via Email, GitHub, Magiclink or directly through Metamask.  
+
+It is important to note that registrations through Metamask or Magiclink do not provide a dedicated API Key. Without an API Key, you will not be able to perform transactions on Global Trust Network (GTN), and will have limited functionality on Stability Testnet. To receive an API Key, you must register using either GitHub, Google, or Email. 
+
 If you opt to register via email, ensure you can verify your email address.
 
-![Generate API Key Screen](../../static/img/createapi.png)
+![Stability Login Screen](../../static/img/portalloginoptions.png)
 
-Once logged in to Stability's [Account Manager](https://account.stabilityprotocol.com/keys), locate the option for generating an API key. Click on the designated button to create your unique API key.
+#### Step 3 - Select Your Preferred Network
 
+Using the dropdown menu on the top right, select the network you wish to generate an API Key on.
+
+![Stability Portal Screen with Networks Highlighted](../../static/img/portalselectnetwork.png)
+
+#### Step 4 - Click the `Create New API Key` Button
+![Stability Portal Screen with Create New API Key Button Highlighted](../../static/img/portalcreatenewapikey.png)
+
+#### Step 5 - Congrats! You've created an API Key.
+
+To view your personal RPC URL, click the `Info` button.
+![Stability Portal Screen with Info Button Highlighted](../../static/img/portalinfo.png)
+
+Here, you will find your personal RPC URL.
+![Stability Portal Screen with API URL Highlighted](../../static/img/portalapikeyurlhighlight.png)
+ 
 
 ### 3a. Add Network Automatically to Metamask + Other Compatible Wallets
 
-![Metamask Logo](../../static/img/metamaskarrow.png)
+![Metamask Logo](../../static/img/portalmetamasklogo.png)
 
     To add your custom RPC to your browser extension wallet, click the Metamask Fox Logo next to your API Key. This will work with Metamask as well as many other browser extension based wallets. 
 
@@ -42,27 +60,27 @@ Once logged in to Stability's [Account Manager](https://account.stabilityprotoco
 
     In the event you are unable to add your wallet automatically, or you wish to add the network manually, simply follow the steps below.
 
-####     1. Navigate to `Settings` in Metamask.
+#### Step 1 - Navigate to `Settings` in Metamask.
 
 ![Metamask Main Screen with Settings Highlighted](../../static/img/metamasksettings.png)
 
-####     2. Click on the `Networks` tab.
+#### Step 2 - Click on the `Networks` tab.
 
 ![Metamask Settings Screen with Networks Highlighted](../../static/img/metamasknetworks.png)
 
-####    3. Click the `Add a network` button.
+#### Step 3 - Click the `Add a network` button.
 
 ![Metamask Networks Screen with 'Add a network' Button Highlighted](../../static/img/metamaskaddnetwork.png)
 
-####     4. Click the `Add a network manually` text link.
+#### Step 4 - Click the `Add a network manually` text link.
 
 ![Metamask Add Network Screen with 'Add a network manually' Highlighted](../../static/img/metamaskaddanetworkmanually.png)
 
-####     5. Go to the [Stability Account Manager](https://account.stabilityprotocol.com/keys) and copy your API Key.
+#### Step 5 - Go to the [Stability Account Manager](https://account.stabilityprotocol.com/keys) and copy your API Key.
 
 ![Stability Account Manager Screen with an Example API Key Highlighted](../../static/img/apikeyhighlight.png)
 
-####     6. Fill out the network settings using the details below. Be sure to replace the `YOUR_API_KEY` with your own API Key. Afterward, click Save.
+#### Step 6 - Fill out the network settings using the details below. Be sure to replace the `YOUR_API_KEY` with your own API Key. Afterward, click Save.
     
 ![Metamask Manual Network Screen with Details Filled and Save Button Highlighted](../../static/img/metamaskmanualnetworksave.png)
 
