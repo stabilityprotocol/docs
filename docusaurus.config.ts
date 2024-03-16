@@ -36,7 +36,15 @@ const config: Config = {
     locales: ["en"],
   },
 
-  plugins: ["docusaurus-plugin-sass"],
+  plugins: ["docusaurus-plugin-sass",       
+  [
+    'docusaurus-pushfeedback',{
+        project: 'w5y3gws75s',
+        buttonPosition: 'center-right',
+        modalPosition: 'sidebar-right',
+        buttonStyle: 'dark',
+    }
+]],
   presets: [
     [
       "classic",
@@ -51,7 +59,7 @@ const config: Config = {
         },
         blog: false,
         theme: {
-          customCss: "./src/css/custom.scss",
+          customCss: require.resolve("./src/css/custom.scss"),
         },
       } satisfies Preset.Options,
     ],
