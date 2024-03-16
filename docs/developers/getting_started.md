@@ -47,8 +47,53 @@ To view your personal RPC URL, click the `Info` button.
 Here, you will find your personal RPC URL.
 ![Stability Portal Screen with API URL Highlighted](../../static/img/portalapikeyurlhighlight.png)
 
+### 3a. Add Network Automatically to Metamask + Other Compatible Wallets
 
-### 3. Review What Is Different With Stability
+![Metamask Logo](../../static/img/portalmetamasklogo.png)
+
+To add your custom RPC to your browser extension wallet, which will allow you to use Global Trust Network or Stability Testnet, click the Metamask Fox Logo next to your API Key. This will work with Metamask as well as many other browser extension based wallets. 
+
+If you are not able to add the network to your wallet, you may have to add the network manually. Follow the instructions below.
+
+### 3b. Add Network Manually to Metamask
+
+In the event you are unable to add your wallet automatically via clicking the Metamask Fox Logo above, or you wish to add the network manually, simply follow the steps below.
+
+#### Step 1 - Navigate to `Settings` in Metamask.
+
+![Metamask Main Screen with Settings Highlighted](../../static/img/metamasksettings.png)
+
+#### Step 2 - Click on the `Networks` tab.
+
+![Metamask Settings Screen with Networks Highlighted](../../static/img/metamasknetworks.png)
+
+#### Step 3 - Click the `Add a network` button.
+
+![Metamask Networks Screen with 'Add a network' Button Highlighted](../../static/img/metamaskaddnetwork.png)
+
+#### Step 4 - Click the `Add a network manually` text link.
+
+![Metamask Add Network Screen with 'Add a network manually' Highlighted](../../static/img/metamaskaddanetworkmanually.png)
+
+#### Step 5 - Go to the [Stability Account Manager](https://account.stabilityprotocol.com/keys) and copy your API Key.
+
+![Stability Account Manager Screen with an Example API Key Highlighted](../../static/img/apikeyhighlight.png)
+
+#### Step 6 - Fill out the network settings using the details below. Be sure to replace the `YOUR_API_KEY` with your own API Key. Afterward, click Save.
+    
+![Metamask Manual Network Screen with Details Filled and Save Button Highlighted](../../static/img/metamaskmanualnetworksave.png)
+
+
+
+| **Property**               | **Global Trust Network**                                       | **Stability Testnet**                                               |
+|----------------------------|-----------------------------------------------------------------|----------------------------------------------------------------------|
+| Network Name               | Global Trust Network                                           | Stability Test Net                                                   |
+| New RPC URL                | `https://gtn.stabilityprotocol.com/?api_key=YOUR_API_KEY`      | `https://free.testnet.stabilityprotocol.com/?api_key=YOUR_API_KEY` |
+| Chain ID                   | 101010                                                          | 20180427                                                             |
+| Currency Symbol            | FREE                                                            | FREE                                                                 |
+| Block Explorer URL         | `https://stability.blockscout.com/`                             | `https://stability-testnet.blockscout.com/`                          |
+
+### 4. Review What Is Different With Stability
 
 We highly recommend reviewing the section on [What Is Different](./what_is_different.md) regarding Stability as opposed to traditional Ethereum Virtual Machine (EVM) blockchains. Understanding these distinctions is crucial for developers looking to create decentralized applications (dApps) on the Stability platform, especially since certain functionalities, like native token transfers, will not operate in the same way on Stability.
 
