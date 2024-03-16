@@ -10,7 +10,7 @@ A precompile refers to a set of special, pre-defined functions built into the na
 
 Precompiles are accessible at specific addresses on the blockchain and are designed to perform complex cryptographic operations such as hashing, digital signature verification, and mathematical operations more efficiently.
 
-Blockchains deploy precompiled contracts for two main reasons. First, if the contracts are intrigual to the functioning of the blockchain themselves, then it is vital that every instance of the blockchain contains these smart contracts. Secondly, precompiled  contracts as far more efficient for certain operations. 
+Blockchains deploy precompiled contracts for two main reasons. First, if the contracts are integral to the functioning of the blockchain itself, then it is vital that every instance of the blockchain contains these smart contracts. Secondly, precompiled contracts are far more efficient for certain operations.
 
 ## Interacting With Precompiles
 
@@ -26,7 +26,7 @@ Stability
 
 ## Ethereum Native Precompiles
 
-To Learn More About Ethereum Precompile Contracts, we highly recommand visiting [EVM Codes](https://www.evm.codes/precompiled?fork=shanghai)
+To Learn More About Ethereum Precompile Contracts, we highly recommend visiting [EVM Codes](https://www.evm.codes/precompiled?fork=shanghai)
 
 | Address | Name      | Input                        | Output       | Description                                                                                        |
 |---------|-----------|---------------------------------|--------------|----------------------------------------------------------------------------------------------------|
