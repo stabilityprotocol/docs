@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Getting Started 
+# Getting Started with the Global Trust Network and Stability Testnet
 
 This quickstart guide is intended for users who wish to use the Global Trust Network (GTN) or Stability Testnet through browser extensions. In this example, we will use MetaMask, the most popular browser extension for interacting with blockchains.
 
@@ -22,7 +22,7 @@ If you haven't already, install MetaMask for your browser from the [official Met
 
 #### Step 2 - Select Your Preferred Registration
 
-On this screen, select your preferred method of registration. For this tutorial, we will be following the Google sign-in path. You may also similarly log in via Email, GitHub, Magiclink or directly through Metamask.  
+On this screen, select your preferred method of registration. For this tutorial, we will be following the Google sign-in path. You may also similarly log in via Email, GitHub, Magiclink, or directly through Metamask.  
 
 It is important to note that registrations through Metamask or Magiclink do not provide a dedicated API Key. Without an API Key, you will not be able to perform transactions on Global Trust Network (GTN), and will have limited functionality on Stability Testnet. To receive an API Key, you must register using either GitHub, Google, or Email. 
 
@@ -52,13 +52,13 @@ Here, you will find your personal RPC URL.
 
 ![Metamask Logo](../../static/img/portalmetamasklogo.png)
 
-    To add your custom RPC to your browser extension wallet, click the Metamask Fox Logo next to your API Key. This will work with Metamask as well as many other browser extension based wallets. 
+To add your custom RPC to your browser extension wallet, click the Metamask Fox Logo next to your API Key. This will work with Metamask as well as many other browser extension based wallets. 
 
-    If you are not able to add the network to your wallet, you may have to add the network manually. Follow the instructions below.
+If you are not able to add the network to your wallet, you may have to add the network manually. Follow the instructions below.
 
 ### 3b. Add Network Manually to Metamask
 
-    In the event you are unable to add your wallet automatically, or you wish to add the network manually, simply follow the steps below.
+In the event you are unable to add your wallet automatically, or you wish to add the network manually, simply follow the steps below.
 
 #### Step 1 - Navigate to `Settings` in Metamask.
 
