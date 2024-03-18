@@ -28,7 +28,7 @@ For this setup, we'll be utilizing npm and ethers. This combination allows us to
 
 ## 4. Install
 
-Begin by installing ethers via npm. This step ensures that you have the necessary tools to connect to the Stability blockchain using JavaScript.
+Begin by installing ethers via npm. This step ensures that you have the necessary tools that interact with Stability Testnet and Global Trust Network (GTN) using Javascript.
 
 ```bash
 npm install ethers
@@ -37,8 +37,6 @@ npm install ethers
 ## 5. Create an `index.js` File
 
 Next, create a JavaScript file named `index.js` and paste the following code. This script configures Ethers to connect to the Stability Testnet and Global Trust Network (GTN), allowing you to read from the blockchain. In this example, we will retrieve the current block number.
-
-If you wish to deploy on Global Trust Network (GTN), simply swap out `"https://free.testnet.stabilityprotocol.com"` with your private Global Trust Network RPC URL. 
 
 ```bash
 
@@ -75,5 +73,5 @@ node index.js
 
 Upon successful execution, you should see a console log displaying the current block numbers of Stability Testnet and Global Trust Network (GTN). This step confirms that your JavaScript / Ethers setup is correctly configured to interact with the blockchains.
 
-![Console Return of Block Number](../../../../static/img/currentblocks.png)
+![Console Return of Block Number](../../../../static/img/ethersblocknumbers.png)
 
