@@ -88,7 +88,7 @@ In the event you are unable to add your wallet automatically via clicking the Me
 | **Property**               | **Global Trust Network**                                       | **Stability Testnet**                                               |
 |----------------------------|-----------------------------------------------------------------|----------------------------------------------------------------------|
 | Network Name               | Global Trust Network                                           | Stability Test Net                                                   |
-| New RPC URL                | `https://gtn.stabilityprotocol.com/?api_key=YOUR_API_KEY`      | `https://free.testnet.stabilityprotocol.com/?api_key=YOUR_API_KEY` |
+| New RPC URL                | `https://gtn.stabilityprotocol.com/zgt/YOUR_API_KEY`      | `https://free.testnet.stabilityprotocol.com/zgt/YOUR_API_KEY` |
 | Chain ID                   | 101010                                                          | 20180427                                                             |
 | Currency Symbol            | FREE                                                            | FREE                                                                 |
 | Block Explorer URL         | `https://stability.blockscout.com/`                             | `https://stability-testnet.blockscout.com/`                          |
