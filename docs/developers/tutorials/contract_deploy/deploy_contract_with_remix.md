@@ -10,13 +10,12 @@ Remix is an online smart contract IDE that does not require installation.
 
 ### Prerequisites
 
-- Basic knowledge of programming and blockchain
-- Metamask installed
+- Basic knowledge of programming and blockchain.
+- Metamask installed.
 
-### 2. Sign Up For An API Key
+## 2. Sign Up for an API Key
 
-If you have not done so, review the developer [getting started](../../getting_started.md) documentation to create your own API Key. 
-
+If you have not done so already, review the developer [getting started](../../getting_started.md) documentation to create your own API Key, and add either Stability Testnet or Global Trust Network (GTN) to Metamask.
 
 ## 3. Setting Up Remix
 
@@ -39,7 +38,7 @@ contract MyERC20 is ERC20 {
 }
 ```
 
-## 4. Compile contract
+## 4. Compile the Contract
 
 Once your contract is finished, you need to compile it. To do this, click on the `Solidity Compiler` option in the left sidebar. You will see something like this:
 
@@ -65,13 +64,13 @@ Then, you will need to set the initial supply of our token, as it is a required 
 
 For example, set the initial supply to `1000000`.
 
-After typing the initial supply, click on the orange button. A MetaMask popover will appear; click on `Confirm` and wait.
+After entering the initial supply, click on the orange button. A MetaMask popup will appear; click on `Confirm` and wait.
 
 After a moment, the contract will be deployed, and you will see something like this:
 
 ![Contract deployed image](deployed_remix.png)
 
-Congratulations! You now have a smart contract deployed.
+Congratulations! Your smart contract is now deployed.
 
 If you search for that address in the Stability block explorer, you will see something similar to this:
 
@@ -79,4 +78,4 @@ If you search for that address in the Stability block explorer, you will see som
 
 ### Conclusion
 
-Deploying a contract on the Stability network using Remix is very simple, as despite having zero gas transactions, the network maintains EVM compatibility, which allows using all existing tools in the EVM ecosystem to expedite the development of applications.
+Deploying a contract on the Stability network using Remix is straightforward. Despite having zero gas transactions, the network maintains EVM compatibility, allowing the use of all existing tools in the EVM ecosystem to expedite the development of applications.
