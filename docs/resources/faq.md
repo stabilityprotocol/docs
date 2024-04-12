@@ -28,7 +28,7 @@ To perform trnasactions on GTN, you must sign up for an API key. This allows for
 
 The connection details for GTN are as follows. Simply replace 'YOUR_API_KEY' with your API key.
     - **Network Name:** Global Trust Network
-    - **New RPC URL:** `https://free.testnet.stabilityprotocol.com/?api_key=YOUR_API_KEY`
+    - **New RPC URL:** `https://gtn.stabilityprotocol.com/zgt/YOUR_API_KEY`
     - **Chain ID:** 101010
     - **Currency Symbol:** FREE
     - **Block Explorer URL:** `https://stability.blockscout.com/`
@@ -50,7 +50,7 @@ Our connection details for our public RPC is as follows -
 
 The setup details for a private RPC on Stability Testnet are the same, save for the RPC URL. Simply replace 'YOUR_API_KEY' with your API key.
     - **Network Name:** Stability Test Net
-    - **New RPC URL:** `https://free.testnet.stabilityprotocol.com/?api_key=YOUR_API_KEY`
+    - **New RPC URL:** `https://free.testnet.stabilityprotocol.com/zgt/YOUR_API_KEY`
     - **Chain ID:** 20180427
     - **Currency Symbol:** FREE
     - **Block Explorer URL:** `https://stability-testnet.blockscout.com/`
