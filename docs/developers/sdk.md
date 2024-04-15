@@ -50,7 +50,7 @@ import { createStabilityTestnetClientViem } from "@stabilityprotocol/provider";
 ```
 ## Example
 
-Let's see the SDK in action.
+Let's see the SDK in action with a quick tutorial. This code is available on [Github](https://github.com/stabilityprotocol/sdk-tutorial). 
 
 In the root folder of your project, create a new file named test.ts. This TypeScript test code will use each of the four imports to retrieve the current block number.
 
