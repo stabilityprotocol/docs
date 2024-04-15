@@ -24,7 +24,7 @@ Yes. Private keys used on Ethereum, or any other EVM-based blockchain, will reso
 
 Global Trust Network (GTN) uses the same architecture for performing transactions as most blockchain networks. Simply connect to an RPC and you are able to perform transactions on GTN.
 
-To perform trnasactions on GTN, you must sign up for an API key. This allows for up to 2,000 daily transactions per API Key on Global Trust Network, and only requires a sign on using your e-mail, Github, or Google account. It is completely free. For an easy step-by-step guide to doing so, please check out [User Quickstart](../users/getting_started.md).
+To perform transactions on GTN, you must sign up for an API key. This allows for up to 2,000 daily transactions per API Key on Global Trust Network, and only requires a sign on using your e-mail, Github, or Google account. It is completely free. For an easy step-by-step guide to doing so, please check out [User Quickstart](../users/getting_started.md).
 
 The connection details for GTN are as follows. Simply replace 'YOUR_API_KEY' with your API key.
     - **Network Name:** Global Trust Network
