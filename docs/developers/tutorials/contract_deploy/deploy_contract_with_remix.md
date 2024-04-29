@@ -4,26 +4,27 @@
 
 ### Tutorial Objective
 
-This tutorial teaches how to deploy an ERC20 Smart Contract on the Stability Testnet using Remix IDE.
-
-Remix is an online smart contract IDE that does not require installation.
+This tutorial will guide you through deploying an ERC20 smart contract on the Global Trust Network (GTN) using the Remix IDE, an online smart contract development environment that requires no installation.
 
 ### Prerequisites
 
 - Basic knowledge of programming and blockchain.
-- Metamask installed.
+- MetaMask installed and configured.
 
 ## 2. Sign Up for an API Key
 
-If you have not done so already, review the developer [getting started](../../getting_started.md) documentation to create your own API Key, and add either Stability Testnet or Global Trust Network (GTN) to Metamask.
+
+Before starting, ensure you have an API key. Refer to the [getting started](../../getting_started.md)documentation to sign up for an API key and add the Stability Testnet or Global Trust Network (GTN) to MetaMask.
 
 ## 3. Setting Up Remix
 
-First, navigate to [Remix IDE](https://remix.ethereum.org/)
+Navigate to [Remix IDE](https://remix.ethereum.org/)
 
-Once you are in Remix, create a file inside the 'contracts' folder. For this tutorial, we are going to deploy an ERC20 token, so we will name it 'MyERC20.sol'.
+![Screenshot of Remix](../../../../static/img/remixscreen.png)
 
-In this file, paste the following code:
+In Remix, create a new file by clicking the icon highlighted in the screenshot. Name your file `MyERC20.sol` and prepare to deploy an ERC20 token named `PossumToken` with the ticker symbol `POSSUM`.
+
+Paste the following code into your file:
 
 ```
 // SPDX-License-Identifier: MIT
@@ -31,51 +32,44 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-contract MyERC20 is ERC20 {
-    constructor(uint256 initialSupply) ERC20("MyToken", "MTK") {
-        _mint(msg.sender, initialSupply);
+// SPDX-License-Identifier: MIT
+// Compatible with OpenZeppelin Contracts ^5.0.0
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
+contract PossumToken is ERC20 {
+    constructor() ERC20("PossumToken", "POSSUM") {
+        _mint(msg.sender, 10000 * 10 ** decimals());
     }
 }
 ```
 
 ## 4. Compile the Contract
 
-Once your contract is finished, you need to compile it. To do this, click on the `Solidity Compiler` option in the left sidebar. You will see something like this:
+To compile your contract, select the Solidity Compiler from the left sidebar in Remix.
 
-![Compile remix](compile_remix.png)
+![Compile remix](../../../../static/img/possumtokencompile.png)
 
-Then, click on the `Compile MyERC20.sol` button.
-
-Now, your contract is successfully compiled.
+Click on the Compile MyERC20.sol button. Your contract should now be compiled successfully.
 
 ## 5. Deploy
 
-Now you need to deploy it. To do this, navigate to the `Deploy & Run Transactions` section using the left sidebar.
+To deploy the contract, go to the Deploy & Run Transactions section in the left sidebar.
 
-There, you will see something like this:
+![Deploy with Remix](../../../../static/img/deployscreenremix.png)
 
-![Deploy with remix](deploy_remix.png)
+Set the `ENVIRONMENT` to `Injected Provider - MetaMask`.
 
-Select `Injected Provider - MetaMask` in the `ENVIRONMENT` input.
+Under the `Contract` dropdown, select `MyERC20`, and then click the orange deploy button.
 
-In the `Contract` section, choose `MyERC20`.
+A MetaMask popup will appear; confirm the transaction by clicking Confirm.
 
-Then, you will need to set the initial supply of our token, as it is a required variable in the constructor method of the MyERC20 contract.
+Once deployed, you will see a confirmation like this:
 
-For example, set the initial supply to `1000000`.
+![Contract deployed image](../../../../static/img/deployedcontract.png)
 
-After entering the initial supply, click on the orange button. A MetaMask popup will appear; click on `Confirm` and wait.
+Congratulations! Your smart contract is now deployed. 
 
-After a moment, the contract will be deployed, and you will see something like this:
+To view your token, visit the [Global Trust Network's block explorer](https://stability.blockscout.com/), then copy and paste your contract's address.
 
-![Contract deployed image](deployed_remix.png)
-
-Congratulations! Your smart contract is now deployed.
-
-If you search for that address in the Stability block explorer, you will see something similar to this:
-
-![Contract deployed image](contract_deployed_image.png)
-
-### Conclusion
-
-Deploying a contract on the Stability network using Remix is straightforward. Despite having zero gas transactions, the network maintains EVM compatibility, allowing the use of all existing tools in the EVM ecosystem to expedite the development of applications.
