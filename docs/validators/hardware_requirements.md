@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Stability uses Substrate as its blockchain framework. We strongly advise to use the appropriate hardware for secure and efficient participation in the network. These recommendations provided aim to ensure maximum uptime and performance.
 
-## Tendermint Requirements
+## Substrate Requirements
 
 Below are the minimum and recommended hardware specifications for running a node or validator on the Stability network using Substrate:
 
