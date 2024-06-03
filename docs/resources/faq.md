@@ -39,7 +39,7 @@ Stability uses the same architecture for performing transactions as most blockch
 
  We currently offer two options for connecting to Stability Testnet.
 
-Our public RPC allows a limit of 25 transactions per address. Users wishing to go beyond 25 free daily transactions should register for a free API Key on our testnet. This provides a private RPC this allows for up to 1,000 daily transactions per API Key on Stability Testnet, and only requires a sign on using your e-mail, Github, or Google account. It is completely free. For an easy step-by-step guide to doing so, please check out [User Quickstart](../users/getting_started.md).
+Our public RPC allows a limit of 25 transactions per address. Users wishing to go beyond 25 free daily transactions should register for a free API Key on our testnet. This provides a private RPC this allows for up to 1,000 monthly transactions per API Key on Stability Testnet, and only requires a sign on using your e-mail, Github, or Google account. It is completely free. For an easy step-by-step guide to doing so, please check out [User Quickstart](../users/getting_started.md).
 
 Our connection details for our public RPC is as follows -
     - **Network Name:** Stability Test Net
