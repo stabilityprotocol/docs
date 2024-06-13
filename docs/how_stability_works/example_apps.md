@@ -24,6 +24,8 @@ The Mintify app demonstrates the simplest web3 onboarding experience in the worl
 
 ## PayNow - Stability Testnet
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YxlRBvmjdTM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 The PayNow app demonstrates frictionless peer-to-peer stablecoin payments on Stability Testnet, using names as recipients. These transfers can occur with or without wallets by utilizing MagicLink. By using names as recipients, quick money transfers are as simple as your standard cash app.
 
 [**Launch App**](https://paynow.stabilityprotocol.com)
