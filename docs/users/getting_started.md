@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Getting Started with the Global Trust Network and Stability Testnet
+# Getting Started
 
 This quickstart guide is intended for users who wish to use the Global Trust Network (GTN) or Stability Testnet through browser extensions. In this example, we will use MetaMask, the most popular browser extension for interacting with blockchains.
 
