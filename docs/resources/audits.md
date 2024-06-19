@@ -69,4 +69,4 @@ The audit targeted the Stability blockchain implemented in Substrate + Rust, foc
 
 The audit identified 4 high-risk, 4 low-risk, and 3 suggested vulnerability categories. The team has addressed most of the vulnerabilities, with some acknowledged due to their nature or current architecture limitations.
 
-Find the full report [here](../../static/Slowmist-Audit.pdf).
+[Find the full report here](../../static/Slowmist-Audit.pdf).

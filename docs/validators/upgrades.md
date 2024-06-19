@@ -22,6 +22,6 @@ For more information on Runtime Upgrades, please consult the [Substrate Document
 
 ## Managing Node Upgrades
 
-Node upgrades require active participation from validators to ensure their nodes remain in sync with the network. Each upgrade produces a new Docker image, available [here](https://github.com/stabilityprotocol/stability/pkgs/container/stability), and can be deployed by following [this tutorial](./run_node_using_docker).
+Node upgrades require active participation from validators to ensure their nodes remain in sync with the network. Each upgrade produces a new Docker image, [you can view the Docker Image here on Github](https://github.com/stabilityprotocol/stability/pkgs/container/stability). This image can be deployed by following [this tutorial](./run_node_using_docker).
 
 To stay updated with each node upgrade, validators must download the latest Docker image and restart their nodes, thus ensuring they are running the most current version of the software.
