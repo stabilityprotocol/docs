@@ -20,7 +20,7 @@ In conventional blockchain systems, transactions are broadcast to a public mempo
 
 Stability Protocol adopts a different approach to transaction sequencing. Our network only considers the chronological order of transaction submissions. This method ensures a fairer and more predictable processing time, as transactions are mined based on their submission time rather than their associated gas fees. As a result, users experience a more consistent and equitable transaction processing environment, with transactions typically being processed within a remarkably short timeframe of 2 seconds.
 
-Furthermore, this sequencing mechanism ensures all tranasactions are private until they have been mined. Versus the public mempool of conventional blockchains, the mempool on Stability is private. The details of a transaction are not known until they have been finalized on our network.
+Furthermore, this sequencing mechanism ensures all transactions are private until they have been mined. Versus the public mempool of conventional blockchains, the mempool on Stability is private. The details of a transaction are not known until they have been finalized on our network.
 
 The network's infrastructure is robust, capable of handling approximately 10,000 transactions per second (TPS). This high throughput is indicative of the network's efficiency and scalability. The underlying architecture and technology enable the Stability Protocol to maintain high performance while offering the potential for further scalability. This scalability is crucial for accommodating an increasing volume of transactions as the network grows, ensuring that the system remains efficient and responsive even under heavy loads.
 
