@@ -16,6 +16,10 @@ One of the key differences with Stability is its lack of a native token. This fu
 
 ## Examples
 
+### Stability is an EVM Compatible with Solidity up to 0.8.19
+
+Stability makes use of the Frontier EVM Pallet. Currently, Stability has not implamented the Cancun update. Developers must compile Solidity at version 0.8.19 or lower. 
+
 ### Native Token Value Transfers
 
 On Stability, functions intended for transferring native gas tokens, such as `.transfer`, `.send`, and any operations involving `msg.value`, are not supported. Attempts to execute such transactions will automatically revert. This is a significant departure from traditional Ethereum-based smart contract interactions, where these methods are commonly used to manage and transfer Ether between accounts. For instance, the following Solidity code snippets illustrate transactions that would **fail** on Stability:
