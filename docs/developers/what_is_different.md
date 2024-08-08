@@ -16,9 +16,9 @@ One of the key differences with Stability is its lack of a native token. This fu
 
 ## Examples
 
-### Stability is an EVM Compatible with Solidity up to 0.8.19
+### Stability is an EVM Compatible with Solidity up to 0.8.24
 
-Stability makes use of the Frontier EVM Pallet. Currently, Stability has not implamented the Cancun update. Developers must compile Solidity at version 0.8.19 or lower. 
+Stability makes use of the Frontier EVM Pallet. Currently, Stability has not implamented the Cancun update. Developers must compile Solidity at version 0.8.24 or lower. 
 
 ### Native Token Value Transfers
 
