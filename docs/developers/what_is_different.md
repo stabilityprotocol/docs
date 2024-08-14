@@ -20,6 +20,20 @@ One of the key differences with Stability is its lack of a native token. This fu
 
 Stability makes use of the Frontier EVM Pallet. Currently, Stability has not implamented the Cancun update. Developers must compile Solidity at version 0.8.24 or lower. 
 
+### Gas Cost and Priority Fee Must Be Set To Zero
+
+On Stability, gas costs and priority fees are not applicable in the same way they are on traditional EVM-based blockchains due to the absence of a native token. Wallets such as Metamask will handle this automatically. However, this means that when constructing transactions, developers must explicitly set the gas cost and priority fee to zero. 
+
+Here is an example of how this can be achieved using ethers.js:
+
+```javascript
+const tx = {
+    ...
+    gasPrice: ethers.utils.parseUnits("0", "gwei"),
+    maxPriorityFeePerGas: ethers.utils.parseUnits("0", "gwei"),
+};
+```
+
 ### Native Token Value Transfers
 
 On Stability, functions intended for transferring native gas tokens, such as `.transfer`, `.send`, and any operations involving `msg.value`, are not supported. Attempts to execute such transactions will automatically revert. This is a significant departure from traditional Ethereum-based smart contract interactions, where these methods are commonly used to manage and transfer Ether between accounts. For instance, the following Solidity code snippets illustrate transactions that would **fail** on Stability:
