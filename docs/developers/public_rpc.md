@@ -18,14 +18,14 @@ For Ethereum API specifics, refer to the [Ethereum API Documentation](https://et
 
 The Stability Public Testnet RPC facilitates blockchain reading and permits up to 20 transactions per address daily. Users requiring more transactions can obtain a free API key by visiting our [Getting Started page](./getting_started).
 
-- **RPC URL**: `https://free.testnet.stabilityprotocol.com`
+- **RPC URL**: `https://rpc.testnet.stabilityprotocol.com/`
 - **Chain ID**: `20180427`
 
 ### Global Trust Network Mainnet Access
 
 The Global Trust Network (GTN) Public RPC is read-only for the blockchain. Transaction execution is not available through the GTN Public RPC. Users looking to perform transactions should acquire a free API key as detailed on our [Getting Started page](./getting_started).
 
-- **RPC URL**: `https://gtn.stabilityprotocol.com`
+- **RPC URL**: `https://rpc.stabilityprotocol.com`
 - **Chain ID**: `101010`
 
 ## Stability Custom RPC Endpoints
@@ -45,7 +45,7 @@ Our networks feature a suite of custom RPC endpoints developed by the Stability 
 The following command illustrates how to query the supported tokens using the `stability_getSupportedTokens` endpoint:
 
 ```shell
-curl 'https://free.testnet.stabilityprotocol.com/' \
+curl 'https://rpc.testnet.stabilityprotocol.com/' \
   -X POST \
   -H "Content-Type: application/json" \
   --data '{"method":"stability_getSupportedTokens","params":[], "id":1,"jsonrpc":"2.0"}'

@@ -68,10 +68,10 @@ const stbleTestnet = defineChain({
   },
   rpcUrls: {
     default: {
-      http: ["https://free.testnet.stabilityprotocol.com"],
+      http: ["https://rpc.testnet.stabilityprotocol.com"],
     },
     public: {
-      http: ["https://free.testnet.stabilityprotocol.com"],
+      http: ["https://rpc.testnet.stabilityprotocol.com"],
     },
   },
   contracts: {
@@ -101,10 +101,10 @@ const globalTrustNetwork = defineChain({
   },
   rpcUrls: {
     default: {
-      http: ["https://gtn.stabilityprotocol.com"],
+      http: ["https://rpc.stabilityprotocol.com"],
     },
     public: {
-      http: ["https://gtn.stabilityprotocol.com"],
+      http: ["https://rpc.stabilityprotocol.com"],
     },
   },
   contracts: {

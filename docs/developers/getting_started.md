@@ -88,14 +88,14 @@ In the event you are unable to add your wallet automatically via clicking the Me
 | **Property**               | **Global Trust Network**                                       | **Stability Testnet**                                               |
 |----------------------------|-----------------------------------------------------------------|----------------------------------------------------------------------|
 | Network Name               | Global Trust Network                                           | Stability Test Net                                                   |
-| New RPC URL                | `https://gtn.stabilityprotocol.com/zgt/YOUR_API_KEY`      | `https://free.testnet.stabilityprotocol.com/zgt/YOUR_API_KEY` |
+| New RPC URL                | `https://rpc.stabilityprotocol.com/zgt/YOUR_API_KEY`      | `https://rpc.testnet.stabilityprotocol.com/zgt/YOUR_API_KEY` |
 | Chain ID                   | 101010                                                          | 20180427                                                             |
 | Currency Symbol            | FREE                                                            | FREE                                                                 |
 | Block Explorer URL         | `https://stability.blockscout.com/`                             | `https://stability-testnet.blockscout.com/`                          |
 
 ### 4. Review What Is Different With Stability
 
-We highly recommend reviewing the section on [What Is Different](./what_is_different.md) regarding Stability as opposed to traditional Ethereum Virtual Machine (EVM) blockchains. Understanding these distinctions is crucial for developers looking to create decentralized applications (dApps) on the Stability platform, especially since certain functionalities, like native token transfers, will not operate in the same way on Stability. It is important to note that Stablity supports Solidity version 0.8.19 or lower. 
+We highly recommend reviewing the section on [What Is Different](./what_is_different.md) regarding Stability as opposed to traditional Ethereum Virtual Machine (EVM) blockchains. Understanding these distinctions is crucial for developers looking to create decentralized applications (dApps) on the Stability platform, especially since certain functionalities, like native token transfers, will not operate in the same way on Stability. It is important to note that Stablity supports Solidity version 0.8.24 or lower. 
 
 
 ## Now Start Swimming

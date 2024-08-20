@@ -42,8 +42,8 @@ Next, create a JavaScript file named `index.js` and paste the following code. Th
 
 const { JsonRpcProvider } = require('ethers');
 
-const providerTest = new JsonRpcProvider("https://free.testnet.stabilityprotocol.com");
-const providerGTN = new JsonRpcProvider("https://gtn.stabilityprotocol.com");
+const providerTest = new JsonRpcProvider("https://rpc.testnet.stabilityprotocol.com");
+const providerGTN = new JsonRpcProvider("https://rpc.stabilityprotocol.com");
 
 const logCurrentBlockNumbers = async () => {
   try {
