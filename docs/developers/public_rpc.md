@@ -16,7 +16,7 @@ For Ethereum API specifics, refer to the [Ethereum API Documentation](https://et
 
 ### Stability Testnet Access
 
-The Stability Public Testnet RPC facilitates blockchain reading and permits up to 20 transactions per address daily. Users requiring more transactions can obtain a free API key by visiting our [Getting Started page](./getting_started).
+The Stability Public Testnet RPC is read-only for the blockchain. Users looking to perform transactions should acquire a free API key as detailed on our [Getting Started page](./getting_started).
 
 - **RPC URL**: `https://rpc.testnet.stabilityprotocol.com/`
 - **Chain ID**: `20180427`

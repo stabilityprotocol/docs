@@ -24,7 +24,7 @@ If you haven't already, install MetaMask for your browser from the [official Met
 
 On this screen, select your preferred method of registration. For this tutorial, we will be following the Google sign-in path. You may also similarly log in via Email, GitHub, Magiclink, or directly through Metamask.  
 
-It is important to note that registrations through Metamask or Magiclink do not provide a dedicated API Key. Without an API Key, you will not be able to perform transactions on Global Trust Network (GTN), and will have limited functionality on Stability Testnet. To receive an API Key, you must register using either GitHub, Google, or Email. 
+It is important to note that registrations through Metamask or Magiclink do not provide a dedicated API Key. Without an API Key, you will not be able to perform transactions on Global Trust Network (GTN) and Stability Testnet. To receive an API Key, you must register using either GitHub, Google, or Email. 
 
 If you opt to register via email, ensure you can verify your email address.
 
