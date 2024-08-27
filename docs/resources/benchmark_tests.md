@@ -14,7 +14,6 @@ These tests occurred on March 11th, 2024 for Testnet, and March 12th, 2024 for G
 |------------------------------|-------------|
 | Transactions Per Second (TPS) | This metric indicates the number of transactions the network can handle in one second. Varying this parameter helps in assessing the network's scalability and throughput. |
 | Gas Per Transaction          | Represents the amount of computational effort required to execute a transaction in units of wei. |
-| Average Block Time           | The average time taken to mine a block. This is a critical measure of the network's latency and responsiveness. |
 | Total Block Gas              | The cumulative gas used by all transactions in a block. This metric gives an overview of the block's capacity utilization. |
 | Max Transactions Per Block   | The maximum number of transactions that can be included in a single block, which is directly influenced by the block gas limit and the gas used per transaction. |
 
