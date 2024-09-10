@@ -73,17 +73,29 @@ We set limits to prevent spamming of the network.
 
 Developing on Stability uses the same tooling as Ethereum, or any other EVM-based blockchain. 
 
-### Can I deploy and interact with smart contracts on Stability Testnet? Is it the same as Ethereum?
+### Can I deploy and interact with smart contracts on Stability? Is it the same as Ethereum?
 
 Yes. Stability is an EVM-based blockchain and most smart contract functionality remains the same. There are a few notable differences due to our tokenless model. For further detail, view our [What is different on Stability](../developers/what_is_different.md) documentation.
 
-### Can I create and deploy my own tokens on the Stability Testnet network?
+### Can I create and deploy my own tokens on the Stability?
 
 Yes. Go nuts! The Stability Testnet is here for experimentation, and exploring the possiblities of zero-gas transactions.
 
-### I would like to have a larger quota for Stability Testnet transactions. How can I do this?
+### I would like to have a larger quota for Stability. How can I do this?
 
 Please contact us using the following [`Google Form`](https://docs.google.com/forms/d/e/1FAIpQLSfiBQOc0z9HtHyHCH1QCIZWQ0mdJ8koGaWysErJHJRylQy2Yw/viewform)
+
+### What is the block time on Stability?
+
+Our average block time is ~2secs.
+
+### What is the current block size on Stability?
+
+Our current block size allows for 300,000,000 gas units per block.
+
+### What is the maximum size of a transaction?
+
+The maximum size for a transaction is 260,000,000 gas units.
 
 <!-- ### Community
 
