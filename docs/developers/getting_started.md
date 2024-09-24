@@ -92,6 +92,8 @@ In the event you are unable to add your wallet automatically via clicking the Me
 | Chain ID                   | 101010                                                          | 20180427                                                             |
 | Currency Symbol            | FREE                                                            | FREE                                                                 |
 | Block Explorer URL         | `https://stability.blockscout.com/`                             | `https://stability-testnet.blockscout.com/`                          |
+| Request Limit              | 1500 Per Minute                                                 | 1500 Per Minute                                                      |
+| Max Batch Size             | 40                                                              | 40                                                                   |
 
 ### 4. Review What Is Different With Stability
 
