@@ -106,7 +106,7 @@ readMessage();
 
 #### Explanation:
 
-- **Contract Details**: We define the `contractAddress` and the ABI (Application Binary Interface) for the `getMessage` function.
+- **Contract Details**: We define the `contractAddress` and the ABI (Application Binary Interface) for the `getMessage` function. This contract has been deployed by the Stability Team for this example.
 - **Provider**: We connect to the Stability Testnet Network using the JSON RPC provider URL. Ideally, create your own free RPC in [Stability Account Manager](https://account.stabilityprotocol.com/keys), as this public RPC will severely limit your reads.
 - **Contract Interaction**: We create a contract instance using `ethers.Contract` and call the `getMessage` function to retrieve the message stored on the contract.
 
