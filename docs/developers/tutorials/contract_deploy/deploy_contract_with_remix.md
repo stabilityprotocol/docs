@@ -57,14 +57,11 @@ To deploy the contract, go to the Deploy & Run Transactions section in the left 
 Set the `ENVIRONMENT` to `Injected Provider - MetaMask`.
 
 Under the `Contract` dropdown, select `MyERC20`, and then click the orange deploy button.
-
-![Deploy with Remix](../../../../static/img/deployscreenremixnew.png)
-
 A MetaMask popup will appear. Click the pencil icon in the estimated fee box.
 
 ![Adjust Gas Icon in Metamask](../../../../static/img/adjustgas.png)
 
-This will allow you to customize Metamask for zero gas transactions. Click the advanced gas fee icon. Set your `Max Base Fee` and `Priority Fee` to zero. Click the `Save these values as my default...` checkbox to avoid doing this in the future. 
+This will allow you to customize Metamask for zero gas transactions. Click the advanced gas fee icon. Set your `Max Base Fee` and `Priority Fee` to zero. Click the `Save these values as my default...` checkbox to avoid having to manually set the gas in the future. 
 
 ![Advanced Gas Fee Settings in Metamask](../../../../static/img/advancegasscreen.png)
 
