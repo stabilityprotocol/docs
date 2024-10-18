@@ -28,11 +28,6 @@ Paste the following code into your file:
 
 ```
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
-
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-
-// SPDX-License-Identifier: MIT
 // Compatible with OpenZeppelin Contracts ^5.0.0
 pragma solidity ^0.8.20;
 
@@ -49,7 +44,7 @@ contract PossumToken is ERC20 {
 
 To compile your contract, select the Solidity Compiler from the left sidebar in Remix.
 
-![Compile remix](../../../../static/img/possumtokencompile.png)
+![Compile remix](../../../../static/img/possumtokencompilenew.png)
 
 Click on the Compile MyERC20.sol button. Your contract should now be compiled successfully.
 
@@ -57,13 +52,22 @@ Click on the Compile MyERC20.sol button. Your contract should now be compiled su
 
 To deploy the contract, go to the Deploy & Run Transactions section in the left sidebar.
 
-![Deploy with Remix](../../../../static/img/deployscreenremix.png)
+![Deploy with Remix](../../../../static/img/deployscreenremixnew.png)
 
 Set the `ENVIRONMENT` to `Injected Provider - MetaMask`.
 
 Under the `Contract` dropdown, select `MyERC20`, and then click the orange deploy button.
 
-A MetaMask popup will appear; confirm the transaction by clicking Confirm.
+![Deploy with Remix](../../../../static/img/deployscreenremixnew.png)
+
+A MetaMask popup will appear. Click the pencil icon in the estimated fee box.
+
+![Adjust Gas Icon in Metamask](../../../../static/img/adjustgas.png)
+
+This will allow you to customize Metamask for zero gas transactions. Click the advanced gas fee icon. Set your `Max Base Fee` and `Priority Fee` to zero. Click the `Save these values as my default...` checkbox to avoid doing this in the future. 
+
+![Advanced Gas Fee Settings in Metamask](../../../../static/img/advancegasscreen.png)
+
 
 Once deployed, you will see a confirmation like this:
 
