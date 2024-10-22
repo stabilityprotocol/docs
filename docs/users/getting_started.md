@@ -94,8 +94,19 @@ In the event you are unable to add your wallet automatically via clicking the Me
 | Currency Symbol            | FREE                                                            | FREE                                                                 |
 | Block Explorer URL         | `https://stability.blockscout.com/`                             | `https://stability-testnet.blockscout.com/`                          |
 
-    
-### 4. Complete!
+### 4. Configure your Metamask for Zero Fees
+
+Transactions submitted to Stability require the max base fee and priority fee to be set to zero. For the your first transaction, you will have to manually set these values to zero. It is advised that you save these values as the default setting for our network.
+
+![Adjust Gas Icon in Metamask](../../static/img/adjustgas.png)
+
+On your first transaction, A MetaMask popup will appear to confirm the transaction. Click the pencil icon in the estimated fee box.
+
+![Advanced Gas Fee Settings in Metamask](../../static/img/advancegasscreen.png)
+
+This will allow you to customize Metamask for zero gas transactions. Click the advanced gas fee icon. Set your `Max Base Fee` and `Priority Fee` to zero. Click the `Save these values as my default...` checkbox to avoid having to manually set the gas in the future. 
+
+### 5. Complete!
 
 You're now connected to our blockchain network and ready to make transactions or interact with smart contracts!
 
