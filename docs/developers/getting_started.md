@@ -95,7 +95,22 @@ In the event you are unable to add your wallet automatically via clicking the Me
 | Request Limit              | 1500 Per Minute                                                 | 1500 Per Minute                                                      |
 | Max Batch Size             | 40                                                              | 40                                                                   |
 
-### 4. Review What Is Different With Stability
+### 4. Configure for Zero Fees
+
+It is important to note that Stability requires you to manually set the `Max Base Fee` and `Priority Fee` to zero. When using libraries such as `ethers`, this must be coded into the transaction. A live example of this is available in the source code of our [Data Store App](https://github.com/stabilityprotocol/datastoredapp). 
+
+To set this in Metamask, for the your first transaction, you will have to manually set these values to zero. It is advised that you save these values as the default setting for our network.
+
+![Adjust Gas Icon in Metamask](../../static/img/adjustgas.png)
+
+On your first transaction, A MetaMask popup will appear to confirm the transaction. Click the pencil icon in the estimated fee box.
+
+![Advanced Gas Fee Settings in Metamask](../../static/img/advancegasscreen.png)
+
+This will allow you to customize Metamask for zero gas transactions. Click the advanced gas fee icon. Set your `Max Base Fee` and `Priority Fee` to zero. Click the `Save these values as my default...` checkbox to avoid having to manually set the gas in the future. 
+
+
+### 5. Review What Is Different With Stability
 
 We highly recommend reviewing the section on [What Is Different](./what_is_different.md) regarding Stability as opposed to traditional Ethereum Virtual Machine (EVM) blockchains. Understanding these distinctions is crucial for developers looking to create decentralized applications (dApps) on the Stability platform, especially since certain functionalities, like native token transfers, will not operate in the same way on Stability. It is important to note that Stablity supports Solidity version 0.8.24 or lower. 
 
