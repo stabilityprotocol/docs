@@ -26,7 +26,7 @@ The network's infrastructure is robust, capable of handling approximately 10,000
 
 ## Validators: Achieving Consensus
 
-Stability has created a novel consensus mechanism to facilitate our tokenless blockchain.
+Stability has created a novel consensus mechanism to facilitate our feeless blockchain.
 
 ### Aura: Block Creation
 Aura is a slot-based, round-robin mechanism for block creation, performed by a predefined set of validator nodes. In this system, time is divided into distinct slots, and each slot is assigned to a specific validator. This ensures a predictable and fair block creation process, as each validator knows in advance when it will be their turn to create a block. The round-robin nature of Aura ensures that the opportunity to create blocks is evenly distributed among all validators, enhancing the decentralization and fairness of the process.

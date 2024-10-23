@@ -4,13 +4,13 @@ sidebar_position: 1
 
 # Intro to Stability Network 
 
-Welcome to the Stability Network, an innovative approach to blockchain technology that challenges the conventional norms. Stability stands out in the blockchain landscape as a tokenless, open-source, decentralized, public, and highly scalable platform. This introduction aims to provide a high-level overview of Stability's unique features and how they collectively contribute to its distinct position in the blockchain ecosystem.
+Welcome to the Stability Network, an innovative approach to blockchain technology that challenges the conventional norms. Stability stands out in the blockchain landscape as a feeless, open-source, decentralized, public, and highly scalable platform. This introduction aims to provide a high-level overview of Stability's unique features and how they collectively contribute to its distinct position in the blockchain ecosystem.
 
 ---
 
-### Tokenless
+### Feeless
 
-**Transactions without Gas Fees**: Unlike traditional blockchains that require tokens for transaction fees (often referred to as "gas"), Stability offers a groundbreaking alternative. Transactions on the Stability network do not require a token, eliminating the need for users to hold or manage any form of native cryptocurrency. This is made possible through the use of API keys, which allocate transactions to users through secure, unique RPC addresses. This tokenless approach allows for an accessable, better user experience while reducing costs for all parties.
+**Transactions without Gas Fees**: Unlike traditional blockchains that require tokens for transaction fees (often referred to as "gas"), Stability offers a groundbreaking alternative. Transactions on the Stability network do not require a token, eliminating the need for users to hold or manage any form of native cryptocurrency. This is made possible through the use of API keys, which allocate transactions to users through secure, unique RPC addresses. This feeless approach allows for an accessable, better user experience while reducing costs for all parties.
 
 ### Open-Source
 
@@ -31,4 +31,4 @@ Welcome to the Stability Network, an innovative approach to blockchain technolog
 ---
 
 # Stability is Different
-The Stability Network represents a significant leap forward in blockchain technology, offering a unique blend of features that make it an attractive platform for a wide range of applications. Its tokenless nature, open-source ethos, decentralized architecture, public accessibility, and high scalability set it apart as a forward-thinking solution for the future of decentralized systems.
+The Stability Network represents a significant leap forward in blockchain technology, offering a unique blend of features that make it an attractive platform for a wide range of applications. Its feeless nature, open-source ethos, decentralized architecture, public accessibility, and high scalability set it apart as a forward-thinking solution for the future of decentralized systems.

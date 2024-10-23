@@ -75,7 +75,7 @@ Developing on Stability uses the same tooling as Ethereum, or any other EVM-base
 
 ### Can I deploy and interact with smart contracts on Stability? Is it the same as Ethereum?
 
-Yes. Stability is an EVM-based blockchain and most smart contract functionality remains the same. There are a few notable differences due to our tokenless model. For further detail, view our [What is different on Stability](../developers/what_is_different.md) documentation.
+Yes. Stability is an EVM-based blockchain and most smart contract functionality remains the same. There are a few notable differences due to our feeless model. For further detail, view our [What is different on Stability](../developers/what_is_different.md) documentation.
 
 ### Can I create and deploy my own tokens on the Stability?
 
