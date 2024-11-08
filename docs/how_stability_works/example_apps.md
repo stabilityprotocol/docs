@@ -7,8 +7,7 @@ sidebar_position: 3
 The following are a list of example dApps created by the Stability Team.
 
 ## Stability Account Portal - Mainnet & Testnet
-**Generates API Keys For Individual RPCs**
-**Wallet Not Required**
+**Generates API Keys For Individual RPCs** / **Wallet Not Required**
 
 A platform for creating free accounts to allow you to interact and perform transactions on the Stability Testnet and Global Trust Network. You can create an API key to use with an RPC URL for wallets such as MetaMask or create an account with MagicLink for a wallet-free experience.
 
@@ -17,8 +16,7 @@ For a walkthrough on this process, please visit our [**Getting Started**](../use
 [**Launch App**](https://account.stabilityprotocol.com)
 
 ## Stability Publisher - Mainnet & Testnet
-**Demonstrates Data Publishing on Stability**
-**Walletless**
+**Demonstrates Data Publishing on Stability** / **Walletless**
 
 A simple decentralized application (dApp) and React frontend that allows users to submit messages to the Stability Blockchain using our experimental [**ZKT RPC**](../developers/zkt.md), with the option to post to either the Testnet or Mainnet.
 
@@ -27,8 +25,7 @@ A simple decentralized application (dApp) and React frontend that allows users t
 [**Github - Source Code**](https://github.com/stabilityprotocol/stability-publisher-dapp)
 
 ## Mintify - Testnet
-**Demonstrates Tokenization on Stability**
-**Wallet Not Required**
+**Demonstrates Tokenization on Stability** / **Wallet Not Required**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HADeAppAUaM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -39,8 +36,7 @@ The Mintify app demonstrates the simplest web3 onboarding experience in the worl
 [**Github - Source Code**](https://github.com/stabilityprotocol/demo-fungibles)
 
 ## PayNow - Testnet
-**Demonstrates Secure P2P Token Transfers Using Magiclink on Stability**
-**Walletless**
+**Demonstrates Secure P2P Token Transfers Using Magiclink on Stability** / **Walletless**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YxlRBvmjdTM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
