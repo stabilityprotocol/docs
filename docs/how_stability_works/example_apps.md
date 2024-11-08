@@ -6,7 +6,7 @@ sidebar_position: 3
 
 The following are a list of example dApps created by the Stability Team.
 
-## Stability Account Portal
+## Stability Account Portal - Mainnet & Testnet
 
 A platform for creating free accounts to allow you to interact and perform transactions on the Stability Testnet and Global Trust Network. You can create an API key to use with an RPC URL for wallets such as MetaMask or create an account with MagicLink for a wallet-free experience.
 
@@ -14,15 +14,15 @@ For a walkthrough on this process, please visit our [**Getting Started**](../use
 
 [**Launch App**](https://account.stabilityprotocol.com)
 
-## Stability Publisher 
+## Stability Publisher - Mainnet & Testnet
 
 A simple decentralized application (dApp) and React frontend that allows users to submit messages to the Stability Blockchain using our experimental [**ZKT RPC**](../developers/zkt.md), with the option to post to either the Testnet or Mainnet.
 
-[**Launch App**](https://stabilityprotocol.github.io/stability-publisher-dapp/) 
-[**Code Sandbox**](https://codesandbox.io/p/github/stabilityprotocol/stability-publisher-dapp/main)
+[**Launch App**](https://stabilityprotocol.github.io/stability-publisher-dapp/) |
+[**Code Sandbox**](https://codesandbox.io/p/github/stabilityprotocol/stability-publisher-dapp/main) |
 [**Github - Source Code**](https://github.com/stabilityprotocol/stability-publisher-dapp)
 
-## Mintify - Stability Testnet
+## Mintify - Testnet
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HADeAppAUaM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -30,7 +30,7 @@ The Mintify app demonstrates the simplest web3 onboarding experience in the worl
 
 [**Launch App**](https://mintify.stabilityprotocol.com)
 
-## PayNow - Stability Testnet
+## PayNow - Testnet
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YxlRBvmjdTM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
