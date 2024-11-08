@@ -14,6 +14,14 @@ For a walkthrough on this process, please visit our [**Getting Started**](../use
 
 [**Launch App**](https://account.stabilityprotocol.com)
 
+## Stability Publisher 
+
+A simple decentralized application (dApp) and React frontend that allows users to submit messages to the Stability Blockchain using our experimental [**ZKT RPC**](../developers/zkt.md), with the option to post to either the Testnet or Mainnet.
+
+[**Launch App**](https://stabilityprotocol.github.io/stability-publisher-dapp/) 
+[**Code Sandbox**](https://codesandbox.io/p/github/stabilityprotocol/stability-publisher-dapp/main)
+[**Github - Source Code**](https://github.com/stabilityprotocol/stability-publisher-dapp)
+
 ## Mintify - Stability Testnet
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HADeAppAUaM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
