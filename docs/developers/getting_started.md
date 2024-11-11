@@ -114,6 +114,10 @@ This will allow you to customize Metamask for zero gas transactions. Click the a
 
 We highly recommend reviewing the section on [What Is Different](./what_is_different.md) regarding Stability as opposed to traditional Ethereum Virtual Machine (EVM) blockchains. Understanding these distinctions is crucial for developers looking to create decentralized applications (dApps) on the Stability platform, especially since certain functionalities, like native token transfers, will not operate in the same way on Stability. It is important to note that Stablity supports Solidity version 0.8.24 or lower. 
 
+It is highly recommended you check out [Example dApps](../how_stability_works/example_apps.md) for examples of coding with Stability's unique attributes. Many of our examples are open-sourced on [Github](https://github.com/stabilityprotocol). 
+
+A non-frills example on Code Sandbox using the a basic Storage smart contract is available [here](https://codesandbox.io/p/devbox/trusting-thunder-rjrxfq).
+
 
 ## Now Start Swimming
 Armed with this knowledge and your API key, you're well-prepared to embark on your development journey with the Stability Network. Dive in and start innovating! Happy hacking!
