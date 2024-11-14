@@ -116,8 +116,6 @@ We highly recommend reviewing the section on [What Is Different](./what_is_diffe
 
 It is highly recommended you check out [Example dApps](../how_stability_works/example_apps.md) for examples of coding with Stability's unique attributes. Many of our examples are open-sourced on [Github](https://github.com/stabilityprotocol). 
 
-A non-frills example on Code Sandbox using the a basic Storage smart contract is available [here](https://codesandbox.io/p/devbox/trusting-thunder-rjrxfq).
-
 
 ## Now Start Swimming
 Armed with this knowledge and your API key, you're well-prepared to embark on your development journey with the Stability Network. Dive in and start innovating! Happy hacking!

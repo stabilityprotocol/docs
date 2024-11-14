@@ -21,7 +21,6 @@ For a walkthrough on this process, please visit our [**Getting Started**](../use
 A simple decentralized application (dApp) and React frontend that allows users to submit messages to the Stability Blockchain using our experimental [**ZKT RPC**](../developers/zkt.md), with the option to post to either the Testnet or Mainnet.
 
 [**Launch App**](https://stabilityprotocol.github.io/stability-publisher-dapp/) |
-[**Code Sandbox**](https://codesandbox.io/p/github/stabilityprotocol/stability-publisher-dapp/main) |
 [**Github - Source Code**](https://github.com/stabilityprotocol/stability-publisher-dapp)
 
 ## Mintify - Testnet
@@ -32,7 +31,6 @@ A simple decentralized application (dApp) and React frontend that allows users t
 The Mintify app demonstrates the simplest web3 onboarding experience in the world today, possible with Stability. This revolutionary proof-of-concept enables a user to log in with an email address and automatically create a brand new, unfunded wallet and mint a digital collectible (NFT) onto the Stability Testnet Blockchain for free. No cryptocurrency, transaction fee, account abstraction, or sponsored transaction required — an industry first.
 
 [**Launch App**](https://mintify.stabilityprotocol.com) |
-[**Code Sandbox**](https://codesandbox.io/p/github/stabilityprotocol/demo-fungibles/draft/eager-shadow) |
 [**Github - Source Code**](https://github.com/stabilityprotocol/demo-fungibles)
 
 ## PayNow - Testnet
