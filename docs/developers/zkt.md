@@ -2,11 +2,11 @@
 sidebar_position: 6
 ---
 
-# ZKT - HTTP POST on Stability Blockchain (Beta)
+# Zero-Knowledge Transactions (Beta)
 
 ### Overview
 
-ZKT is a feature built on the **Stability Blockchain** that simplifies blockchain interactions by enabling users to submit messages directly to the blockchain via HTTP POST requests. This is an experimental aspect of Stability, aimed at making blockchain interactions as simple as possible.
+Zero-Knowledge Transactions, ZKT, is a feature built on the **Stability Blockchain** that simplifies blockchain interactions by enabling users to submit messages directly to the blockchain via HTTP POST requests. This is an experimental aspect of Stability, aimed at making blockchain interactions as simple as possible.
 
 An open-source GitHub repository, [Stability Publisher](https://github.com/stabilityprotocol/stability-publisher-dapp) is available for exploring this feature. There is a live demo available [here](https://stabilityprotocol.github.io/stability-publisher-dapp/). 
 
