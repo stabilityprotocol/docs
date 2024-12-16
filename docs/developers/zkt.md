@@ -53,6 +53,7 @@ The **API Gateway** serves as the entry point for all requests, responsible for:
 
 - **API Rate Limiting**: Enforced at the API Gateway to prevent spam or denial-of-service attacks.
 - **Data Privacy**: Although messages are public, the initator of the transaction is unknown when using the public key. 
+- **Max Payload**: The maximum size of a ZKT transaction payload is 1 MB.
 
 ### Error Handling
 
