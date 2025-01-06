@@ -47,6 +47,8 @@ Our connection details for our public RPC is as follows -
     - **Chain ID:** 20180427
     - **Currency Symbol:** FREE
     - **Block Explorer URL:** `https://stability-testnet.blockscout.com/`
+    - **Request Limit:** 200 Per Minute Free / 1500 Per Minute Tier 1
+    - **Max Batch Size:** 40
 
 The setup details for a private RPC on Stability Testnet are the same, save for the RPC URL. Simply replace 'YOUR_API_KEY' with your API key.
     - **Network Name:** Stability Test Net
@@ -54,6 +56,8 @@ The setup details for a private RPC on Stability Testnet are the same, save for 
     - **Chain ID:** 20180427
     - **Currency Symbol:** FREE
     - **Block Explorer URL:** `https://stability-testnet.blockscout.com/`
+    - **Request Limit:** 200 Per Minute / 1500 Per Minute Tier 1
+    - **Max Batch Size:** 40
 
 ### Will using the private RPC result in my transactions occurring on a different network?
 

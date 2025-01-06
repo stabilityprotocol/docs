@@ -20,7 +20,7 @@ The Stability Public Testnet RPC is read-only for the blockchain. Users looking 
 
 - **RPC URL**: `https://rpc.testnet.stabilityprotocol.com/`
 - **Chain ID**: `20180427`
-- **Request Limit**: `1500 per minute`
+- **Request Limit**: `200 per minute`
 - **Maximum Batch Size**: `40`
 
 ### Global Trust Network Mainnet Access
@@ -29,7 +29,7 @@ The Global Trust Network (GTN) Public RPC is read-only for the blockchain. Trans
 
 - **RPC URL**: `https://rpc.stabilityprotocol.com`
 - **Chain ID**: `101010`
-- **Request Limit**: `1500 per minute`
+- **Request Limit**: `200 per minute`
 - **Maximum Batch Size**: `40`
 
 ## Stability Custom RPC Endpoints
