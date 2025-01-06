@@ -92,7 +92,7 @@ In the event you are unable to add your wallet automatically via clicking the Me
 | Chain ID                   | 101010                                                          | 20180427                                                             |
 | Currency Symbol            | FREE                                                            | FREE                                                                 |
 | Block Explorer URL         | `https://stability.blockscout.com/`                             | `https://stability-testnet.blockscout.com/`                          |
-| Request Limit              | 200 Per Minute Free / 1500 Per Minute Tier 1                                                 | 200 Per Minute / 1500 Per Minute Tier 1                                                     |
+| Request Limit              | 200 Per Minute / Higher Limits Available                        | 200 Per Minute / Higher Limits Available                             |
 | Max Batch Size             | 40                                                              | 40                                                                   |
 
 ### 4. Configure for Zero Fees
@@ -118,4 +118,6 @@ It is highly recommended you check out [Example dApps](../how_stability_works/ex
 
 
 ## Now Start Swimming
+Your free API key allows for 1,000 free transactions per a month, and 200 requests per minute to our API. You can track your usage on the `Account Portal` page. To increase your limits, click the `Increase Limits` button in the `Account Portal` to explore our plans. 
+
 Armed with this knowledge and your API key, you're well-prepared to embark on your development journey with the Stability Network. Dive in and start innovating! Happy hacking!

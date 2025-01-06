@@ -46,4 +46,6 @@ Here, you will find your personal RPC URL.
 
 We highly recommend reviewing the section on [What Is Different](./what_is_different.md) regarding Stability as opposed to traditional Ethereum Virtual Machine (EVM) blockchains. Understanding these distinctions is crucial for developers looking to create decentralized applications (dApps) on the Stability platform, especially since certain functionalities, like native token transfers, will not operate in the same way on Stability. It is important to note that Stablity supports Solidity version 0.8.24 or lower. 
 
+Your free API key allows for 1,000 free transactions per a month, and 200 requests per minute to our API. You can track your usage on the `Account Portal` page. To increase your limits, click the `Increase Limits` button in the `Account Portal` to explore our plans. 
+
 Congratulations! You've successfully created an API key on Stability's Account Manager. Now, you're all set to use Stability at no cost. Utilize your private RPC to interact with the Stability network using wallets such as Metamask or frameworks like Viem or Ethers.js.
