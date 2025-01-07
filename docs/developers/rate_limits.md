@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # RPC Rate Limits
 
-Our RPC endpoint enforces a rate limit of **200 requests per minute** for the free tier. If your usage exceeds this limit, additional requests within the same rolling minute will be blocked, and return a 429 status code. The limit will reset iat the end of the rolling minute. We also offer paid tiers with higher request allowances for high-volume or enterprise-level needs.
+Our RPC endpoint enforces a rate limit of **200 requests per minute** for the free tier. If your usage exceeds this limit, additional requests within the same rolling minute will be blocked, and return a 429 status code. The limit will reset at the end of the rolling minute. We also offer paid tiers with higher request allowances for high-volume or enterprise-level needs.
 
 ## What is a Request?
 
