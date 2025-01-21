@@ -90,6 +90,14 @@ const config: Config = {
       defaultMode: "dark",
     },
     image: "img/docusaurus-social-card.jpg",
+    announcementBar: {
+      id: 'solidity-compatibility-note', // Any unique ID
+      content:
+        'Solidity Compatibility : Solidity Version ≤ 0.8.24 | EVM Compiler Version ≤ Shanghai',
+      // backgroundColor: '#FFD969', // Pick any background color you like
+      // textColor: '#091E42',       // Text color
+      isCloseable: true,         // Set to true if you want users to be able to close this banner
+    },
     navbar: {
       title: "Stability Docs",
       logo: {
