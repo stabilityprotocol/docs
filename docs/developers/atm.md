@@ -14,7 +14,7 @@ Validators may choose which tokens would be used for the fee payment. This opens
 
 ## How It Works
 
-Whenever a user makes a transaction on STABILITY, such as calling a smart contract function, the fee they pay is not entirely allocated to the block producer. Instead, the fee is split according to a preset percentage between the `validator` who included the transaction in a block, and `smart contract` that was the target or “destination” of the transaction​.
+Whenever a user makes a transaction on STABILITY, such as calling a smart contract function, the fee they pay is not entirely allocated to the block producer. Instead, the fee is split according to a preset percentage between the `validator` who included the transaction in a block, and the `smart contract` that was the target or “destination” of the transaction​.
 
 For instance, if the split is 50/50 by default, half the fee goes to the `validator` and half to the `smart contract`. This split percentage is configurable by the protocol and may be adjusted. The mechanism provides continuous rewards to dapp owners.
 
@@ -56,19 +56,25 @@ If a contract doesn’t implement `owner()`, the protocol considers it to have n
 
 ## Earning and Claiming Fees as a Validator
 
-Validators also claim their portion through the same vault system. Unlike developers, validators do not need to be whitelisted or approved; any active validator can claim its earned fees freely​
+Validators also claim their portion through the same vault system. Unlike developers, validators do not need to be whitelisted or approved; any active validator can claim its earned fees freely​.
 
 A validator simply calls `claimReward(validatorAddress, token)` using its own address to withdraw the fees it has accumulated for that token. The protocol checks that the caller is indeed entitled (in other words, the address is currently an active validator in the consensus) and then pays out the amount. If a validator leaves the validator set, it can no longer claim new rewards. Any unclaimed rewards at that point remain in the vault inaccessible. Validators are expected to claim periodically while they are active.
 
 ## Example
 
 Suppose a user calls a function on a DeFi contract on STABILITY and pays 10 XYZ token for the transaction fee. The network’s validator percentage is 50%. The runtime deducts 10 XYZ from the user and holds it in the vault.
-After execution, suppose only 8 XYZ token was actually used - then 2XYZ is refunded to the user from the vault.
+
+After execution, suppose only 8 XYZ token was actually used - then 2 XYZ is refunded to the user from the vault.
+
 Now 8 XYZ remains in the vault for that transaction’s fee. The split logic gives 4 XYZ(50%) to the validator and 4 XYZ (50%) to the dapp. The storage is updated so that the validator’s address now has +4 XYZ claimable and the dapp’s address has +4 XYZ claimable​. An event is emitted recording this split.
 
-Later, the validator calls `claimReward(myValidatorAddress, XYZAddress)` from its account. The precompile checks that this address is indeed an active validator (allowed) and finds 4 XYZ claimable. It transfers 4 XYZ from the vault to the validator’s account and zeros out the record, emitting `RewardClaimed(myValidatorAddress, myValidatorAddress, XYZAddress)`. The DeFi contract’s developer (who is the owner of the contract) calls `claimReward(dappContractAddress, XYZAddress)` from his EOA. The precompile verifies the contract’s `owner()` is this EOA, and that the contract is whitelisted.
+Later, the validator calls `claimReward(myValidatorAddress, XYZAddress)` from its account. The precompile checks that this address is indeed an active validator (allowed) and finds 4 XYZ claimable. It transfers 4 XYZ from the vault to the validator’s account and zeros out the record, emitting `RewardClaimed(myValidatorAddress, myValidatorAddress, XYZAddress)`.
 
-It then transfers 4 XYZ from the vault to the EOA (owner) and clears the record, emitting `RewardClaimed(dappContractAddress, developerEOA, XYZAddress)`. Both parties have now received their shares. Throughout this process, the integrity is maintained by STABILITY, and the interactions are exposed in a familiar format to anyone monitoring or interacting via Ethereum-like tools.
+The DeFi contract’s developer (who is the owner of the contract) calls `claimReward(dappContractAddress, XYZAddress)` from his EOA. The precompile verifies the contract’s `owner()` is this EOA, and that the contract is whitelisted.
+
+4 XYZ is then transfered from the vault to the EOA (owner) and clears the record, emitting `RewardClaimed(dappContractAddress, developerEOA, XYZAddress)`. Both parties have now received their shares.
+
+Throughout this process, the integrity is maintained by STABILITY, and the interactions are exposed in a familiar format to anyone monitoring or interacting via Ethereum-like tools.
 
 ## Further Technical Reading
 
