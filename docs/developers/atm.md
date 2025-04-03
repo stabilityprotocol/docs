@@ -2,7 +2,7 @@
 sidebar_position: 7
 ---
 
-# Application Token Module (ATM) Transactions (Beta)
+# Application Token Module Transactions (Beta)
 
 ## Overview
 
