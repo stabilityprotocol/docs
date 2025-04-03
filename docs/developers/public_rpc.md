@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 9
 ---
 
 # Public RPC Guide
@@ -56,4 +56,3 @@ curl 'https://rpc.testnet.stabilityprotocol.com/' \
 
 {"jsonrpc":"2.0","result":{"code":200,"value":["0xdc2b93f3291030f3f7a6d9363ac37757f7ad5c43"]},"id":1}
 ```
-

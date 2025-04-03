@@ -22,9 +22,9 @@ Global Trust Network (GTN) and Stability Testnet employ API keys to manage trans
 
 #### Step 2 - Select Your Preferred Registration
 
-On this screen, select your preferred method of registration. For this tutorial, we will be following the Google sign-in path. You may also similarly log in via Email, GitHub, Magiclink, or directly through Metamask.  
+On this screen, select your preferred method of registration. For this tutorial, we will be following the Google sign-in path. You may also similarly log in via Email, GitHub, Magiclink, or directly through Metamask.
 
-It is important to note that registrations through Metamask or Magiclink do not provide a dedicated API Key. Without an API Key, you will not be able to perform transactions on Global Trust Network (GTN), and will have limited functionality on Stability Testnet. To receive an API Key, you must register using either GitHub, Google, or Email. 
+It is important to note that registrations through Metamask or Magiclink do not provide a dedicated API Key. Without an API Key, you will not be able to perform transactions on Global Trust Network (GTN), and will have limited functionality on Stability Testnet. To receive an API Key, you must register using either GitHub, Google, or Email.
 
 If you opt to register via email, ensure you can verify your email address.
 
@@ -37,6 +37,7 @@ Using the dropdown menu on the top right, select the network you wish to generat
 ![Stability Portal Screen with Networks Highlighted](../../static/img/portalselectnetwork.png)
 
 #### Step 4 - Click the `Create New API Key` Button
+
 ![Stability Portal Screen with Create New API Key Button Highlighted](../../static/img/portalcreatenewapikey.png)
 
 #### Step 5 - Congrats! You've created an API Key.
@@ -51,7 +52,7 @@ Here, you will find your personal RPC URL.
 
 ![Metamask Logo](../../static/img/portalmetamasklogo.png)
 
-To add your custom RPC to your browser extension wallet, which will allow you to use Global Trust Network or Stability Testnet, click the Metamask Fox Logo next to your API Key. This will work with Metamask as well as many other browser extension based wallets. 
+To add your custom RPC to your browser extension wallet, which will allow you to use Global Trust Network or Stability Testnet, click the Metamask Fox Logo next to your API Key. This will work with Metamask as well as many other browser extension based wallets.
 
 If you are not able to add the network to your wallet, you may have to add the network manually. Follow the instructions below.
 
@@ -80,24 +81,22 @@ In the event you are unable to add your wallet automatically via clicking the Me
 ![Stability Account Manager Screen with an Example API Key Highlighted](../../static/img/apikeyhighlight.png)
 
 #### Step 6 - Fill out the network settings using the details below. Be sure to replace the `YOUR_API_KEY` with your own API Key. Afterward, click Save.
-    
+
 ![Metamask Manual Network Screen with Details Filled and Save Button Highlighted](../../static/img/metamaskmanualnetworksave.png)
 
-
-
-| **Property**               | **Global Trust Network**                                       | **Stability Testnet**                                               |
-|----------------------------|-----------------------------------------------------------------|----------------------------------------------------------------------|
-| Network Name               | Global Trust Network                                           | Stability Test Net                                                   |
-| New RPC URL                | `https://rpc.stabilityprotocol.com/zgt/YOUR_API_KEY`      | `https://rpc.testnet.stabilityprotocol.com/zgt/YOUR_API_KEY` |
-| Chain ID                   | 101010                                                          | 20180427                                                             |
-| Currency Symbol            | FREE                                                            | FREE                                                                 |
-| Block Explorer URL         | `https://stability.blockscout.com/`                             | `https://stability-testnet.blockscout.com/`                          |
-| Request Limit              | 200 Per Minute / Higher Limits Available                        | 200 Per Minute / Higher Limits Available                             |
-| Max Batch Size             | 40                                                              | 40                                                                   |
+| **Property**       | **Global Trust Network**                             | **Stability Testnet**                                        |
+| ------------------ | ---------------------------------------------------- | ------------------------------------------------------------ |
+| Network Name       | Global Trust Network                                 | Stability Test Net                                           |
+| New RPC URL        | `https://rpc.stabilityprotocol.com/zgt/YOUR_API_KEY` | `https://rpc.testnet.stabilityprotocol.com/zgt/YOUR_API_KEY` |
+| Chain ID           | 101010                                               | 20180427                                                     |
+| Currency Symbol    | FREE                                                 | FREE                                                         |
+| Block Explorer URL | `https://stability.blockscout.com/`                  | `https://stability-testnet.blockscout.com/`                  |
+| Request Limit      | 200 Per Minute / Higher Limits Available             | 200 Per Minute / Higher Limits Available                     |
+| Max Batch Size     | 40                                                   | 40                                                           |
 
 ### 4. Configure for Zero Fees
 
-It is important to note that Stability requires you to manually set the `Max Base Fee` and `Priority Fee` to zero. When using libraries such as `ethers`, this must be coded into the transaction. A live example of this is available in the source code of our [Data Store App](https://github.com/stabilityprotocol/datastoredapp). 
+It is important to note that Stability requires you to manually set the `Max Base Fee` and `Priority Fee` to zero. When using libraries such as `ethers`, this must be coded into the transaction. A live example of this is available in the source code of our [Data Store App](https://github.com/stabilityprotocol/datastoredapp).
 
 To set this in Metamask, for the your first transaction, you will have to manually set these values to zero. It is advised that you save these values as the default setting for our network.
 
@@ -107,17 +106,16 @@ On your first transaction, A MetaMask popup will appear to confirm the transacti
 
 ![Advanced Gas Fee Settings in Metamask](../../static/img/advancegasscreen.png)
 
-This will allow you to customize Metamask for zero gas transactions. Click the advanced gas fee icon. Set your `Max Base Fee` and `Priority Fee` to zero. Click the `Save these values as my default...` checkbox to avoid having to manually set the gas in the future. 
-
+This will allow you to customize Metamask for zero gas transactions. Click the advanced gas fee icon. Set your `Max Base Fee` and `Priority Fee` to zero. Click the `Save these values as my default...` checkbox to avoid having to manually set the gas in the future.
 
 ### 5. Review What Is Different With Stability
 
-We highly recommend reviewing the section on [What Is Different](./what_is_different.md) regarding Stability as opposed to traditional Ethereum Virtual Machine (EVM) blockchains. Understanding these distinctions is crucial for developers looking to create decentralized applications (dApps) on the Stability platform, especially since certain functionalities, like native token transfers, will not operate in the same way on Stability. It is important to note that Stablity supports Solidity version 0.8.24 or lower. 
+We highly recommend reviewing the section on [What Is Different](./what_is_different.md) regarding Stability as opposed to traditional Ethereum Virtual Machine (EVM) blockchains. Understanding these distinctions is crucial for developers looking to create decentralized applications (dApps) on the Stability platform, especially since certain functionalities, like native token transfers, will not operate in the same way on Stability. It is important to note that Stablity supports Solidity version 0.8.24 or lower.
 
-It is highly recommended you check out [Example dApps](../how_stability_works/example_apps.md) for examples of coding with Stability's unique attributes. Many of our examples are open-sourced on [Github](https://github.com/stabilityprotocol). 
-
+It is highly recommended you check out [Example dApps](../how_stability_works/example_apps.md) for examples of coding with Stability's unique attributes. Many of our examples are open-sourced on [Github](https://github.com/stabilityprotocol).
 
 ## Now Start Swimming
-Your free API key allows for 1,000 free transactions per a month, and 200 requests per minute to our API. You can track your usage on the `Account Portal` page. To increase your limits, click the `Increase Limits` button in the `Account Portal` to explore our plans. 
+
+Your free API key allows for 1,000 free transactions per a month, and 200 requests per minute to our API. You can track your usage on the `Account Portal` page. To increase your limits, click the `Increase Limits` button in the `Account Portal` to explore our plans.
 
 Armed with this knowledge and your API key, you're well-prepared to embark on your development journey with the Stability Network. Dive in and start innovating! Happy hacking!
