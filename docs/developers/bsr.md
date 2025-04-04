@@ -12,6 +12,8 @@ In traditional blockchains, validators (or miners) keep all transaction fees; BS
 
 Validators may choose which tokens would be used for the fee payment. This opens up numerous possibilities and incentives for projects to utilize STABILITY.
 
+Note: BSR is currently in Beta. Implementation and parameters may evolve based on governance and ecosystem feedback.
+
 ## How It Works
 
 Whenever a user makes a transaction on STABILITY, such as calling a smart contract function, the fee they pay is not entirely allocated to the block producer. Instead, the fee is split according to a preset percentage between the `validator` who included the transaction in a block, and the `smart contract` that was the target or “destination” of the transaction​.
@@ -22,13 +24,13 @@ For instance, if the split is 50/50 by default, half the fee goes to the `valida
 
 STABILITY is an EVM-compatible blockchain (built on Substrate), which means developers interact with BSR through familiar Ethereum-like interfaces.
 
-The fee-sharing logic runs in the chain’s runtime, but it’s exposed to smart contracts and external applications via a precompiled system contract called the `FeeRewardsVaultController`. This precompile lives at a fixed STABILITY address at[`0x0000000000000000000000000000000000000807`](https://explorer.stabilityprotocol.com/address/0x0000000000000000000000000000000000000807). The smart contract code is available [on Github](https://github.com/stabilityprotocol/stability/blob/896c16bbdd1d2c0a241d945f5f42b00f00d3caff/precompiles/fee-rewards-vault-controller/FeeRewardsVaultController.sol#L4).
+The fee-sharing logic runs in the chain’s runtime, but it’s exposed to smart contracts and external applications via a precompiled system contract called the `FeeRewardsVaultController`. This precompile lives at[`0x0000000000000000000000000000000000000807`](https://explorer.stabilityprotocol.com/address/0x0000000000000000000000000000000000000807). The smart contract code is available [on Github](https://github.com/stabilityprotocol/stability/blob/896c16bbdd1d2c0a241d945f5f42b00f00d3caff/precompiles/fee-rewards-vault-controller/FeeRewardsVaultController.sol#L4).
 
 All BSR functions are accessible via the precompiled contract interface. Developers can use web3.js, ethers.js, or Solidity to call these functions exactly like a normal contract. For example, calling `FeeRewardsVaultController.getValidatorPercentage()` will return the current fee split percentage allocated to validators​. More importantly, the precompile allows claiming and querying accumulated fee shares through standard function calls, making BSR easy to use.
 
 ## Earning and Claiming Fees as a Developer
 
-When a transaction involving a smart contract executes, the BSR mechanism will automatically allocate the validator's and the smart contract's share of the fee into the `feeRewardsVaultController`.
+When a transaction involving a smart contract executes, the BSR mechanism will automatically allocate the validator's and the smart contract's share of the fee into the `FeeRewardsVaultController`.
 
 To claim your funds, your smart contract and dApp must be whitelisted. What this means for a developer is that after deploying a contract, you should apply for or await whitelisting by the protocol’s governance or admin. All contracts accrue their fee share regardless of whitelist status. Your dapp’s share is still recorded. However, only whitelisted contracts are permitted to actually withdraw the funds​.
 
@@ -46,7 +48,7 @@ Your smart contract can call the precompile’s `claimReward(address dapp, addre
 
 ### The Contract Owner Claims
 
-If your smart contract implements a standard `owner()` function (e.g., as in OpenZeppelin Ownable), the precompile can use it to determine the contract’s owner. The owner (EOA or multisig) can then call `claimReward(contractAddress, token)` from their external account. The precompile will recognize that the caller is the owner of the given contract (by internally calling `owner()` on the contract to verify)​
+If your smart contract implements a standard `owner()` function (e.g., as in OpenZeppelin Ownable), the precompile can use it to determine the contract’s owner. The owner (EOA or multisig) can then call `claimReward(contractAddress, token)` from their external account. The precompile will recognize that the caller is the owner of the given contract (by internally calling `owner()` on the contract to verify)​.
 
 This allows the owner to withdraw the accumulated fees on the contract’s behalf.
 
@@ -72,7 +74,7 @@ Later, the validator calls `claimReward(myValidatorAddress, XYZAddress)` from it
 
 The DeFi contract’s developer (who is the owner of the contract) calls `claimReward(dappContractAddress, XYZAddress)` from his EOA. The precompile verifies the contract’s `owner()` is this EOA, and that the contract is whitelisted.
 
-4 XYZ is then transfered from the vault to the EOA (owner) and clears the record, emitting `RewardClaimed(dappContractAddress, developerEOA, XYZAddress)`. Both parties have now received their shares.
+4 XYZ is then transferred from the vault to the EOA (owner) and clears the record, emitting `RewardClaimed(dappContractAddress, developerEOA, XYZAddress)`. Both parties have now received their shares. This provides long-term alignment between developers and validators, encouraging dApp quality and validator participation.
 
 Throughout this process, the integrity is maintained by STABILITY, and the interactions are exposed in a familiar format to anyone monitoring or interacting via Ethereum-like tools.
 
