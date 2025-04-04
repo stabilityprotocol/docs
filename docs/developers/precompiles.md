@@ -23,6 +23,7 @@ Stability
 |---------|-----------|------------------------------|--------------|-----------------------------------------------------------------------------|----------------------------|
 | 0x805 | ValidatorController | data | data | A precompile that enables Stability to manage validator addresses. | [Code](https://github.com/stabilityprotocol/stability/blob/main/precompiles/upgrade-runtime-controller/UpgradeRuntimeController.sol) |
 | 0x806 | UpgradeRuntimeControllerPrecompile | data | data | A precompile that enables Stability to manage runtime upgrades.| [Code](https://github.com/stabilityprotocol/stability/blob/main/precompiles/upgrade-runtime-controller/UpgradeRuntimeController.sol) |
+| 0x807 | FeeRewardsVaultController | data | data | A precompile that enables fee-sharing logic for the ATM.| [Code](https://github.com/stabilityprotocol/stability/blob/main/precompiles/fee-rewards-vault-controller/FeeRewardsVaultController.sol) |
 
 ## Ethereum Native Precompiles
 
