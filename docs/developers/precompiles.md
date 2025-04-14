@@ -21,6 +21,8 @@ To interact with a precompile contract, simply treat the precompile contract as 
 Stability
 | Address | Name | Input | Output | Description | Source |
 |---------|-----------|------------------------------|--------------|-----------------------------------------------------------------------------|----------------------------|
+| 0x802 | FeeTokenSelector | data | data | A precompile that allows users to set their fee token. | [Code](https://github.com/stabilityprotocol/stability/blob/main/precompiles/token-fee-controller/fee-token-selector/FeeTokenSelector.sol) |
+| 0x803 | ValidatorFeeTokenSelector | data | data | A precompile that allows Validators that select which tokens to accept. | [Code](https://github.com/stabilityprotocol/stability/blob/main/precompiles/token-fee-controller/validator-fee-selector/ValidatorFeeTokenSelector.sol) |
 | 0x805 | ValidatorController | data | data | A precompile that enables Stability to manage validator addresses. | [Code](https://github.com/stabilityprotocol/stability/blob/main/precompiles/upgrade-runtime-controller/UpgradeRuntimeController.sol) |
 | 0x806 | UpgradeRuntimeControllerPrecompile | data | data | A precompile that enables Stability to manage runtime upgrades.| [Code](https://github.com/stabilityprotocol/stability/blob/main/precompiles/upgrade-runtime-controller/UpgradeRuntimeController.sol) |
 | 0x807 | FeeRewardsVaultController | data | data | A precompile that enables fee-sharing logic for the ATM.| [Code](https://github.com/stabilityprotocol/stability/blob/main/precompiles/fee-rewards-vault-controller/FeeRewardsVaultController.sol) |
