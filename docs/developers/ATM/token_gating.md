@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Overview
 
-**Token Gating** in STABILITY refers to the system that allows transaction fees to be paid in multiple ERC-20 tokens instead of a single native coin. Unlike most blockchains, Stability has no native gas token – it doesn’t issue a built-in currency for fees​. Instead, users can choose a supported ERC-20 token to pay fees, and validators choose which of those tokens they will accept as payment. This design effectively “decentralizes” the native token, making approved tokens function as gas currency.
+**Token Gating** in STABILITY refers to the system that allows transaction fees to be paid in multiple ERC-20 tokens instead of a single native coin. Unlike most blockchains, STABILITY has no native gas token – it doesn’t issue a built-in currency for fees​. Instead, users can choose a supported ERC-20 token to pay fees, and validators choose which of those tokens they will accept as payment. This design effectively “decentralizes” the native token, making approved tokens function as gas currency.
 
 The economic rationale is to improve usability and composability: projects can have their own token or stablecoins cover transaction fees, eliminating the need for a separate gas coin. This enables a form of native token abstraction – from a user’s perspective, they pay gas in a token they already hold (e.g. USDC), rather than acquiring a separate coin, or interfacing with STABILITY directly. It also permits a public mempool despite multi-token fees: STABILITY globally whitelists which tokens validators can accept for fees, so nodes only propagate transactions paying with approved tokens. By gating the mempool to accepted tokens, STABILITY prevents spam transactions with worthless tokens while still letting users and dApps benefit from flexible fee payment.
 
@@ -22,7 +22,7 @@ The set of tokens that can be used to pay fees is controlled by a whitelist call
 
 ### User Fee Token Selection
 
-Each user can select which whitelisted token they wish to use to pay transaction fees. The user signals their choice by calling a precompiled contract function. Stability provides the `Fee Token Selector` precompile [(Code)](https://github.com/stabilityprotocol/stability/blob/main/precompiles/token-fee-controller/fee-token-selector/FeeTokenSelector.sol) for this purpose​.
+Each user can select which whitelisted token they wish to use to pay transaction fees. The user signals their choice by calling a precompiled contract function. STABILITY provides the `Fee Token Selector` precompile [(Code)](https://github.com/stabilityprotocol/stability/blob/main/precompiles/token-fee-controller/fee-token-selector/FeeTokenSelector.sol) for this purpose​.
 
 By calling `FeeTokenSelector.setFeeToken(address tokenAddress)`, a user sets their preferred fee token. The chosen token must be one of the whitelisted tokens, otherwise the call will fail. If successful, the user’s preference is recorded on-chain and mapped to the user’s address. From that point on, any transaction sent via ATM by the user will be charged in the selected token. Users can query their current setting via `FeeTokenSelector.getFeeToken(address user)`, which returns the token address they have selected​. If a user never calls `setFeeToken`, the system assumes the default token for their ATM transactions​. Users may update their fee token selection at any time by calling `setFeeToken` again with a different allowed token.
 
@@ -40,7 +40,7 @@ In practice, a transaction paying with token X will only be picked up by validat
 
 ### Transaction Execution and Conversion
 
-Once a validator that supports the user’s fee token is producing a block, the transaction can be executed. Stability’s runtime still uses the EVM to execute transactions, but because there is no native currency, the gas price fields are handled differently. In fact, on Stability, transaction gas price and priority fee are effectively set to zero at the protocol level​.
+Once a validator that supports the user’s fee token is producing a block, the transaction can be executed. STABILITY’s runtime still uses the EVM to execute transactions, but because there is no native currency, the gas price fields are handled differently. In fact, on STABILITY, transaction gas price and priority fee are effectively set to zero at the protocol level​.
 
 This zero gas price is possible because the network doesn’t charge any native coin during execution. Instead, after the transaction runs, the protocol calculates the fee in the user’s chosen token using a conversion rate. Each validator has an associated `Conversion Rate Manager` contract which determines how to convert the abstract gas usage into an ERC-20 token amount​. The validator sets the address of its conversion contract via `ValidatorFeeTokenSelector.updateConversionRateController(address controller)​`. This is typically set to a default contract used by all validators, unless a validator chooses a custom strategy. The conversion manager implements `getConversionRate(address sender, address validator, address token) returns (uint256, uint256)​`, and is called by the runtime for each transaction to fetch the conversion rate. The conversion rate is a factor that translates the network’s internal gas units into actual token amount. In simpler terms, it’s akin to a price or exchange rate for the fee token, where a each individual sets their own conversion rate.
 
@@ -53,7 +53,7 @@ total_fee = gas_used * base_gas_price * conversion_rate
           = 0.00012 USDC.
 ```
 
-In Stability’s current implementation, `baseFee + priorityFee` is effectively constant, since the chain doesn’t update a base fee per block as Ethereum does. This means the conversion rate often directly determines the fee level. The `Conversion Rate Manager` returns a pair of values (numerator/denominator or similar) that the runtime uses to compute the multiplier for the token​. The protocol then charges the fee in the token by transferring tokens from the user to the validator upon transaction inclusion.
+In STABILITY’s current implementation, `baseFee + priorityFee` is effectively constant, since the chain doesn’t update a base fee per block as Ethereum does. This means the conversion rate often directly determines the fee level. The `Conversion Rate Manager` returns a pair of values (numerator/denominator or similar) that the runtime uses to compute the multiplier for the token​. The protocol then charges the fee in the token by transferring tokens from the user to the validator upon transaction inclusion.
 
 ### Fee Distribution and BSR
 
