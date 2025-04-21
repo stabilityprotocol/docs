@@ -84,7 +84,7 @@ In STABILITY’s current implementation of ATM, `baseFee + priorityFee` is effec
 
 ## Fee Distribution and BSR
 
-After fee conversion, STABILITY's fee distribution logic. The fee amount in the token is deducted from the user’s balance. The fee is split between the validator and the smart contract (dApp) that was called, according to the `Business Share Revenue (BSR)` rules. In practice, the validator’s portion of the fee goes to the validator’s account, and the dApp’s portion is deposited into the BSR vault to be claimed by the contract owner in the same token that was used to pay​ gas fees.
+After fee conversion, STABILITY's fee distribution logic kicks in. The fee amount in the token is deducted from the user’s balance. The fee is split between the validator and the smart contract (dApp) that was called, according to the `Business Share Revenue (BSR)` rules. In practice, the validator’s portion of the fee goes to the validator’s account, and the dApp’s portion is deposited into the BSR vault to be claimed by the contract owner in the same token that was used to pay​ gas fees.
 
 For example, if a user pays 0.05 USDC in gas fees on a swap contract and the BSR split is 50/50, the validator gets 0.025 USDC and the contract’s BSR vault accrues 0.025 USDC for the dApp developer. The fee token gating system works seamlessly with BSR: the vault holds balances in multiple tokens. Developers can query and claim rewards per token using `getClaimableReward(dapp, token)` and `claimReward(dapp, token)` on the `FeeRewardsVault` precompile [(Code)](https://github.com/stabilityprotocol/stability/blob/896c16bbdd1d2c0a241d945f5f42b00f00d3caff/precompiles/fee-rewards-vault-controller/FeeRewardsVaultController.sol#L4).
 
