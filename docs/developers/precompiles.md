@@ -21,6 +21,7 @@ To interact with a precompile contract, simply treat the precompile contract as 
 Stability
 | Address | Name | Input | Output | Description | Source |
 |---------|-----------|------------------------------|--------------|-----------------------------------------------------------------------------|----------------------------|
+| 0x801 | supportedTokensManager | data | data | A precompile that stores and manages the ATM gas and ATM tokens. | [Code](https://github.com/stabilityprotocol/stability/blob/main/precompiles/token-fee-controller/supported-tokens-manager/SupportedTokensManager.sol) |
 | 0x802 | FeeTokenSelector | data | data | A precompile that allows users to set their fee token. | [Code](https://github.com/stabilityprotocol/stability/blob/main/precompiles/token-fee-controller/fee-token-selector/FeeTokenSelector.sol) |
 | 0x803 | ValidatorFeeTokenSelector | data | data | A precompile that allows Validators that select which tokens to accept. | [Code](https://github.com/stabilityprotocol/stability/blob/main/precompiles/token-fee-controller/validator-fee-selector/ValidatorFeeTokenSelector.sol) |
 | 0x805 | ValidatorController | data | data | A precompile that enables Stability to manage validator addresses. | [Code](https://github.com/stabilityprotocol/stability/blob/main/precompiles/upgrade-runtime-controller/UpgradeRuntimeController.sol) |
