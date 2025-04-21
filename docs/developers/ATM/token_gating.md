@@ -99,3 +99,99 @@ If a token is less widely accepted – say only 20% of validators opt in – the
 The more validators support a token, the smoother and faster the user’s transactions will be. This also puts downward market pressure on the conversion rate of the token. If no active validator supports the token, the transaction will never be executed. The transaction will remain pending until it times out or the user cancels it by changing fee token, underscoring the importance of using well-supported tokens.
 
 In other words, the token gating system involves a handshake between user preferences and validator policies: users pick a token from the allowed list and validators indicate which tokens they’ll take and what rate they will accept it. The network only processes the transaction when there’s a match, then uses the validator’s conversion rate to charge the fee in that token. All of this occurs at the protocol level, allowing a user to effectively use a preferred token as the “native gas” for that transaction.
+
+## How to Use - Developers
+
+### Overview
+
+Developers will be primarily interacting with the following three contracts when utilizing token gating on STABILITY -
+
+| Contract                  | Address                                                                                                                                 | Description                                                                           | Code                                                                                                                                                   |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| SupportedTokensManager    | [0x0000000000000000000000000000000000000801](https://explorer.stabilityprotocol.com/address/0x0000000000000000000000000000000000000801) | To query which fee tokens are supported network-wide (and what the default token is). | [Code](https://github.com/stabilityprotocol/stability/blob/main/precompiles/token-fee-controller/supported-tokens-manager/SupportedTokensManager.sol)  |
+| FeeTokenSelector          | [0x0000000000000000000000000000000000000803](https://explorer.stabilityprotocol.com/address/0x0000000000000000000000000000000000000803) | For users (EOAs or contracts paying fees) to set or get their selected fee token.     | [Code](https://github.com/stabilityprotocol/stability/blob/main/precompiles/token-fee-controller/fee-token-selector/FeeTokenSelector.sol)              |
+| ValidatorFeeTokenSelector | [0x0000000000000000000000000000000000000802](https://explorer.stabilityprotocol.com/address/0x000000000000000000000000000000000000082)  | For validators to configure accepted tokens and conversion rate controllers.          | [Code](https://github.com/stabilityprotocol/stability/blob/main/precompiles/token-fee-controller/validator-fee-selector/ValidatorFeeTokenSelector.sol) |
+
+These precompiles are built into the runtime at a fixed address. They can be called like any smart contract, using a web3 library or via Solidity interfaces. Below is a developer guide for typical use-cases.
+
+### Example: Checking Supported Fee Tokens (Token Whitelist)
+
+Let's say you can you want to check what tokens are currently whitelisted by the ATM to be used as gas fees, if a validator accepts.
+
+All three functions below are `view` calls. You can interact with the `Supported Token Manager` precompile at [0x0000000000000000000000000000000000000801](https://explorer.stabilityprotocol.com/address/0x0000000000000000000000000000000000000801).
+
+| Function                                                 | Return Type | Description                                                                                                                                                                                                                                                                                                                                                                         |
+| -------------------------------------------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `SupportedTokensManager.supportedTokens()`               | `address[]` | Returns the list of all ERC-20 token addresses that are currently whitelisted as fee tokens. A dApp or wallet can call this to present users with the available options. The order of the array is unspecified, but one of them will be the default token.                                                                                                                          |
+| `SupportedTokensManager.isTokenSupported(address token)` | `bool`      | Quick check if a given token address is in the whitelist. Returns true if the token can be used for fees.                                                                                                                                                                                                                                                                           |
+| `SupportedTokensManager.defaultToken()`                  | `address`   | Returns the address of the current default fee token. This is the token that will be used for fees if a user has not set any preference. By default, this might be a stablecoin or another primary token chosen by the network. Admins can update it via `updateDefaultToken(address token)`, but as a developer you can treat it as a network constant between governance changes. |
+
+#### Ethers Example Code in Typescript
+
+```typescript
+async function getSupportedFeeTokens() {
+  const provider = new ethers.JsonRpcProvider(/ YOUR RPC URL HERE /);
+  const supportedTokensManagerAddr =
+    "0x0000000000000000000000000000000000000801";
+  const abi = [
+    "function supportedTokens() view returns (address[])",
+    "function defaultToken() view returns (address)",
+  ];
+  const stm = new ethers.Contract(supportedTokensManagerAddr, abi, provider);
+  const tokens = await stm.supportedTokens();
+  const decodedTokens = tokens.map((token: string) => ethers.getAddress(token));
+  console.log("Whitelisted fee tokens:", decodedTokens);
+  const defaultToken = await stm.defaultToken();
+  console.log("Default fee token:", defaultToken);
+}
+```
+
+This would give you an array of allowed fee token addresses and the default token as a string.
+
+### Example: Setting a User’s Fee Token
+
+Let's say any end-user (EOA) or even a contract wants to pay its own fees in a specific token. Typically an EOA will call this from their account. To set the fee token, you simply call `setFeeToken` on the precompile, passing the desired token’s address. The precompile uses `msg.sender` as the user whose preference is being set, so you cannot set someone else’s preference – each user must call it for themselves. The call will revert if the token is not in the supported list. If it succeeds, the new preference takes effect immediately for subsequent transactions.
+
+The `getFeeToken` is a read call, while the `setFeeToken` is a write call.. You can interact with the `Fee Token Selector` precompile at [0x0000000000000000000000000000000000000803](https://explorer.stabilityprotocol.com/address/0x0000000000000000000000000000000000000803).
+
+| Function                     | Return Type | Description                                             |
+| ---------------------------- | ----------- | ------------------------------------------------------- |
+| `setFeeToken(address token)` | `void`      | Sets the caller’s fee token preference.                 |
+| `getFeeToken(address user)`  | `address`   | Returns the fee token selected by a given user address. |
+
+#### Ethers Example Code in Typescript
+
+```typescript
+// Initialize Wallet & Signer
+const provider = new ethers.JsonRpcProvider(/ YOUR RPC URL HERE /);
+const signer = new ethers.Wallet("/YOUR PRIVATE KEY HERE/", provider);
+const feeTokenSelectorAddr = "0x0000000000000000000000000000000000000803";
+
+// To Check the Current Fee Token for a User
+async function getFeeToken(address: string) {
+  const abi = [
+    "function getFeeToken(address user) external view returns (address)",
+  ];
+  const feeTokenSel = new ethers.Contract(feeTokenSelectorAddr, abi, provider);
+  let token = await feeTokenSel.getFeeToken(address);
+  console.log("My current fee token is:", token);
+}
+
+// To Set a New Fee Token for a User. The parameter is the token address to set, the user's address is strictly defined as the msg.sender's address.
+async function setFeeToken(address: string) {
+  const abi = ["function setFeeToken(address token) external"];
+  const feeTokenSel = new ethers.Contract(feeTokenSelectorAddr, abi, signer);
+  await feeTokenSel.setFeeToken(address);
+
+  // To Verify the Fee Token Change
+  getFeeToken(address);
+}
+```
+
+After calling `setFeeToken`, the user’s future transactions will be charged in the selected token. No additional parameters are needed in those transactions – the system will automatically apply the token.
+
+To query another address’s setting, anyone can call `getFeeToken(userAddr)`. This can be useful to know what token a particular account will use for gas. For instance, a dApp might check if a user has set a non-default token and warn if they have no balance of it.
+
+**_Important_**: The first time a user uses STABILITY, their account will be set to the default fee token. If they want to switch to a different token, the user must use a framework such as `ZGT`, or must have a balance of the default token to pay for the `setFeeToken` transaction itself. This is because the initial call’s fee will be charged in the default token, as the preference change happens upon execution.
+
+For example, if the default token is `TOKENA` and the user wants to use `TOKENB` for future fees, the user needs to utilize STABILITY's API keys for Zero Gas Transaactions, or the user needs a small amount of `TOKENA` to call `setFeeToken(TokenBAddress)`. After that, they would pay fees in `TOKENB`. This bootstrap issue can be mitigated by funding new users with a bit of the default token or by having an onboarding process. Once set, a user can change to another token anytime by calling `setFeeToken` again. Each change will incur a fee in whatever token was currently active for that call.
