@@ -96,7 +96,7 @@ In the event you are unable to add your wallet automatically via clicking the Me
 
 ### 4. Configure for Zero Fees
 
-It is important to note that Stability requires you to manually set the `Max Base Fee` and `Priority Fee` to zero. When using libraries such as `ethers`, this must be coded into the transaction. A live example of this is available in the source code of our [Data Store App](https://github.com/stabilityprotocol/datastoredapp).
+It is important to note that Stability requires you to manually set the `Max Base Fee` and `Max Priority Fee` to zero. When using libraries such as `ethers`, this must be coded into the transaction. A live example of this is available in the source code of our [Data Store App](https://github.com/stabilityprotocol/datastoredapp).
 
 To set this in Metamask, for the your first transaction, you will have to manually set these values to zero. It is advised that you save these values as the default setting for our network.
 
