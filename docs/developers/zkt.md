@@ -125,14 +125,14 @@ ZKT extends its capabilities beyond simple message posting by allowing direct in
 
 When interacting with smart contract functions via the ZKT endpoint, the request body should be a JSON object containing the following fields:
 
-| Field     | Description                                                                                                                                                                       |
-| :-------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| abi       | An array containing the ABI definitions of the functions and events you want to interact with. This allows the service to understand how to encode and decode the function calls. |
-| to        | The address of the smart contract you are interacting with.                                                                                                                       |
-| method    | The name of the function you want to call.                                                                                                                                        |
-| id        | An optional identifier for your request. This is useful for matching responses to requests.                                                                                       |
-| arguments | An optional array containing the arguments to be passed to the function, if required.                                                                                             |
-| wait      | An optional boolean that indicates if the call should wait till completion, if required.                                                                                          |
+| Field       | Description                                                                                            |
+| ----------- | ------------------------------------------------------------------------------------------------------ |
+| `abi`       | Array of ABI entries (functions/events) the service needs to encode / decode your call.                |
+| `to`        | Address of the target smart contract.                                                                  |
+| `method`    | Name of the contract function to invoke.                                                               |
+| `arguments` | Array of arguments for `method` (empty array `[]` if none).                                            |
+| `id`        | Optional request identifier for matching responses.                                                    |
+| `wait`      | Optional boolean; if `true`, the call blocks until the transaction is mined and a receipt is returned. |
 
 ---
 
