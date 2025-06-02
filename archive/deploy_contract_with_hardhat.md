@@ -78,7 +78,7 @@ const config: HardhatUserConfig = {
   solidity: "0.8.20",
   networks: {
     stabilityprotocol: {
-      url: "https://free.testnet.stabilityprotocol.com/?api_key={YOUR_API_KEY}",
+      url: "https://rpc.testnet.stabilityprotocol.com/zgt/YOUR_API_KEY",
       accounts: [
         "f64a9d6c862031a967d2f062d73e5c2b25370180e4acd51ef510c2c25cbb0682", // Replace this for your private key. This is a random private key for tutorial purposes
       ],
