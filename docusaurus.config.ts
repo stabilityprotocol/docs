@@ -58,15 +58,14 @@ const config: Config = {
           // editUrl:
           //   "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
+        gtag: {
+          trackingID: 'G-D29T7B03G4',
+          anonymizeIP: true,
+        },
         blog: false,
         theme: {
           customCss: require.resolve("./src/css/custom.scss"),
         },
-        {
-          gtag: {
-            trackingID: 'G-D29T7B03G4',
-            anonymizeIP: true,
-          },
       } satisfies Preset.Options,
     ],
     [
