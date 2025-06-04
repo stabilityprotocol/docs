@@ -21,21 +21,6 @@ const config: Config = {
   trailingSlash: false,
 
 
-  scripts: [
-    {
-      src: 'https://www.googletagmanager.com/gtag/js?id=G-D29T7B03G4',
-      async: true,
-    },
-    {
-      src: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-D29T7B03G4');
-      `,
-    },
-  ],
-
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "stabilityprotocol", // Usually your GitHub org/user name.
@@ -77,6 +62,11 @@ const config: Config = {
         theme: {
           customCss: require.resolve("./src/css/custom.scss"),
         },
+        {
+          gtag: {
+            trackingID: 'G-D29T7B03G4',
+            anonymizeIP: true,
+          },
       } satisfies Preset.Options,
     ],
     [
