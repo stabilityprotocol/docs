@@ -20,6 +20,23 @@ const config: Config = {
   baseUrl: "/",
   trailingSlash: false,
 
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: {
+        async: true,
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-D29T7B03G4',
+      },
+    },
+    {
+      tagName: 'script',
+      innerHTML: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D29T7B03G4');`,
+    },
+  ],
+
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "stabilityprotocol", // Usually your GitHub org/user name.
