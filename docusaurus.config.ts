@@ -20,20 +20,19 @@ const config: Config = {
   baseUrl: "/",
   trailingSlash: false,
 
-  headTags: [
+
+  scripts: [
     {
-      tagName: 'script',
-      attributes: {
-        async: true,
-        src: 'https://www.googletagmanager.com/gtag/js?id=G-D29T7B03G4',
-      },
+      src: 'https://www.googletagmanager.com/gtag/js?id=G-D29T7B03G4',
+      async: true,
     },
     {
-      tagName: 'script',
-      innerHTML: `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-D29T7B03G4');`,
+      src: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D29T7B03G4');
+      `,
     },
   ],
 
