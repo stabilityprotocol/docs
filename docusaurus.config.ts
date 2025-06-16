@@ -20,6 +20,7 @@ const config: Config = {
   baseUrl: "/",
   trailingSlash: false,
 
+
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "stabilityprotocol", // Usually your GitHub org/user name.
@@ -56,6 +57,10 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           // editUrl:
           //   "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+        },
+        gtag: {
+          trackingID: 'G-D29T7B03G4',
+          anonymizeIP: true,
         },
         blog: false,
         theme: {
