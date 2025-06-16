@@ -10,7 +10,7 @@ The Stability RPC is a critical component that allows applications to connect wi
 
 In addition to supporting standard Ethereum/Geth-compatible endpoints, the Stability JSON RPC API also includes custom endpoints tailored to the unique needs of our ecosystem.
 
-For Ethereum API specifics, refer to the [Ethereum API Documentation](https://ethereum.github.io/execution-apis/api-documentation/). Note that STABILITY does not support `eth_blobBaseFee` at this time.
+For Ethereum API specifics, refer to the [Ethereum API Documentation](https://ethereum.github.io/execution-apis/). Note that STABILITY does not support `eth_blobBaseFee` at this time.
 
 ## EVM RPC Endpoints
 
