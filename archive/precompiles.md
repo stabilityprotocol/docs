@@ -15,7 +15,7 @@ In Stability, we have developed a set of precompiles to facilitate interaction f
 
 Address: `0x0000000000000000000000000000000000000801`
 
-Link to code: [here](https://github.com/stabilityprotocol/stability/blob/main/precompiles/token-fee-controller/supported-tokens-manager/SupportedTokensManager.sol)
+Link to code: [here](https://github.com/stabilityprotocol/stability/blob/master/precompiles/token-fee-controller/supported-tokens-manager/SupportedTokensManager.sol)
 
 A precompile that enables Stability administration to manage the various permitted tokens
 
@@ -23,7 +23,7 @@ A precompile that enables Stability administration to manage the various permitt
 
 Address: `0x0000000000000000000000000000000000000802`
 
-Link to code: [here](https://github.com/stabilityprotocol/stability/blob/main/precompiles/token-fee-controller/validator-fee-selector/ValidatorFeeTokenSelector.sol)
+Link to code: [here](https://github.com/stabilityprotocol/stability/blob/master/precompiles/token-fee-controller/validator-fee-selector/ValidatorFeeTokenSelector.sol)
 
 A precompile that allows validators to manage their accepted tokens and their conversion rate controllers
 
@@ -31,7 +31,7 @@ A precompile that allows validators to manage their accepted tokens and their co
 
 Address: `0x0000000000000000000000000000000000000803`
 
-Link to code: [here](https://github.com/stabilityprotocol/stability/blob/main/precompiles/token-fee-controller/fee-token-selector/FeeTokenSelector.sol)
+Link to code: [here](https://github.com/stabilityprotocol/stability/blob/master/precompiles/token-fee-controller/fee-token-selector/FeeTokenSelector.sol)
 
 A precompile that allows users to set their fee token
 
@@ -39,7 +39,7 @@ A precompile that allows users to set their fee token
 
 Address: `0x0000000000000000000000000000000000000805`
 
-Link to code: [here](https://github.com/stabilityprotocol/stability/blob/main/precompiles/upgrade-runtime-controller/UpgradeRuntimeController.sol)
+Link to code: [here](https://github.com/stabilityprotocol/stability/blob/master/precompiles/upgrade-runtime-controller/UpgradeRuntimeController.sol)
 
 A precompile that enables Stability administration to manage the validator node set
 
@@ -47,7 +47,7 @@ A precompile that enables Stability administration to manage the validator node 
 
 Address: `0x0000000000000000000000000000000000000806`
 
-Link to code: [here](https://github.com/stabilityprotocol/stability/blob/main/precompiles/upgrade-runtime-controller/UpgradeRuntimeController.sol)
+Link to code: [here](https://github.com/stabilityprotocol/stability/blob/master/precompiles/upgrade-runtime-controller/UpgradeRuntimeController.sol)
 
 A precompile that enables Stability administration to manage runtime upgrades.
 
@@ -55,7 +55,7 @@ A precompile that enables Stability administration to manage runtime upgrades.
 
 Address: `0x0000000000000000000000000000000000000807`
 
-Link to code: [here](https://github.com/stabilityprotocol/stability/blob/main/precompiles/fee-rewards-vault-controller/FeeRewardsVaultController.sol)
+Link to code: [here](https://github.com/stabilityprotocol/stability/blob/master/precompiles/fee-rewards-vault-controller/FeeRewardsVaultController.sol)
 
 A precompile for Stability users and administration that enables interaction with the BSR (Business Share Revenue) feature
 

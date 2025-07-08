@@ -24,7 +24,7 @@ For instance, if the split is 50/50 by default, half the fee goes to the `valida
 
 STABILITY is an EVM-compatible blockchain (built on Substrate), which means developers interact with BSR through familiar Ethereum-like interfaces.
 
-The fee-sharing logic runs in the chain’s runtime, but it’s exposed to smart contracts and external applications via a precompiled system contract called the `FeeRewardsVaultController`. This precompile lives at[`0x0000000000000000000000000000000000000807`](https://explorer.stabilityprotocol.com/address/0x0000000000000000000000000000000000000807). The smart contract code is available [on Github](https://github.com/stabilityprotocol/stability/blob/896c16bbdd1d2c0a241d945f5f42b00f00d3caff/precompiles/fee-rewards-vault-controller/FeeRewardsVaultController.sol#L4).
+The fee-sharing logic runs in the chain’s runtime, but it’s exposed to smart contracts and external applications via a precompiled system contract called the `FeeRewardsVaultController`. This precompile lives at[`0x0000000000000000000000000000000000000807`](https://explorer.stabilityprotocol.com/address/0x0000000000000000000000000000000000000807). The smart contract code is available [on Github](https://github.com/stabilityprotocol/stability/blob/master/precompiles/fee-rewards-vault-controller/FeeRewardsVaultController.sol).
 
 All BSR functions are accessible via the precompiled contract interface. Developers can use web3.js, ethers.js, or Solidity to call these functions exactly like a normal contract. For example, calling `FeeRewardsVaultController.getValidatorPercentage()` will return the current fee split percentage allocated to validators​. More importantly, the precompile allows claiming and querying accumulated fee shares through standard function calls, making BSR easy to use.
 
@@ -80,8 +80,8 @@ Throughout this process, the integrity is maintained by STABILITY, and the inter
 
 ## Further Technical Reading
 
-The implementation details of BSR are documented in STABILITY’s code and BSR Readme available [on Github](https://github.com/stabilityprotocol/stability/blob/main/docs/BUSINESS-SHARE-REVENUE.md).
+The implementation details of BSR are documented in STABILITY’s code and BSR Readme available [on Github](https://github.com/stabilityprotocol/stability/blob/master/docs/BUSINESS-SHARE-REVENUE.md).
 
-The runtime code in Rust that shows the storage structures and fee-splitting logic is available [on Github](https://github.com/stabilityprotocol/stability/blob/main/pallets/dnt-fee-controller/src/lib.rs).
+The runtime code in Rust that shows the storage structures and fee-splitting logic is available [on Github](https://github.com/stabilityprotocol/stability/blob/master/pallets/dnt-fee-controller/src/lib.rs).
 
-The FeeRewardsVaultController solidity code is available [on Github](https://github.com/stabilityprotocol/stability/blob/896c16bbdd1d2c0a241d945f5f42b00f00d3caff/precompiles/fee-rewards-vault-controller/FeeRewardsVaultController.sol#L4), and is located at [`0x0000000000000000000000000000000000000807`](https://explorer.stabilityprotocol.com/address/0x0000000000000000000000000000000000000807).
+The FeeRewardsVaultController solidity code is available [on Github](https://github.com/stabilityprotocol/stability/blob/master/precompiles/fee-rewards-vault-controller/FeeRewardsVaultController.sol)), and is located at [`0x0000000000000000000000000000000000000807`](https://explorer.stabilityprotocol.com/address/0x0000000000000000000000000000000000000807).
