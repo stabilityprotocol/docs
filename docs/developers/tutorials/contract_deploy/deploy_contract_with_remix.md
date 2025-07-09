@@ -14,7 +14,7 @@ This tutorial will guide you through deploying an ERC20 smart contract on the Gl
 ## 2. Sign Up for an API Key
 
 
-Before starting, ensure you have an API key. Refer to the [getting started](../../getting_started.md)documentation to sign up for an API key and add the Global Trust Network (GTN) to MetaMask.
+Before starting, ensure you have an API key. Refer to the [getting started ](../../getting_started.md)documentation to sign up for an API key and add the Global Trust Network (GTN) to MetaMask.
 
 ## 3. Setting Up Remix
 
