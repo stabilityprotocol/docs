@@ -40,6 +40,26 @@
     "Liberation Mono", "Courier New", monospace;
 }
 
+/* Enhanced link styling for better visibility in articles */
+.markdown a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.markdown a:hover {
+  color: #1d4ed8;
+}
+
+[data-theme="dark"] .markdown a {
+  color: #60a5fa;
+}
+
+[data-theme="dark"] .markdown a:hover {
+  color: #93c5fd;
+}
+
 .card {
   padding: 1rem;
 }
