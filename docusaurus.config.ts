@@ -11,7 +11,7 @@ const darkCodeTheme = prismThemes.dracula;
 const config: Config = {
   title: "Stability Docs",
   tagline: "",
-  favicon: "img/favicon.ico",
+  favicon: "img/logo.png",
 
   // Set the production url of your site here
   url: "https://docs.stabilityprotocol.com/",
@@ -107,7 +107,7 @@ const config: Config = {
       title: "Stability Docs",
       logo: {
         alt: "Stability Logo",
-        src: "img/favicon.ico",
+        src: "img/logo.png",
       },
       items: [
         {
