@@ -6,4 +6,4 @@ title: "Welcome"
 
 # Welcome to Stability's Documentation 👋
 
-![Stability Documentation](../static/img/landing_page.jpg)
+![Stability Documentation](../static/img/TechDocs-CoverImage.jpg)
