@@ -1,339 +1,108 @@
-/* Google Fonts for brand consistency */
-@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&display=swap");
+/* Google Fonts for new branding */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800&display=swap");
 
 /**
- * Modern design system for Stability documentation
- * Aligned with brand guidelines and design tokens
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
  */
 
+/* You can override the default Infima variables here. */
 :root {
-  /* Typography */
-  --ifm-font-family-base: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --ifm-font-family-monospace: ui-monospace, "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
-  --ifm-heading-font-family: "Archivo", var(--ifm-font-family-base);
+  --ifm-color-primary: #2d3353;
+  --ifm-color-primary-dark: #292e4b;
+  --ifm-color-primary-darker: #262b47;
+  --ifm-color-primary-darkest: #20243a;
+  --ifm-color-primary-light: #32385b;
+  --ifm-color-primary-lighter: #343b5f;
+  --ifm-color-primary-lightest: #3a426c;
   --ifm-code-font-size: 95%;
-
-  /* Brand Color Palette */
-  --brand-primary-black: #000000;
-  --brand-primary-gray: #4f5151;
-  --brand-primary-navy: #183859;
-  --brand-primary-cream: #f2dfca;
-  --brand-primary-white: #ffffff;
-  --brand-primary-teal: #38999b;
-  --brand-accent-peach: #f2dfca;
-  --brand-accent-coral: #38999b;
-
-  /* Docusaurus theme mapping to brand colors */
-  --ifm-color-primary: var(--brand-primary-navy);
-  --ifm-color-primary-dark: #15324f;
-  --ifm-color-primary-darker: #132f4a;
-  --ifm-color-primary-darkest: #0f263c;
-  --ifm-color-primary-light: #1b3d63;
-  --ifm-color-primary-lighter: #1e4168;
-  --ifm-color-primary-lightest: #24497a;
-
-  /* Background and surface colors */
-  --ifm-background-color: var(--brand-primary-white);
-  --ifm-background-surface-color: #fafafa;
-  --ifm-color-content: var(--brand-primary-gray);
-  --ifm-color-content-secondary: rgba(79, 81, 81, 0.7);
-
-  /* Interactive colors */
-  --ifm-color-emphasis-300: var(--brand-primary-teal);
-  --ifm-color-emphasis-600: var(--brand-primary-navy);
-  --ifm-color-emphasis-800: var(--brand-primary-black);
-
-  /* Code highlighting */
-  --docusaurus-highlighted-code-line-bg: rgba(24, 56, 89, 0.1);
-  
-  /* Custom gradients */
-  --gradient-primary: linear-gradient(135deg, var(--brand-primary-cream) 0%, var(--brand-primary-navy) 50%, var(--brand-primary-teal) 100%);
-  --gradient-accent: linear-gradient(45deg, var(--brand-accent-peach) 0%, var(--brand-accent-coral) 100%);
-  --gradient-subtle: linear-gradient(135deg, var(--brand-primary-white) 0%, var(--brand-primary-cream) 100%);
-
-  /* Shadows and borders */
-  --ifm-global-shadow-lw: 0 2px 8px rgba(24, 56, 89, 0.08);
-  --ifm-global-shadow-md: 0 4px 16px rgba(24, 56, 89, 0.12);
-  --ifm-global-shadow-tl: 0 8px 32px rgba(24, 56, 89, 0.16);
-
-  /* Feedback colors */
-  --feedback-primary-color: var(--brand-primary-navy);
+  --feedback-primary-color: #2d3353;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --ifm-font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --ifm-heading-font-family: "Archivo", var(--ifm-font-family-base);
 }
 
-/* Dark theme */
+/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-  --ifm-color-primary: var(--brand-primary-cream);
-  --ifm-color-primary-dark: #e8cca3;
-  --ifm-color-primary-darker: #e5c698;
+  --ifm-color-primary: #f6ebdb;
+  --ifm-color-primary-dark: #edd6b6;
+  --ifm-color-primary-darker: #e8cca3;
   --ifm-color-primary-darkest: #daad6b;
-  --ifm-color-primary-light: #f5e2cc;
-  --ifm-color-primary-lighter: #f7e5d1;
-  --ifm-color-primary-lightest: #fceee0;
-
-  --ifm-background-color: var(--brand-primary-black);
-  --ifm-background-surface-color: #1a1a1a;
-  --ifm-color-content: var(--brand-primary-cream);
-  --ifm-color-content-secondary: rgba(242, 223, 202, 0.7);
-
-  --docusaurus-highlighted-code-line-bg: rgba(242, 223, 202, 0.1);
-
-  /* Dark mode gradients */
-  --gradient-primary: linear-gradient(135deg, var(--brand-primary-black) 0%, var(--brand-primary-navy) 50%, var(--brand-primary-teal) 100%);
-  --gradient-subtle: linear-gradient(135deg, var(--brand-primary-black) 0%, #1a1a1a 100%);
+  --ifm-color-primary-light: #ffffff;
+  --ifm-color-primary-lighter: #ffffff;
+  --ifm-color-primary-lightest: #ffffff;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-font-family-base: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --ifm-font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --ifm-heading-font-family: "Archivo", var(--ifm-font-family-base);
 }
 
-/* Typography enhancements */
+/* Apply Archivo font to all headings */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: var(--ifm-heading-font-family);
-  font-weight: 600;
-  line-height: 1.2;
-  margin: 0;
-}
-
-h1 {
-  font-size: 3.5rem;
   font-weight: 700;
 }
 
-h2 {
-  font-size: 2.5rem;
-  font-weight: 600;
-}
-
-h3 {
-  font-size: 1.875rem;
-  font-weight: 600;
-}
-
-/* Navbar styling */
+/* Ensure navbar title uses heading font */
 .navbar__title {
   font-family: var(--ifm-heading-font-family);
   font-weight: 700;
-  color: var(--brand-primary-navy);
 }
 
-[data-theme="dark"] .navbar__title {
-  color: var(--brand-primary-cream);
-}
-
-/* Enhanced link styling */
+/* Enhanced link styling for better visibility in articles */
 .markdown a {
-  color: var(--brand-primary-teal);
+  color: #2563eb;
   text-decoration: none;
   font-weight: 500;
-  transition: all 0.2s ease;
-  border-bottom: 1px solid transparent;
-}
-
-.markdown a:hover {
-  color: var(--brand-primary-navy);
-  border-bottom-color: var(--brand-primary-teal);
-}
-
-[data-theme="dark"] .markdown a {
-  color: var(--brand-primary-teal);
-}
-
-[data-theme="dark"] .markdown a:hover {
-  color: var(--brand-primary-cream);
-  border-bottom-color: var(--brand-primary-teal);
-}
-
-/* Card enhancements */
-.card {
-  padding: 1.5rem;
-  background: var(--gradient-subtle);
-  border: 1px solid rgba(24, 56, 89, 0.1);
-  border-radius: 0.75rem;
-  box-shadow: var(--ifm-global-shadow-lw);
-  transition: all 0.3s ease;
-}
-
-.card:hover {
-  box-shadow: var(--ifm-global-shadow-md);
-  transform: translateY(-2px);
-}
-
-[data-theme="dark"] .card {
-  background: var(--gradient-subtle);
-  border-color: rgba(242, 223, 202, 0.1);
-}
-
-/* Button enhancements */
-.button--primary {
-  background: var(--gradient-accent);
-  border: none;
-  font-family: var(--ifm-heading-font-family);
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.button--primary:hover {
-  background: var(--brand-primary-navy);
-  transform: translateY(-1px);
-  box-shadow: var(--ifm-global-shadow-md);
-}
-
-.button--secondary {
-  background: transparent;
-  border: 2px solid var(--brand-primary-teal);
-  color: var(--brand-primary-teal);
-  font-family: var(--ifm-heading-font-family);
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.button--secondary:hover {
-  background: var(--brand-primary-teal);
-  color: var(--brand-primary-white);
-}
-
-/* Code block styling */
-.codeBlockContainer_Ckt0 {
-  background: var(--brand-primary-navy);
-  border-radius: 0.75rem;
-  overflow: hidden;
-  box-shadow: var(--ifm-global-shadow-md);
-}
-
-.codeBlockTitle_Ktv7 {
-  background: rgba(242, 223, 202, 0.1);
-  color: var(--brand-primary-cream);
-  font-family: var(--ifm-heading-font-family);
-  font-weight: 500;
-}
-
-/* Search styling */
-[data-theme="dark"] .DocSearch {
-  --docsearch-text-color: var(--brand-primary-cream);
-  --docsearch-muted-color: rgba(242, 223, 202, 0.7);
-  --docsearch-container-background: rgba(0, 0, 0, 0.8);
-  --docsearch-modal-background: var(--brand-primary-black);
-  --docsearch-searchbox-background: #1a1a1a;
-  --docsearch-searchbox-focus-background: var(--brand-primary-navy);
-  --docsearch-hit-color: var(--brand-primary-cream);
-  --docsearch-hit-active-color: var(--brand-primary-white);
-  --docsearch-hit-background: rgba(24, 56, 89, 0.3);
-  --docsearch-footer-background: #1a1a1a;
-  --docsearch-key-gradient: linear-gradient(-26.5deg, var(--brand-primary-teal) 0%, var(--brand-primary-navy) 100%);
-}
-
-/* Sidebar enhancements */
-.theme-doc-sidebar-container {
-  background: var(--gradient-subtle);
-  border-right: 1px solid rgba(24, 56, 89, 0.1);
-}
-
-[data-theme="dark"] .theme-doc-sidebar-container {
-  background: var(--gradient-subtle);
-  border-right-color: rgba(242, 223, 202, 0.1);
-}
-
-/* Footer styling */
-.footer--dark {
-  background: var(--brand-primary-navy);
-  color: var(--brand-primary-cream);
-}
-
-.footer__title {
-  font-family: var(--ifm-heading-font-family);
-  font-weight: 600;
-  color: var(--brand-primary-cream);
-}
-
-.footer__link-item {
-  color: rgba(242, 223, 202, 0.8);
   transition: color 0.2s ease;
 }
 
-.footer__link-item:hover {
-  color: var(--brand-primary-cream);
+.markdown a:hover {
+  color: #1d4ed8;
 }
 
-/* Custom animations */
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+[data-theme="dark"] .markdown a {
+  color: #60a5fa;
 }
 
-@keyframes slideUp {
-  0% { opacity: 0; transform: translateY(10px); }
-  100% { opacity: 1; transform: translateY(0); }
+[data-theme="dark"] .markdown a:hover {
+  color: #93c5fd;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+.card {
+  padding: 1rem;
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.5s ease-in-out;
-}
+[data-theme="dark"] .DocSearch {
+  --docsearch-text-color: var(--ifm-font-color-base);
+  --docsearch-muted-color: var(--ifm-color-secondary-darkest);
+  --docsearch-container-background: rgba(47, 55, 69, 0.7);
+  /* Modal */
+  --docsearch-modal-background: var(--ifm-background-color);
+  /* Search box */
+  --docsearch-searchbox-background: var(--ifm-background-color);
+  --docsearch-searchbox-focus-background: var(--ifm-color-black);
+  /* Hit */
+  --docsearch-hit-color: var(--ifm-font-color-base);
+  --docsearch-hit-active-color: var(--ifm-color-white);
+  --docsearch-hit-background: var(--ifm-color-emphasis-100);
+  /* Footer */
+  --docsearch-footer-background: var(--ifm-background-surface-color);
+  --docsearch-key-gradient: linear-gradient(
+    -26.5deg,
+    var(--ifm-color-emphasis-200) 0%,
+    var(--ifm-color-emphasis-100) 100%
+  );
 
-.animate-slide-up {
-  animation: slideUp 0.5s ease-out;
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-/* Utility classes */
-.bg-brand-gradient {
-  background: var(--gradient-primary);
-}
-
-.bg-accent-gradient {
-  background: var(--gradient-accent);
-}
-
-.text-brand-navy {
-  color: var(--brand-primary-navy);
-}
-
-.text-brand-teal {
-  color: var(--brand-primary-teal);
-}
-
-.text-brand-cream {
-  color: var(--brand-primary-cream);
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--brand-primary-cream);
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, var(--brand-primary-teal), var(--brand-primary-navy));
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, var(--brand-primary-navy), var(--brand-primary-teal));
-}
-
-[data-theme="dark"] ::-webkit-scrollbar-track {
-  background: #1a1a1a;
-}
-
-[data-theme="dark"] ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, var(--brand-primary-teal), var(--brand-primary-cream));
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Focus styles */
-*:focus-visible {
-  outline: 2px solid var(--brand-primary-teal);
-  outline-offset: 2px;
+  [aria-selected="true"] {
+    > a {
+      background-color: var(--ifm-background-surface-color);
+    }
+  }
 }
