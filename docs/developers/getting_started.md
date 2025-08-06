@@ -12,47 +12,33 @@ This tutorial presumes a foundational understanding of blockchain technology and
 
 ## Register for an API Key
 
-Global Trust Network (GTN) and Stability Testnet employ API keys to manage transactions. On Global Trust Network, an API key is required to perform write transactions. On Stability Testnet, each address is given a limited number of free transactions without an API key using our public RPC. To increase the number of transactions that a certain user can execute on either chain, users are required to sign up with our [Account Manager](https://account.stabilityprotocol.com/keys) for their very own private RPC address.
+Global Trust Network (GTN) and Stability Testnet employ API keys to manage transactions. On Global Trust Network, an API key is required to perform write transactions. On Stability Testnet, each address is given a limited number of free transactions without an API key using our public RPC. To increase the number of transactions that a certain user can execute on either chain, users are required to sign up with our [Account Manager](https://account.stabilityprotocol.com/keys) for their very own private RPC address. Only an e-mail is required.
 
 ### 2. Sign Up For An API Key
 
-#### Step 1 - Navigate to [Stability Portal](https://portal.stabilityprotocol.com/) and click the `Login | New User' button.
-
-![Stability Portal Page](../../static/img/portallogin.png)
+#### Step 1 - Navigate to [Stability Portal](https://portal.stabilityprotocol.com/) 
 
 #### Step 2 - Select Your Preferred Registration
 
-On this screen, select your preferred method of registration. For this tutorial, we will be following the Google sign-in path. You may also similarly log in via Email, GitHub, Magiclink, or directly through Metamask.
-
-It is important to note that registrations through Metamask or Magiclink do not provide a dedicated API Key. Without an API Key, you will not be able to perform transactions on Global Trust Network (GTN), and will have limited functionality on Stability Testnet. To receive an API Key, you must register using either GitHub, Google, or Email.
+On this screen, select your preferred method of registration. For this tutorial, we will be following the Google sign-in path. You may also similarly log in via Email.
 
 If you opt to register via email, ensure you can verify your email address.
 
-![Stability Login Screen](../../static/img/portalloginoptions.png)
-
 #### Step 3 - Select Your Preferred Network
 
-Using the dropdown menu on the top right, select the network you wish to generate an API Key on.
+Using the dropdown menu on the top right, select the network you wish to generate an API Key on. Currently, you can choose GTN or Testnet.
 
-![Stability Portal Screen with Networks Highlighted](../../static/img/portalselectnetwork.png)
-
-#### Step 4 - Click the `Create New API Key` Button
-
-![Stability Portal Screen with Create New API Key Button Highlighted](../../static/img/portalcreatenewapikey.png)
+#### Step 4 - Click the `Create New Key` Button
 
 #### Step 5 - Congrats! You've created an API Key.
 
-To view your personal RPC URL, click the `Info` button.
-![Stability Portal Screen with Info Button Highlighted](../../static/img/portalinfo.png)
+To view your personal RPC URL, click the `View Details` button next to your API key, followed by the `Setup Instructions` button.
 
 Here, you will find your personal RPC URL.
-![Stability Portal Screen with API URL Highlighted](../../static/img/portalapikeyurlhighlight.png)
 
 ### 3a. Add Network Automatically to Metamask + Other Compatible Wallets
 
-![Metamask Logo](../../static/img/portalmetamasklogo.png)
-
-To add your custom RPC to your browser extension wallet, which will allow you to use Global Trust Network or Stability Testnet, click the Metamask Fox Logo next to your API Key. This will work with Metamask as well as many other browser extension based wallets.
+To add your custom RPC to your browser extension wallet, which will allow you to use Global Trust Network or Stability Testnet, click the `Add To Metamask` button. This will work with Metamask as well as many other browser extension based wallets.
 
 If you are not able to add the network to your wallet, you may have to add the network manually. Follow the instructions below.
 
