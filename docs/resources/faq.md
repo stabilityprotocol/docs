@@ -46,7 +46,7 @@ Our connection details for our public RPC is as follows -
     - **New RPC URL:** `https://rpc.testnet.stabilityprotocol.com/zgt/YOUR_API_KEY`
     - **Chain ID:** 20180427
     - **Currency Symbol:** FREE
-    - **Block Explorer URL:** `https://stability-testnet.blockscout.com/`
+    - **Block Explorer URL:** `https://explorer.stble.io/testnet/`
     - **Request Limit:** 200 Per Minute Free / 1500 Per Minute Tier 1
     - **Max Batch Size:** 40
 

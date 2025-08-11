@@ -10,7 +10,7 @@ The Global Trust Network (GTN) Block Explorer can be accessed by the following U
 
 The Stability Testnet Block Explorer allows you to inspect, analyze, and interact with real-time data on Stability Chain Testnet. The block explorer can be accessed by the following URL:  
   
-[https://stability-testnet.blockscout.com/](https://stability-testnet.blockscout.com/)
+[https://explorer.stble.io/testnet/blocks/](https://explorer.stble.io/testnet/blocks/)
 
 ## Transactions
 

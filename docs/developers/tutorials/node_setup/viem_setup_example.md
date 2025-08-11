@@ -63,7 +63,7 @@ const stbleTestnet = defineChain({
   blockExplorers: {
     default: {
       name: "Stability Testnet",
-      url: "https://stability-testnet.blockscout.com/",
+      url: "https://explorer.stble.io/testnet",
     },
   },
   rpcUrls: {

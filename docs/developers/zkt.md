@@ -43,7 +43,7 @@ The **API Gateway** serves as the entry point for all requests, responsible for:
 
 **Endpoints**:
 
-- **POST /zkt/try-it-out**: Public endpoint for submitting messages to the blockchain. Note this endpoint may be limited. Any transactions submitted to this account are signed by a single account - `0x7f521250d3aacba194dbb33427ffea2c546b433d`. You can view this account on our [Testnet Explorer](https://stability-testnet.blockscout.com/address/0x7f521250d3aacba194dbb33427ffea2c546b433d) and our [Mainnet Explorer](https://stability.blockscout.com/address/0x7F521250d3AAcba194dBB33427fFEa2C546B433d).
+- **POST /zkt/try-it-out**: Public endpoint for submitting messages to the blockchain. Note this endpoint may be limited. Any transactions submitted to this account are signed by a single account - `0x7f521250d3aacba194dbb33427ffea2c546b433d`. You can view this account on our [Testnet Explorer](https://explorer.stble.io/testnet/address/0x7f521250d3aacba194dbb33427ffea2c546b433d/) and our [Mainnet Explorer](https://stability.blockscout.com/address/0x7F521250d3AAcba194dBB33427fFEa2C546B433d).
 - **POST /zkt/your-api-key**: An authenticated endpoint for submitting messages to the blockchain. To obtain a free API Key, please visit [Stability Portal](https://account.stabilityprotocol.com/keys). Transactions submitted via this endpoint are signed by a wallet exclusive to your API key.
 
 ### Data Flow Example

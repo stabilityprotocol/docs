@@ -76,7 +76,7 @@ In the event you are unable to add your wallet automatically via clicking the Me
 | New RPC URL        | `https://rpc.stabilityprotocol.com/zgt/YOUR_API_KEY` | `https://rpc.testnet.stabilityprotocol.com/zgt/YOUR_API_KEY` |
 | Chain ID           | 101010                                               | 20180427                                                     |
 | Currency Symbol    | FREE                                                 | FREE                                                         |
-| Block Explorer URL | `https://stability.blockscout.com/`                  | `https://stability-testnet.blockscout.com/`                  |
+| Block Explorer URL | `https://stability.blockscout.com/`                  | `https://explorer.stble.io/testnet/blocks/`                  |
 | Request Limit      | 200 Per Minute / Higher Limits Available             | 200 Per Minute / Higher Limits Available                     |
 | Max Batch Size     | 40                                                   | 40                                                           |
 
