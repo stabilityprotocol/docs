@@ -20,9 +20,9 @@ One of the key differences with Stability is its lack of a native token. This fu
 
 Stability makes use of the Frontier EVM Pallet. Currently, Stability has not implemented the Cancun update. Developers must compile Solidity at version 0.8.24 or lower.
 
-### Gas Cost and Priority Fee Must Be Set To Zero
+### Gas Cost and Priority Fee Must Not Be Explicitly Set
 
-On Stability, gas costs and priority fees are not applicable in the same way they are on traditional EVM-based blockchains due to the absence of a native token. Wallets such as Metamask will handle this automatically. However, this means that when constructing transactions, developers must explicitly set the gas cost and priority fee to zero.
+On Stability, gas costs and priority fees are not applicable in the same way they are on traditional EVM-based blockchains due to the absence of a native token. `gasPrice` and `maxPriorityFeePerGas` must not be explicitly set to a non-zero number. No definition, or explicit definition to 0, is required.
 
 Here is an example of how this can be achieved using ethers.js:
 

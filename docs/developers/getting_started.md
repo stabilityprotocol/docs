@@ -16,9 +16,11 @@ Global Trust Network (GTN) and Stability Testnet employ API keys to manage trans
 
 ### 2. Sign Up For An API Key
 
-#### Step 1 - Navigate to [Stability Portal](https://portal.stabilityprotocol.com/) 
+#### Step 1 - Navigate to [Stability Portal](https://portal.stabilityprotocol.com/)
 
 #### Step 2 - Select Your Preferred Registration
+
+![Stability Account Portal Screen with Login Options](../../static/img/Portal_Account_Register.png)
 
 On this screen, select your preferred method of registration. For this tutorial, we will be following the Google sign-in path. You may also similarly log in via Email.
 
@@ -26,15 +28,21 @@ If you opt to register via email, ensure you can verify your email address.
 
 #### Step 3 - Select Your Preferred Network
 
+![Stability Account Portal Screen with Select Network Dropdown Highlighted](../../static/img/Portal_Select_Network.png)
+
 Using the dropdown menu on the top right, select the network you wish to generate an API Key on. Currently, you can choose GTN or Testnet.
 
 #### Step 4 - Click the `Create New Key` Button
 
+![Stability Account Portal Screen with Create API Key Button Highlighted](../../static/img/Portal_Create_API_Key.png)
+
 #### Step 5 - Congrats! You've created an API Key.
+
+![Stability Account Portal Screen with View Details Button Highlighted ](../../static/img/Portal_View_Details.png)
 
 To view your personal RPC URL, click the `View Details` button next to your API key, followed by the `Setup Instructions` button.
 
-Here, you will find your personal RPC URL.
+Here, you will find your personal RPC URL, as well a link that will add either network to your Metamask in one click.
 
 ### 3a. Add Network Automatically to Metamask + Other Compatible Wallets
 
@@ -82,7 +90,7 @@ In the event you are unable to add your wallet automatically via clicking the Me
 
 ### 4. Configure for Zero Fees
 
-It is important to note that Stability requires you to manually set the `Max Base Fee` and `Max Priority Fee` to zero. When using libraries such as `ethers`, this must be coded into the transaction. A live example of this is available in the source code of our [Data Store App](https://github.com/stabilityprotocol/datastoredapp).
+It is important to note that Stability requires you to not set the `Max Base Fee` and `Max Priority Fee` to a non-zero number. When using libraries such as `ethers`, this must be coded into the transaction. A live example of where these values are explicitly coded to zero is available in the source code of our [Data Store App](https://github.com/stabilityprotocol/datastoredapp).
 
 To set this in Metamask, for the your first transaction, you will have to manually set these values to zero. It is advised that you save these values as the default setting for our network.
 

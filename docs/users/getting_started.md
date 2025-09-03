@@ -20,21 +20,29 @@ If you haven't already, install MetaMask for your browser from the [official Met
 
 #### Step 2 - Select Your Preferred Registration
 
+![Stability Account Portal Screen with Login Options](../../static/img/Portal_Account_Register.png)
+
 On this screen, select your preferred method of registration. For this tutorial, we will be following the Google sign-in path. You may also similarly log in via Email.
 
 If you opt to register via email, ensure you can verify your email address.
 
 #### Step 3 - Select Your Preferred Network
 
+![Stability Account Portal Screen with Select Network Dropdown Highlighted](../../static/img/Portal_Select_Network.png)
+
 Using the dropdown menu on the top right, select the network you wish to generate an API Key on. Currently, you can choose GTN or Testnet.
 
 #### Step 4 - Click the `Create New Key` Button
 
+![Stability Account Portal Screen with Create API Key Button Highlighted](../../static/img/Portal_Create_API_Key.png)
+
 #### Step 5 - Congrats! You've created an API Key.
+
+![Stability Account Portal Screen with View Details Button Highlighted ](../../static/img/Portal_View_Details.png)
 
 To view your personal RPC URL, click the `View Details` button next to your API key, followed by the `Setup Instructions` button.
 
-Here, you will find your personal RPC URL.
+Here, you will find your personal RPC URL, as well a link that will add either network to your Metamask in one click.
 
 ### 3a. Add Network Automatically to Metamask + Other Compatible Wallets
 
@@ -67,18 +75,16 @@ In the event you are unable to add your wallet automatically via clicking the Me
 ![Stability Account Manager Screen with an Example API Key Highlighted](../../static/img/apikeyhighlight.png)
 
 #### Step 6 - Fill out the network settings using the details below. Be sure to replace the `YOUR_API_KEY` with your own API Key. Afterward, click Save.
-    
+
 ![Metamask Manual Network Screen with Details Filled and Save Button Highlighted](../../static/img/metamaskmanualnetworksave.png)
 
-
-
-| **Property**               | **Global Trust Network**                                       | **Stability Testnet**                                               |
-|----------------------------|-----------------------------------------------------------------|----------------------------------------------------------------------|
-| Network Name               | Global Trust Network                                           | Stability Test Net                                                   |
-| New RPC URL                | `https://rpc.stabilityprotocol.com/zgt/YOUR_API_KEY`          | `https://rpc.testnet.stabilityprotocol.com/zgt/YOUR_API_KEY` |
-| Chain ID                   | 101010                                                          | 20180427                                                             |
-| Currency Symbol            | FREE                                                            | FREE                                                                 |
-| Block Explorer URL         | `https://stability.blockscout.com/`                             | `https://explorer.stble.io/testnet/`                          |
+| **Property**       | **Global Trust Network**                             | **Stability Testnet**                                        |
+| ------------------ | ---------------------------------------------------- | ------------------------------------------------------------ |
+| Network Name       | Global Trust Network                                 | Stability Test Net                                           |
+| New RPC URL        | `https://rpc.stabilityprotocol.com/zgt/YOUR_API_KEY` | `https://rpc.testnet.stabilityprotocol.com/zgt/YOUR_API_KEY` |
+| Chain ID           | 101010                                               | 20180427                                                     |
+| Currency Symbol    | FREE                                                 | FREE                                                         |
+| Block Explorer URL | `https://stability.blockscout.com/`                  | `https://explorer.stble.io/testnet/`                         |
 
 ### 4. Configure your Metamask for Zero Fees
 
@@ -90,10 +96,8 @@ On your first transaction, A MetaMask popup will appear to confirm the transacti
 
 ![Advanced Gas Fee Settings in Metamask](../../static/img/advancegasscreen.png)
 
-This will allow you to customize Metamask for zero gas transactions. Click the advanced gas fee icon. Set your `Max Base Fee` and `Priority Fee` to zero. Click the `Save these values as my default...` checkbox to avoid having to manually set the gas in the future. 
+This will allow you to customize Metamask for zero gas transactions. Click the advanced gas fee icon. Set your `Max Base Fee` and `Priority Fee` to zero. Click the `Save these values as my default...` checkbox to avoid having to manually set the gas in the future.
 
 ### 5. Complete!
 
 You're now connected to our blockchain network and ready to make transactions or interact with smart contracts!
-
-
