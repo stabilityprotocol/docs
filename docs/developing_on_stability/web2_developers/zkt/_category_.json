@@ -1,0 +1,8 @@
+{
+  "label": "Zero-Knowledge Transactions",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn how to use Zero-Knowledge Transactions (ZKT) to interact with the Stability blockchain using simple HTTP requests."
+  }
+}

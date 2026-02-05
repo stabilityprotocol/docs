@@ -1,6 +1,9 @@
 ---
-sidebar_position: 8
+sidebar_position: 4
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Precompiles
 
@@ -16,9 +19,11 @@ Blockchains deploy precompiled contracts for two main reasons. First, if the con
 
 To interact with a precompile contract, simply treat the precompile contract as if it was any other smart contract. Stability has their own precompile contracts on our network to manage permissioned validators, as well as standard Ethereum Virtual Machine (EVM) precompiles.
 
+<Tabs>
+  <TabItem value="stability" label="Stability Native Precompiles" default>
+
 ## Stability Native Precompiles
 
-Stability
 | Address | Name | Input | Output | Description | Source |
 |---------|-----------|------------------------------|--------------|-----------------------------------------------------------------------------|----------------------------|
 | 0x801 | supportedTokensManager | data | data | A precompile that stores and manages the ATM gas and ATM tokens. | [Code](https://github.com/stabilityprotocol/stability/blob/master/precompiles/token-fee-controller/supported-tokens-manager/SupportedTokensManager.sol) |
@@ -27,6 +32,10 @@ Stability
 | 0x805 | ValidatorController | data | data | A precompile that enables Stability to manage validator addresses. | [Code](https://github.com/stabilityprotocol/stability/blob/master/precompiles/upgrade-runtime-controller/UpgradeRuntimeController.sol) |
 | 0x806 | UpgradeRuntimeControllerPrecompile | data | data | A precompile that enables Stability to manage runtime upgrades.| [Code](https://github.com/stabilityprotocol/stability/blob/master/precompiles/upgrade-runtime-controller/UpgradeRuntimeController.sol) |
 | 0x807 | FeeRewardsVaultController | data | data | A precompile that enables fee-sharing logic for the ATM.| [Code](https://github.com/stabilityprotocol/stability/blob/master/precompiles/fee-rewards-vault-controller/FeeRewardsVaultController.sol) |
+
+  </TabItem>
+  
+  <TabItem value="ethereum" label="Ethereum Native Precompiles">
 
 ## Ethereum Native Precompiles
 
@@ -45,3 +54,6 @@ To Learn More About Ethereum Precompile Contracts, we highly recommend visiting 
 | 0x09    | Blake2             | rounds, h, m, t, f           | h             | Implements the BLAKE2b hash function and other higher-round 64-bit BLAKE2 variants to run cheaply on the EVM.                                                                                                                                                                             |
 | 0x400   | SHA3FIPS256        | data                         | hash          | Implements the SHA-3 (Secure Hash Algorithm 3) cryptographic hashing function as specified in FIPS 202 (Federal Information Processing Standards Publication). This precompile takes an arbitrary length input and processes it to produce a fixed-length 256-bit (32 bytes) output hash. |
 | 0x402   | ECRecoverPublicKey | hash, v, r, s                | hash          | Similar to ecRecover, but returns the pubkey (not the corresponding Ethereum address)                                                                                                                                                                                                     |
+
+  </TabItem>
+</Tabs>

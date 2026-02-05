@@ -16,7 +16,7 @@ This guide will demonstrate the steps to install Viem and configure the framewor
 
 The complete code of this tutorial can be found at this [link](https://github.com/stabilityprotocol/tutorials/tree/main/setup-viem-environment).
 
-This tutorial will work using only the Public RPCs, as they are sufficient for performing 'read' transactions. However, if you have not done so already, review the developer [getting started](../../getting_started.md) documentation to create your own API Key. This API key is required to perform any 'write' transactions on the Global Trust Network (GTN), as well as for performing a significant number of transactions on the Stability Testnet.
+This tutorial will work using only the Public RPCs, as they are sufficient for performing 'read' transactions. However, if you have not done so already, review the developer [getting started](../../developing_on_stability/web3_developers/getting_started/metamask_api_config.md) documentation to create your own API Key. This API key is required to perform any 'write' transactions on the Global Trust Network (GTN), as well as for performing a significant number of transactions on the Stability Testnet.
 
 ## 2. About Viem
 
@@ -158,4 +158,4 @@ npx ts-node test.ts
 
 Upon successful execution, you should see a console log displaying the current block numbers of Stability Testnet and Global Trust Network (GTN). This step confirms that your TypeScript / Viem setup is correctly configured to interact with the blockchains.
 
-![Console Return of Block Number](../../../../static/img/viemblocknumbers.png)
+![Console Return of Block Number](../../../static/img/viemblocknumbers.png)

@@ -2,6 +2,9 @@
 sidebar_position: 3
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Benchmark Tests
 
 The benchmark tests presented here offer an evaluation of Stability Testnet and Global Trust Network (GTN) in regards to latency and throughput. These tests have been designed to simulate real-world transaction loads.
@@ -17,6 +20,9 @@ These tests occurred on March 11th, 2024 for Testnet, and March 12th, 2024 for G
 | Total Block Gas              | The cumulative gas used by all transactions in a block. This metric gives an overview of the block's capacity utilization. |
 | Max Transactions Per Block   | The maximum number of transactions that can be included in a single block, which is directly influenced by the block gas limit and the gas used per transaction. |
 
+<Tabs>
+  <TabItem value="testnet" label="Testnet Results" default>
+
 ## Testnet Results
 
 | TRANSACTIONS PER SECOND | GAS PER TRANSACTION | TOTAL BLOCK GAS | MAX TRANSACTIONS PER BLOCK | LINK |
@@ -30,6 +36,10 @@ These tests occurred on March 11th, 2024 for Testnet, and March 12th, 2024 for G
 | 171.00                  | 500,000.00          | 164,829,733.00  | 342                    | [Link](https://stability-testnet.blockscout.com/block/345289) |
 | 94.50                  | 1,000,000.00        | 160,541,685.00  | 189                    | [Link](https://stability-testnet.blockscout.com/block/345303) |
 | 152.50                  | 1,000,000.00        | 296,552,763.00  | 305                    | [Link](https://stability-testnet.blockscout.com/block/345376) |
+
+  </TabItem>
+  
+  <TabItem value="gtn" label="GTN Results">
 
 ## Global Trust Network (GTN) Results
 
@@ -45,3 +55,6 @@ These tests occurred on March 11th, 2024 for Testnet, and March 12th, 2024 for G
 | 176.00                  | 300,000.00          | 103,056,480     | 354                        | [Link](https://stability.blockscout.com/block/355006) |
 | 174.50                  | 500,000.00          | 171,445,552     | 349                        | [Link](https://stability.blockscout.com/block/355037) |
 | 305.00                  | 500,000.00          | 299,661,280     | 610                        | [Link](https://stability.blockscout.com/block/355088) |
+
+  </TabItem>
+</Tabs>

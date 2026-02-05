@@ -1,5 +1,5 @@
 ---
-sidebar_position: 9
+sidebar_position: 5
 ---
 
 # Public RPC Guide
@@ -16,7 +16,7 @@ For Ethereum API specifics, refer to the [Ethereum API Documentation](https://et
 
 ### Stability Testnet Access
 
-The Stability Public Testnet RPC is read-only for the blockchain. Users looking to perform transactions should acquire a free API key as detailed on our [Getting Started page](./getting_started.md).
+The Stability Public Testnet RPC is read-only for the blockchain. Users looking to perform transactions should acquire a free API key as detailed on our [Creating Your API Key](../../stability_api/creating_api_key.md) page.
 
 - **RPC URL**: `https://rpc.testnet.stabilityprotocol.com/zgt/YOUR_API_KEY`
 - **Chain ID**: `20180427`
@@ -25,7 +25,7 @@ The Stability Public Testnet RPC is read-only for the blockchain. Users looking 
 
 ### Global Trust Network Mainnet Access
 
-The Global Trust Network (GTN) Public RPC is read-only for the blockchain. Transaction execution is not available through the GTN Public RPC. Users looking to perform transactions should acquire a free API key as detailed on our [Getting Started page](./getting_started.md).
+The Global Trust Network (GTN) Public RPC is read-only for the blockchain. Transaction execution is not available through the GTN Public RPC. Users looking to perform transactions should acquire a free API key as detailed on our [Creating Your API Key](../../stability_api/creating_api_key.md) page.
 
 - **RPC URL**: `https://rpc.stabilityprotocol.com/zgt/YOUR_API_KEY`
 - **Chain ID**: `101010`

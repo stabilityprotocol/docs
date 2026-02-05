@@ -14,13 +14,13 @@ This tutorial will guide you through deploying an ERC20 smart contract on the Gl
 ## 2. Sign Up for an API Key
 
 
-Before starting, ensure you have an API key. Refer to the [getting started ](../../getting_started.md)documentation to sign up for an API key and add the Global Trust Network (GTN) to MetaMask.
+Before starting, ensure you have an API key. Refer to the [getting started](../../developing_on_stability/web3_developers/getting_started/metamask_api_config.md) documentation to sign up for an API key and add the Global Trust Network (GTN) to MetaMask.
 
 ## 3. Setting Up Remix
 
 Navigate to [Remix IDE](https://remix.ethereum.org/)
 
-![Screenshot of Remix](../../../../static/img/remixscreen.png)
+![Screenshot of Remix](../../../static/img/remixscreen.png)
 
 In Remix, create a new file by clicking the icon highlighted in the screenshot. Name your file `MyERC20.sol` and prepare to deploy an ERC20 token named `PossumToken` with the ticker symbol `POSSUM`.
 
@@ -44,7 +44,7 @@ contract PossumToken is ERC20 {
 
 To compile your contract, select the Solidity Compiler from the left sidebar in Remix.
 
-![Compile remix](../../../../static/img/possumtokencompilenew.png)
+![Compile remix](../../../static/img/possumtokencompilenew.png)
 
 Click on the Compile MyERC20.sol button. Your contract should now be compiled successfully.
 
@@ -52,23 +52,23 @@ Click on the Compile MyERC20.sol button. Your contract should now be compiled su
 
 To deploy the contract, go to the Deploy & Run Transactions section in the left sidebar.
 
-![Deploy with Remix](../../../../static/img/deployscreenremixnew.png)
+![Deploy with Remix](../../../static/img/deployscreenremixnew.png)
 
 Set the `ENVIRONMENT` to `Injected Provider - MetaMask`.
 
 Under the `Contract` dropdown, select `MyERC20`, and then click the orange deploy button.
 A MetaMask popup will appear. Click the pencil icon in the estimated fee box.
 
-![Adjust Gas Icon in Metamask](../../../../static/img/adjustgas.png)
+![Adjust Gas Icon in Metamask](../../../static/img/adjustgas.png)
 
 This will allow you to customize Metamask for zero gas transactions. Click the advanced gas fee icon. Set your `Max Base Fee` and `Priority Fee` to zero. Click the `Save these values as my default...` checkbox to avoid having to manually set the gas in the future. 
 
-![Advanced Gas Fee Settings in Metamask](../../../../static/img/advancegasscreen.png)
+![Advanced Gas Fee Settings in Metamask](../../../static/img/advancegasscreen.png)
 
 
 Once deployed, you will see a confirmation like this:
 
-![Contract deployed image](../../../../static/img/deployedcontract.png)
+![Contract deployed image](../../../static/img/deployedcontract.png)
 
 Congratulations! Your smart contract is now deployed. 
 

@@ -2,6 +2,9 @@
 sidebar_position: 6
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Audit
 
 ## Executive Summary - SlowMist Audit Report Summary - Stability Pallets
@@ -14,56 +17,33 @@ The audit targeted the Stability blockchain implemented in Substrate + Rust, foc
 
 ## Findings and Actions Taken
 
-### High Severity Vulnerabilities
+<Tabs>
+  <TabItem value="high" label="High Severity Vulnerabilities" default>
 
-1. **Arithmetic Accuracy Deviation Vulnerability**:
+| Description | Actions Taken | Status |
+|-------------|--------------|--------|
+| **Arithmetic Accuracy Deviation Vulnerability**<br/>Potential loss of precision or accuracy due to the use of `saturating_add`, `saturating_mul`, and `saturating_sub` in Rust. | Replaced with checked arithmetic functions (`checked_add`, `checked_mul`, `checked_sub`) to handle overflows gracefully. | Fixed |
+| **Integer Overflow Audit**<br/>Risks of integer overflow in numeric variables without proper overflow checks. | Implemented checked arithmetic functions. | Fixed |
+| **Error Unhandle Audit (Division by Zero)**<br/>Potential program panic due to division by zero in Rust. | Added checks for division by zero. | Fixed |
 
-   - **Description**: Potential loss of precision or accuracy due to the use of `saturating_add`, `saturating_mul`, and `saturating_sub` in Rust.
-   - **Action Taken**: Replaced with checked arithmetic functions (`checked_add`, `checked_mul`, `checked_sub`) to handle overflows gracefully.
-   - **Status**: Fixed.
+  </TabItem>
+  <TabItem value="low" label="Low Severity Vulnerabilities">
 
-2. **Integer Overflow Audit**:
+| Description | Actions Taken | Status |
+|-------------|--------------|--------|
+| **Weights Audit (Unreasonable Pallet Weight)**<br/>Operations having their weight set to 0, potentially leading to unreasonable resource allocation. | Reviewed and adjusted weights based on computational requirements. | Fixed |
+| **Arithmetic Accuracy Deviation Vulnerability (Balance Precision Loss)**<br/>Loss of balance precision when converting `U256` to `u128`. | Acknowledged as a known limitation; implemented fallback checks. | Acknowledged |
 
-   - **Description**: Risks of integer overflow in numeric variables without proper overflow checks.
-   - **Action Taken**: Implemented checked arithmetic functions.
-   - **Status**: Fixed.
-
-3. **Error Unhandle Audit (Division by Zero)**:
-   - **Description**: Potential program panic due to division by zero in Rust.
-   - **Action Taken**: Added checks for division by zero.
-   - **Status**: Fixed.
-
-### Low Severity Vulnerabilities
-
-1. **Weights Audit (Unreasonable Pallet Weight)**:
-
-   - **Description**: Operations having their weight set to 0, potentially leading to unreasonable resource allocation.
-   - **Action Taken**: Reviewed and adjusted weights based on computational requirements.
-   - **Status**: Fixed.
-
-2. **Arithmetic Accuracy Deviation Vulnerability (Balance Precision Loss)**:
-   - **Description**: Loss of balance precision when converting `U256` to `u128`.
-   - **Action Taken**: Acknowledged as a known limitation; implemented fallback checks.
-   - **Status**: Acknowledged.
+  </TabItem>
+</Tabs>
 
 ### Suggested Improvements
 
-1. **Unimplemented Function Logic**:
-
-   - **Description**: Certain functions lacking full implementation.
-   - **Action Taken**: Acknowledged and reviewed; these functions were mocked as they are not utilized in the current logic.
-   - **Status**: Acknowledged.
-
-2. **Node Crash Risk (Use of `panic!()`)**:
-
-   - **Description**: Potential node crash due to the use of `panic!()` in certain functions.
-   - **Action Taken**: Replaced `panic!()` with appropriate error handling.
-   - **Status**: Fixed.
-
-3. **Avoid Hardcoding Values**:
-   - **Description**: Hardcoded Ethereum addresses in the code.
-   - **Action Taken**: Refactored to use configuration files, environment variables, and parameterization for more flexibility.
-   - **Status**: Fixed.
+| Description | Actions Taken | Status |
+|-------------|--------------|--------|
+| **Unimplemented Function Logic**<br/>Certain functions are lacking full implementation. | Acknowledged and reviewed; these functions were mocked as they are not utilized in the current logic. | Acknowledged |
+| **Node Crash Risk (Use of `panic!()`)**<br/>Potential node crash due to the use of `panic!()` in certain functions. | Replaced `panic!()` with appropriate error handling. | Fixed |
+| **Avoid Hardcoding Values**<br/>Hardcoded Ethereum addresses in the code. | Refactored to use configuration files, environment variables, and parameterization for more flexibility. | Fixed |
 
 ## Conclusion
 

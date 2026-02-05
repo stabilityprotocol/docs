@@ -2,6 +2,9 @@
 sidebar_position: 1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Business Share Revenue (Beta)
 
 ## Overview
@@ -12,7 +15,7 @@ In traditional blockchains, validators (or miners) keep all transaction fees; BS
 
 Validators may choose which tokens would be used for the fee payment. This opens up numerous possibilities and incentives for projects to utilize STABILITY.
 
-Note: BSR is currently in Beta. Implementation and parameters may evolve based on governance and ecosystem feedback.
+_Note: BSR is currently in **Beta**. Implementation and parameters may evolve based on governance and ecosystem feedback._
 
 ## How It Works
 
@@ -22,45 +25,62 @@ For instance, if the split is 50/50 by default, half the fee goes to the `valida
 
 ## BSR and the Ethereum Virtual Machine
 
-STABILITY is an EVM-compatible blockchain (built on Substrate), which means developers interact with BSR through familiar Ethereum-like interfaces.
+STABILITY is an EVM-compatible blockchain (built on Substrate), which means developers interact with BSR through familiar Ethereum tools (Ethers.js, Web3.js, or Solidity). The logic is exposed via a precompiled System Contract.
 
-The fee-sharing logic runs in the chain’s runtime, but it’s exposed to smart contracts and external applications via a precompiled system contract called the `FeeRewardsVaultController`. This precompile lives at[`0x0000000000000000000000000000000000000807`](https://explorer.stabilityprotocol.com/address/0x0000000000000000000000000000000000000807). The smart contract code is available [on Github](https://github.com/stabilityprotocol/stability/blob/master/precompiles/fee-rewards-vault-controller/FeeRewardsVaultController.sol).
+- Precompile Name: `FeeRewardsVaultController`
+- Precompile Address: `0x0000000000000000000000000000000000000807`
+- Source Code: Available [on Github](https://github.com/stabilityprotocol/stability/blob/master/precompiles/fee-rewards-vault-controller/FeeRewardsVaultController.sol)
 
-All BSR functions are accessible via the precompiled contract interface. Developers can use web3.js, ethers.js, or Solidity to call these functions exactly like a normal contract. For example, calling `FeeRewardsVaultController.getValidatorPercentage()` will return the current fee split percentage allocated to validators​. More importantly, the precompile allows claiming and querying accumulated fee shares through standard function calls, making BSR easy to use.
+For example, calling `FeeRewardsVaultController.getValidatorPercentage()` will return the current fee split percentage allocated to validators​. More importantly, the precompile allows claiming and querying accumulated fee shares through standard function calls, making BSR easy to use.
 
-## Earning and Claiming Fees as a Developer
+
+## Earning & Claiming Fees
+
+<Tabs>
+  <TabItem value="developer" label="As a Developer" default>
 
 When a transaction involving a smart contract executes, the BSR mechanism will automatically allocate the validator's and the smart contract's share of the fee into the `FeeRewardsVaultController`.
 
-To claim your funds, your smart contract and dApp must be whitelisted. What this means for a developer is that after deploying a contract, you should apply for or await whitelisting by the protocol’s governance or admin. All contracts accrue their fee share regardless of whitelist status. Your dapp’s share is still recorded. However, only whitelisted contracts are permitted to actually withdraw the funds​.
+To claim your funds, your smart contract and dApp must be whitelisted. What this means for a developer is that after deploying a contract, you should apply for or await whitelisting by the protocol's governance or admin. All contracts accrue their fee share regardless of whitelist status. Your dapp's share is still recorded. However, only whitelisted contracts are permitted to actually withdraw the funds​.
 
-If your dapp gets whitelisted later, you won’t lose past fees – the accumulated rewards that were held will become claimable once whitelisting is in place​.
+If your dapp gets whitelisted later, you won't lose past fees – the accumulated rewards that were held will become claimable once whitelisting is in place​.
 
-From a developer perspective, whitelisting is essentially an approval step ensuring your contract is recognized as a legitimate participant in BSR. The act of whitelisting is done via an admin function (`setWhitelisted(address dapp, bool`) on the same `FeeRewardsVaultController` precompile, and it emits an event `WhitelistStatusUpdated` for transparency. This function is restricted to the contract’s owner – typically a governance or core team address – so developers themselves cannot arbitrarily whitelist.
+From a developer perspective, whitelisting is essentially an approval step ensuring your contract is recognized as a legitimate participant in BSR. The act of whitelisting is done via an admin function (`setWhitelisted(address dapp, bool`) on the same `FeeRewardsVaultController` precompile, and it emits an event `WhitelistStatusUpdated` for transparency. This function is restricted to the contract's owner – typically a governance or core team address – so developers themselves cannot arbitrarily whitelist.
 
 Claimable rewards can be checked by calling the `FeeRewardsVaultController` using the `getClaimableReward(address dapp, address token)` function.
 
 There are two methods for a contract to claim fees that developers should be mindful of when deploying.
 
-### The Contract Itself Claims
+<Tabs>
+  <TabItem value="contract-itself" label="Contract itself claims" default>
 
-Your smart contract can call the precompile’s `claimReward(address dapp, address token)` function, passing its own address as the dapp parameter and the fee token address. This will transfer any accumulated fee revenue (for that contract and token) from the protocol’s vault to the contract’s account. This approach requires the contract to invoke the claim (which could be done in a function or via a privileged call in your contract logic).
+Your smart contract can call the precompile's `claimReward(address dapp, address token)` function, passing its own address as the dapp parameter and the fee token address. This will transfer any accumulated fee revenue (for that contract and token) from the protocol's vault to the contract's account. This approach requires the contract to invoke the claim (which could be done in a function or via a privileged call in your contract logic).
 
-### The Contract Owner Claims
+  </TabItem>
+  
+  <TabItem value="contract-owner" label="Contract owner claims">
 
-If your smart contract implements a standard `owner()` function (e.g., as in OpenZeppelin Ownable), the precompile can use it to determine the contract’s owner. The owner (EOA or multisig) can then call `claimReward(contractAddress, token)` from their external account. The precompile will recognize that the caller is the owner of the given contract (by internally calling `owner()` on the contract to verify)​.
+If your smart contract implements a standard `owner()` function (e.g., as in OpenZeppelin Ownable), the precompile can use it to determine the contract's owner. The owner (EOA or multisig) can then call `claimReward(contractAddress, token)` from their external account. The precompile will recognize that the caller is the owner of the given contract (by internally calling `owner()` on the contract to verify)​.
 
-This allows the owner to withdraw the accumulated fees on the contract’s behalf.
+This allows the owner to withdraw the accumulated fees on the contract's behalf.
+
+  </TabItem>
+</Tabs>
 
 ### Important Note
 
-If a contract doesn’t implement `owner()`, the protocol considers it to have no owner, meaning only the contract itself could claim its rewards (if it has some internal mechanism). If the project does not have an owner or a method for the contract itself to claim, then the funds are not retrievable.
+If a contract doesn't implement `owner()`, the protocol considers it to have no owner, meaning only the contract itself could claim its rewards (if it has some internal mechanism). If the project does not have an owner or a method for the contract itself to claim, then the funds are not retrievable.
 
-## Earning and Claiming Fees as a Validator
+  </TabItem>
+  
+  <TabItem value="owner" label="As an Owner">
 
 Validators also claim their portion through the same vault system. Unlike developers, validators do not need to be whitelisted or approved; any active validator can claim its earned fees freely​.
 
 A validator simply calls `claimReward(validatorAddress, token)` using its own address to withdraw the fees it has accumulated for that token. The protocol checks that the caller is indeed entitled (in other words, the address is currently an active validator in the consensus) and then pays out the amount. If a validator leaves the validator set, it can no longer claim new rewards. Any unclaimed rewards at that point remain in the vault inaccessible. Validators are expected to claim periodically while they are active.
+
+  </TabItem>
+</Tabs>
 
 ## Example
 

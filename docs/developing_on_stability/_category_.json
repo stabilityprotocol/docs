@@ -1,6 +1,6 @@
 {
-  "label": "Developers",
-  "position": 5,
+  "label": "Developing on Stability",
+  "position": 3,
   "link": {
     "type": "generated-index",
     "description": "Documentation for anybody looking to interact directly and build on Stability Blockchain."

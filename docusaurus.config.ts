@@ -116,14 +116,19 @@ const config: Config = {
           label: "How Stability Works",
         },
         {
-          to: "/category/users",
+          to: "/category/stability-api",
           position: "left",
-          label: "Users",
+          label: "Stability API",
         },
         {
-          to: "/category/developers",
+          to: "/category/developing-on-stability",
           position: "left",
-          label: "Developers",
+          label: "Developing on Stability",
+        },
+        {
+          to: "/category/tutorials",
+          position: "left",
+          label: "Tutorials",
         },
         {
           to: "/category/resources",
@@ -148,12 +153,16 @@ const config: Config = {
               to: "/category/how-stability-works",
             },
             {
-              label: "Users",
-              to: "/category/users",
+              label: "Stability API",
+              to: "/category/stability-api",
             },
             {
-              label: "Developers",
-              to: "/category/developers",
+              label: "Developing on Stability",
+              to: "/category/developing-on-stability",
+            },
+            {
+              label: "Tutorials",
+              to: "/category/tutorials",
             },
             {
               label: "Resources",
