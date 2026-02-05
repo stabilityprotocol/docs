@@ -6,7 +6,6 @@
 
 # Lock files (using Yarn, not npm)
 package-lock.json
-**/package-lock.json
 
 # Generated files
 .docusaurus
