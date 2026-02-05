@@ -4,8 +4,6 @@
 # Production
 /build
 
-# Lock files (using Yarn, not npm)
-package-lock.json
 
 # Generated files
 .docusaurus
