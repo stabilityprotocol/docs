@@ -2,6 +2,9 @@
 sidebar_position: 2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Token Gating (Beta)
 
 ## Overview
@@ -18,35 +21,44 @@ Notably, users leveraging the Zero Gas Transaction or ZKT framework can bypass t
 
 ## How It Works
 
-### Whitelisted Fee Tokens
+<Tabs>
+  <TabItem value="whitelisted" label="Whitelisted Fee Tokens" default>
 
 The set of tokens that can be used to pay fees is controlled by a whitelist called the **Supported Tokens List**. Only tokens on this approved list will be recognized for gas payment. If a token is not whitelisted, users cannot select it for fees. Any transaction attempting to use an unapproved token will be rejected or never included in a block. This ensures all fee tokens have been vetted by the STABILITY team. The list is updated by admins via the `SupportedTokensManager` precompile [(Code)](https://github.com/stabilityprotocol/stability/blob/master/precompiles/token-fee-controller/supported-tokens-manager/SupportedTokensManager.sol) to add or remove allowed tokens​. A default token is designated on this list – if a user does not explicitly choose a fee token, the network will use the default​ for ATM transactions.
 
-### User Fee Token Selection
+  </TabItem>
+  
+  <TabItem value="user-selection" label="User Fee Token Selection">
 
 Each user can select which whitelisted token they wish to use to pay transaction fees. The user signals their choice by calling a precompiled contract function. STABILITY provides the `Fee Token Selector` precompile [(Code)](https://github.com/stabilityprotocol/stability/blob/master/precompiles/token-fee-controller/fee-token-selector/FeeTokenSelector.sol) for this purpose​.
 
-By calling `FeeTokenSelector.setFeeToken(address tokenAddress)`, a user sets their preferred fee token. The chosen token must be one of the whitelisted tokens, otherwise the call will fail. If successful, the user’s preference is recorded on-chain and mapped to the user’s address. From that point on, any transaction sent via ATM by the user will be charged in the selected token. Users can query their current setting via `FeeTokenSelector.getFeeToken(address user)`, which returns the token address they have selected​. If a user never calls `setFeeToken`, the system assumes the default token for their ATM transactions​. Users may update their fee token selection at any time by calling `setFeeToken` again with a different allowed token.
+By calling `FeeTokenSelector.setFeeToken(address tokenAddress)`, a user sets their preferred fee token. The chosen token must be one of the whitelisted tokens, otherwise the call will fail. If successful, the user's preference is recorded on-chain and mapped to the user's address. From that point on, any transaction sent via ATM by the user will be charged in the selected token. Users can query their current setting via `FeeTokenSelector.getFeeToken(address user)`, which returns the token address they have selected​. If a user never calls `setFeeToken`, the system assumes the default token for their ATM transactions​. Users may update their fee token selection at any time by calling `setFeeToken` again with a different allowed token.
 
-### Validator Token Selection
+  </TabItem>
+  
+  <TabItem value="validator-selection" label="Validator Token Selection">
 
 For validators, each validator declares which of the whitelisted tokens they are willing to accept as gas payment. Validators use the `Validator Fee Token Selector` precompile [(Code)](https://github.com/stabilityprotocol/stability/blob/master/precompiles/token-fee-controller/validator-fee-selector/ValidatorFeeTokenSelector.sol) to manage their accepted tokens and fee conversion settings​.
 
 A validator calls `ValidatorFeeTokenSelector.setTokenAcceptance(address token, bool acceptance)` to indicate whether they accept a particular token as fees​. By default, a new validator is configured to accept the default token only​. They must explicitly opt in to each additional token they wish to collect fees in. If a validator has not accepted a certain token, that validator will not include transactions that pay fees in that token.
 
-### Fee Matching and Mempool Gating
+  </TabItem>
+  
+  <TabItem value="fee-matching" label="Fee Matching and Mempool Gating">
 
-When a user submits a transaction, the gas fee token address is not included in the transaction data. Instead, the network implicitly knows which token to use from the user’s stored preference. The transaction is propagated in the public mempool only if its fee token is on the global whitelist. Each validator’s mempool will filter or ignore transactions that use tokens the validator doesn’t accept.
+When a user submits a transaction, the gas fee token address is not included in the transaction data. Instead, the network implicitly knows which token to use from the user's stored preference. The transaction is propagated in the public mempool only if its fee token is on the global whitelist. Each validator's mempool will filter or ignore transactions that use tokens the validator doesn't accept.
 
 In addition, to execute, the maxFeePerGas parameter set up by the user must meet the minimum the validator the validator will accept for this transaction. When a user sets their `base_Fee`. This dived into deeper in the next section.
 
-In practice, a transaction paying with token X will only be picked up by validators who have set acceptance for X **_and_** and at the price point the validator will accept. If a validator that doesn’t support token X receives the transaction, or the transaction is underpriced, the validator will not include the transaction in a block. The transaction waits in the mempool until a compatible validator is the one to produce a block.
+In practice, a transaction paying with token X will only be picked up by validators who have set acceptance for X **_and_** and at the price point the validator will accept. If a validator that doesn't support token X receives the transaction, or the transaction is underpriced, the validator will not include the transaction in a block. The transaction waits in the mempool until a compatible validator is the one to produce a block.
 
-### Transaction Execution and Conversion
+  </TabItem>
+  
+  <TabItem value="execution" label="Transaction Execution and Conversion">
 
-Once a validator that supports the user’s fee token is producing a block, the transaction can be executed. STABILITY’s runtime still uses the EVM to execute transactions, but because there is no native currency, the gas price fields are handled differently.
+Once a validator that supports the user's fee token is producing a block, the transaction can be executed. STABILITY's runtime still uses the EVM to execute transactions, but because there is no native currency, the gas price fields are handled differently.
 
-This zero native gas price is possible because the network doesn’t charge any native coin during execution. Instead of charging native gas during execution, the protocol calculates the fee in the user’s chosen token after the transaction is run. Each validator has an associated `Conversion Rate Manager` contract which determines how to convert the abstract gas usage into an ERC-20 token amount​.
+This zero native gas price is possible because the network doesn't charge any native coin during execution. Instead of charging native gas during execution, the protocol calculates the fee in the user's chosen token after the transaction is run. Each validator has an associated `Conversion Rate Manager` contract which determines how to convert the abstract gas usage into an ERC-20 token amount​.
 
 Validators set the address of its conversion contract via `ValidatorFeeTokenSelector.updateConversionRateController(address controller)​`. This is typically set to a default contract used by all validators, unless a validator chooses a custom strategy.
 
@@ -56,13 +68,20 @@ The conversion manager implements
 `getConversionRate(address sender, address validator, address token) returns (uint256, uint256)​`
 ```
 
-This function called by the runtime for each transaction to fetch the conversion rate. The conversion rate is a factor that translates the network’s internal gas units into actual token amount. In simpler terms, it’s akin to a price or exchange rate for the fee token, where a each individual sets their own conversion rate, and the validator sets the conversion rate they will accept to process the transaction.
+This function called by the runtime for each transaction to fetch the conversion rate. The conversion rate is a factor that translates the network's internal gas units into actual token amount. In simpler terms, it's akin to a price or exchange rate for the fee token, where a each individual sets their own conversion rate, and the validator sets the conversion rate they will accept to process the transaction.
 
 Put more simply, this function returns a conversion rate (e.g., as a numerator and denominator pair) that translates internal gas units into a fee amount in the specified token.
 
+In STABILITY's current implementation of ATM, `baseFee + priorityFee` is effectively constant at 1 for `baseFee` and 0 for `priorityFee`, since the chain doesn't update a base fee per block as Ethereum does. This means the conversion rate directly determines the fee level. The `Conversion Rate Manager` returns a pair of values (numerator/denominator or similar) that the runtime uses to compute the multiplier for the token​. The protocol then charges the fee in the token by transferring tokens from the user to the validator upon transaction inclusion.
+
+  </TabItem>
+</Tabs>
+
+---
+
 ### Example: Token Conversion Fee
 
-For example, suppose the network’s internal gas unit is notionally priced at 1 gwei, and the validator’s conversion rate for USDC is set to 5x. This 5x represents a price of 5 gwei. In this case, the effective gas price in USDC would be calculated as: gas_price_token = 1 \* 5 / 1e18 ≈ 5e-8 USDC per gas unit​. Let's assume USDC has 18 decimals, the transaction used 100,000 gas. The transaction contained no priority fee, as it is always ignored.
+For example, suppose the network's internal gas unit is notionally priced at 1 gwei, and the validator's conversion rate for USDC is set to 5x. This 5x represents a price of 5 gwei. In this case, the effective gas price in USDC would be calculated as: gas_price_token = 1 \* 5 / 1e18 ≈ 5e-8 USDC per gas unit​. Let's assume USDC has 18 decimals, the transaction used 100,000 gas. The transaction contained no priority fee, as it is always ignored.
 
 ```
 total_fee = gas_used * base_gas_price * conversion_rate
@@ -79,8 +98,7 @@ total_fee = gas_used * base_gas_price * conversion_rate
           = 100,000 * (0.1e-9 MUFFIN)
           = 0.00001 MUFFIN.
 ```
-
-In STABILITY’s current implementation of ATM, `baseFee + priorityFee` is effectively constant at 1 for `baseFee` and 0 for `priorityFee`, since the chain doesn’t update a base fee per block as Ethereum does. This means the conversion rate directly determines the fee level. The `Conversion Rate Manager` returns a pair of values (numerator/denominator or similar) that the runtime uses to compute the multiplier for the token​. The protocol then charges the fee in the token by transferring tokens from the user to the validator upon transaction inclusion.
+---
 
 ## Fee Distribution and BSR
 
@@ -100,6 +118,8 @@ The more validators support a token, the smoother and faster the user’s transa
 
 In other words, the token gating system involves a handshake between user preferences and validator policies: users pick a token from the allowed list and validators indicate which tokens they’ll take and what rate they will accept it. The network only processes the transaction when there’s a match, then uses the validator’s conversion rate to charge the fee in that token. All of this occurs at the protocol level, allowing a user to effectively use a preferred token as the “native gas” for that transaction.
 
+---
+
 ## How to Use - Developers
 
 ### Overview
@@ -114,7 +134,10 @@ Developers will be primarily interacting with the following three contracts when
 
 These precompiles are built into the runtime at a fixed address. They can be called like any smart contract, using a web3 library or via Solidity interfaces. Below is a developer guide for typical use-cases.
 
-### Example: Checking Supported Fee Tokens (Token Whitelist)
+### Examples
+
+<Tabs>
+  <TabItem value="checking-tokens" label="Checking Supported Fee Tokens (Token Whitelist)" default>
 
 Let's say you can you want to check what tokens are currently whitelisted by the ATM to be used as gas fees, if a validator accepts.
 
@@ -148,7 +171,9 @@ async function getSupportedFeeTokens() {
 
 This would give you an array of allowed fee token addresses and the default token as a string.
 
-### Example: Setting a User’s Fee Token
+  </TabItem>
+  
+  <TabItem value="setting-token" label="Setting a User's Fee Token">
 
 Let's say any end-user (EOA) or even a contract wants to pay its own fees in a specific token. Typically an EOA will call this from their account. To set the fee token, you simply call `setFeeToken` on the precompile, passing the desired token’s address. The precompile uses `msg.sender` as the user whose preference is being set, so you cannot set someone else’s preference – each user must call it for themselves. The call will revert if the token is not in the supported list. If it succeeds, the new preference takes effect immediately for subsequent transactions.
 
@@ -192,6 +217,9 @@ After calling `setFeeToken`, the user’s future transactions will be charged in
 
 To query another address’s setting, anyone can call `getFeeToken(userAddr)`. This can be useful to know what token a particular account will use for gas. For instance, a dApp might check if a user has set a non-default token and warn if they have no balance of it.
 
-**_Important_**: The first time a user uses STABILITY, their account will be set to the default fee token. If they want to switch to a different token, the user must use a framework such as `ZGT`, or must have a balance of the default token to pay for the `setFeeToken` transaction itself. This is because the initial call’s fee will be charged in the default token, as the preference change happens upon execution.
+**_Important_**: The first time a user uses STABILITY, their account will be set to the default fee token. If they want to switch to a different token, the user must use a framework such as `ZGT`, or must have a balance of the default token to pay for the `setFeeToken` transaction itself. This is because the initial call's fee will be charged in the default token, as the preference change happens upon execution.
 
 For example, if the default token is `TOKENA` and the user wants to use `TOKENB` for future fees, the user needs to utilize STABILITY's API keys for Zero Gas Transaactions, or the user needs a small amount of `TOKENA` to call `setFeeToken(TokenBAddress)`. After that, they would pay fees in `TOKENB`. This bootstrap issue can be mitigated by funding new users with a bit of the default token or by having an onboarding process. Once set, a user can change to another token anytime by calling `setFeeToken` again. Each change will incur a fee in whatever token was currently active for that call.
+
+  </TabItem>
+</Tabs>

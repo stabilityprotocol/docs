@@ -106,3 +106,14 @@ h1, h2, h3, h4, h5, h6,
     }
   }
 }
+
+/* Ensure tables in tabs extend to full width */
+.theme-doc-markdown table {
+  width: 100%;
+  display: table;
+}
+
+.theme-doc-markdown div[style*="width: 100%"] table {
+  width: 100%;
+  table-layout: auto;
+}

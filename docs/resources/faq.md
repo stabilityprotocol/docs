@@ -2,96 +2,149 @@
 sidebar_position: 2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # FAQ
 
 _Frequently asked questions_
 
-## Using Stability
+<Tabs>
+  <TabItem value="using" label="Using Stability" default>
 
-### How can a public blockchain work without cryptocurrency?
+<details>
+<summary><strong>How can a public blockchain work without cryptocurrency?</strong></summary>
 
-Stability sets all gas prices to zero, therefore there is no cost to perform a transaction. 
+Stability sets all gas prices to zero, therefore there is no cost to perform a transaction.
 
-### Can I use my existing wallet app on Stability?
+</details>
+
+<details>
+<summary><strong>Can I use my existing wallet app on Stability?</strong></summary>
 
 Yes, all EVM-compatible wallets, such as Metamask, work on Stability.
 
-### Can I use my existing Ethereum address on Stability?
+</details>
+
+<details>
+<summary><strong>Can I use my existing Ethereum address on Stability?</strong></summary>
 
 Yes. Private keys used on Ethereum, or any other EVM-based blockchain, will resolve to the same public address.
 
-### How can I connect to Global Trust Network (GTN)?
+</details>
+
+<details>
+<summary><strong>How can I connect to Global Trust Network (GTN)?</strong></summary>
 
 Global Trust Network (GTN) uses the same architecture for performing transactions as most blockchain networks. Simply connect to an RPC and you are able to perform transactions on GTN.
 
-To perform transactions on GTN, you must sign up for an API key. This allows for up to 1,000 daily transactions per API Key on Global Trust Network, and only requires a sign on using your e-mail, Github, or Google account. It is completely free. For an easy step-by-step guide to doing so, please check out [Getting Started ](../users/getting_started.md) page.
+To perform transactions on GTN, you must sign up for an API key. This allows for up to 1,000 daily transactions per API Key on Global Trust Network, and only requires a sign on using your e-mail, Github, or Google account. It is completely free. For an easy step-by-step guide to doing so, please check out [Creating Your API Key](../stability_api/creating_api_key.md) page.
 
 The connection details for GTN are as follows. Simply replace 'YOUR_API_KEY' with your API key.
-    - **Network Name:** Global Trust Network
-    - **New RPC URL:** `https://rpc.stabilityprotocol.com/zgt/YOUR_API_KEY`
-    - **Chain ID:** 101010
-    - **Currency Symbol:** FREE
-    - **Block Explorer URL:** `https://stability.blockscout.com/`
+- **Network Name:** Global Trust Network
+- **New RPC URL:** `https://rpc.stabilityprotocol.com/zgt/YOUR_API_KEY`
+- **Chain ID:** 101010
+- **Currency Symbol:** FREE
+- **Block Explorer URL:** `https://stability.blockscout.com/`
 
-### How can I connect to Stability Testnet?
+</details>
+
+<details>
+<summary><strong>How can I connect to Stability Testnet?</strong></summary>
 
 Stability uses the same architecture for performing transactions as most blockchain networks. Simply connect to an RPC and you are able to perform transactions on Stability.
 
- We currently offer two options for connecting to Stability Testnet.
+We currently offer two options for connecting to Stability Testnet.
 
-Our public RPC allows a limit of 25 transactions per address. Users wishing to go beyond 25 free daily transactions should register for a free API Key on our testnet. This provides a private RPC this allows for up to 1,000 monthly transactions per API Key on Stability Testnet, and only requires a sign on using your e-mail, Github, or Google account. It is completely free. For an easy step-by-step guide to doing so, please check out [Getting Started ](../users/getting_started.md) page.
+Our public RPC allows a limit of 25 transactions per address. Users wishing to go beyond 25 free daily transactions should register for a free API Key on our testnet. This provides a private RPC this allows for up to 1,000 monthly transactions per API Key on Stability Testnet, and only requires a sign on using your e-mail, Github, or Google account. It is completely free. For an easy step-by-step guide to doing so, please check out [Creating Your API Key](../stability_api/creating_api_key.md) page.
 
 Our connection details for our public RPC is as follows -
-    - **Network Name:** Stability Test Net
-    - **New RPC URL:** `https://rpc.testnet.stabilityprotocol.com/zgt/YOUR_API_KEY`
-    - **Chain ID:** 20180427
-    - **Currency Symbol:** FREE
-    - **Block Explorer URL:** `https://explorer.stble.io/testnet/`
-    - **Request Limit:** 200 Per Minute Free / 1500 Per Minute Tier 1
-    - **Max Batch Size:** 40
+- **Network Name:** Stability Test Net
+- **New RPC URL:** `https://rpc.testnet.stabilityprotocol.com/zgt/YOUR_API_KEY`
+- **Chain ID:** 20180427
+- **Currency Symbol:** FREE
+- **Block Explorer URL:** `https://explorer.stble.io/testnet/`
+- **Request Limit:** 200 Per Minute Free / 1500 Per Minute Tier 1
+- **Max Batch Size:** 40
 
+</details>
 
-### Will using the private RPC result in my transactions occurring on a different network?
+<details>
+<summary><strong>Will using the private RPC result in my transactions occurring on a different network?</strong></summary>
 
 No, all public and private transactions will occur on the same public testnet network.
 
-### What happens if I run out of free transactions?
+</details>
+
+<details>
+<summary><strong>What happens if I run out of free transactions?</strong></summary>
 
 If the daily free transactions exceed your allocated daily limit, your transactions will not be processed by Stability Testnet. Each transaction will return as 'Failed'.
 
-### Why are there limits on the amount of transactions?
+</details>
+
+<details>
+<summary><strong>Why are there limits on the amount of transactions?</strong></summary>
 
 We set limits to prevent spamming of the network.
 
-## Developing on Stability
+</details>
 
-### I am a developer - how do I develop on Stability?
+  </TabItem>
+  
+  <TabItem value="developing" label="Developing on Stability">
 
-Developing on Stability uses the same tooling as Ethereum, or any other EVM-based blockchain. 
+<details>
+<summary><strong>I am a developer - how do I develop on Stability?</strong></summary>
 
-### Can I deploy and interact with smart contracts on Stability? Is it the same as Ethereum?
+Developing on Stability uses the same tooling as Ethereum, or any other EVM-based blockchain.
 
-Yes. Stability is an EVM-based blockchain and most smart contract functionality remains the same. There are a few notable differences due to our feeless model. For further detail, view our [What is different on Stability](../developers/what_is_different.md) documentation.
+</details>
 
-### Can I create and deploy my own tokens on the Stability?
+<details>
+<summary><strong>Can I deploy and interact with smart contracts on Stability? Is it the same as Ethereum?</strong></summary>
+
+Yes. Stability is an EVM-based blockchain and most smart contract functionality remains the same. There are a few notable differences due to our feeless model. For further detail, view our [EVM Compatibility & Solidity Development](../developing_on_stability/web3_developers/evm_compatibility.md) documentation.
+
+</details>
+
+<details>
+<summary><strong>Can I create and deploy my own tokens on the Stability?</strong></summary>
 
 Yes. Go nuts! The Stability Testnet is here for experimentation, and exploring the possiblities of zero-gas transactions.
 
-### I would like to have a larger quota for Stability. How can I do this?
+</details>
+
+<details>
+<summary><strong>I would like to have a larger quota for Stability. How can I do this?</strong></summary>
 
 Please contact us using the following [`Google Form`](https://docs.google.com/forms/d/e/1FAIpQLSfiBQOc0z9HtHyHCH1QCIZWQ0mdJ8koGaWysErJHJRylQy2Yw/viewform)
 
-### What is the block time on Stability?
+</details>
+
+<details>
+<summary><strong>What is the block time on Stability?</strong></summary>
 
 Our average block time is ~2secs.
 
-### What is the current block size on Stability?
+</details>
+
+<details>
+<summary><strong>What is the current block size on Stability?</strong></summary>
 
 Our current block size allows for 300,000,000 gas units per block.
 
-### What is the maximum size of a transaction?
+</details>
+
+<details>
+<summary><strong>What is the maximum size of a transaction?</strong></summary>
 
 The maximum size for a transaction is 260,000,000 gas units.
+
+</details>
+
+  </TabItem>
+</Tabs>
 
 <!-- ### Community
 
