@@ -17,6 +17,10 @@ Click [here](https://stabilityprotocol.github.io/stability-api-docs/) to go to o
 - This specification is compatible with tools like Swagger UI, Redoc, or any OpenAPI v3.0.3-compatible library.
 - It documents how to submit V1 and V2 style transactions, along with the standardized success and error response formats.
 
+### Deploy & Interact with Smart Contracts
+
+You can deploy and interact with more smart contracts using our [Smart Contract Templates](../../../tutorials/templates) page, which provides ready-to-use boilerplate contracts compatible with Stability's gasless network.
+
 ---
 
 ## Request Types
