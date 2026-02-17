@@ -99,4 +99,5 @@ A live example of these values being explicitly set to zero is available in the 
 
 - Review [EVM Compatibility & What's Different](../evm_compatibility.md) to understand other important differences
 - Check out [Example Apps](../../../how_stability_works/example_apps.md) for coding examples
-- Explore [Tutorials](../../../tutorials/contract_deploy/deploy_contract_with_remix.md) to start building
+- Explore [Tutorials](../../../tutorials/contract_deploy/deploy_contract_with_remix) to start building
+- Explore [Smart Contract Templates](../../../tutorials/templates) to deploy and interact with ready-to-use smart contract templates
